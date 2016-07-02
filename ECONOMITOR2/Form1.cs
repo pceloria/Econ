@@ -11,6 +11,7 @@ using System.IO.Ports;
 
 namespace ECONOMITOR2
 {
+    // AL FIN
     public partial class Economitor : Form
     {
         private SerialPort myport;
