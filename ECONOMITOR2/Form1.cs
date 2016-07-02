@@ -44,19 +44,28 @@ namespace ECONOMITOR2
 
         }
 
-        private void buttonStart_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void buttonShutdown_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            this.Dispose();
         }
 
         private void labelBradicardia_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonStart_Click_1(object sender, EventArgs e)
+        {
+            this.textTemperatura.Text = "100";
+        }
+
+        private void buttonShutdown_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
         }
     }
 }

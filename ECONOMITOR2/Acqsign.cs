@@ -32,26 +32,26 @@ namespace ECONOMITOR2
     public class Acqsign
     {
         int tipo_de_variable;
-        int valor[];
+        //int valor[];
         static int varAd = 1;
 
-        private static void aq(){
+        //private static void aq(){
             
-        switch(varAd){
-            case 1:
-                Data.updateTemperatura(100);
-                break;
-            case 2:
-                addECGdata(valor);
-                if (full)
-                    Data.updateECG();
-                break;
-            default:
-                break;
+        //switch(varAd){
+        //    case 1:
+        //        Data.updateTemperatura(100);
+        //        break;
+        //    case 2:
+        //        addECGdata(valor);
+        //        if (full)
+        //            Data.updateECG();
+        //        break;
+        //    default:
+        //        break;
 
 
-        }
-        }
+        //}
+       // }
     }
 
 

@@ -23,12 +23,12 @@ namespace ECONOMITOR2
 
         public static void updateTemperatura(int Temperatura){
             Data.Temperatura = Temperatura;
-            drawTemperatura();
+           // drawTemperatura();
         }
         public static void updateECG(int[] newData)
         {
             // hacer un for a partir del indice j (guardar ese dato) y actualizar con newData
-            Data.ECG[lastPositionInECGArray: (lastPositionInECGArray + newData.Length)] = newData;
+           // Data.ECG[lastPositionInECGArray: (lastPositionInECGArray + newData.Length)] = newData;
             // chequear que no se haya llegado al final del array
 
             drawECG();
