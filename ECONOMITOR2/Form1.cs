@@ -13,7 +13,6 @@ namespace ECONOMITOR2
 {
     public partial class Economitor : Form
     {
-        public SerialPort myport;
         public Economitor()
         {
             InitializeComponent();
