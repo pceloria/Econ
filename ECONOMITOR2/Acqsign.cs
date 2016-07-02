@@ -35,8 +35,18 @@ namespace ECONOMITOR2
         //int valor[];
         static int varAd = 1;
 
+        public static void init(String portName)
+        {
+
+        }
+
+        public static void close()
+        {
+
+        }
+
         //private static void aq(){
-            
+
         //switch(varAd){
         //    case 1:
         //        Data.updateTemperatura(100);
@@ -51,7 +61,7 @@ namespace ECONOMITOR2
 
 
         //}
-       // }
+        // }
     }
 
 
