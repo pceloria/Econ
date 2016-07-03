@@ -256,7 +256,7 @@ namespace ECONOMITOR2
 
                 bytesRead++;
                 if (port.ReadByte() == 85)
-                {              //verifica primer byte de header
+                {              //verifica primer byte de header asd
                     bytesRead++;
                     if (port.ReadByte() == 170)
                     {                //verifica segundo
