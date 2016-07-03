@@ -291,7 +291,7 @@ namespace ECONOMITOR2
                             RespRate = data[2];
                             ST_Level = data[3];
                             ARR_code = data[4];
-
+                            Data.updateECGparams(ECG_Status, HeartRate, RespRate, ST_Level);
                             break;
 
                         case NIBP_PARAM:
@@ -302,6 +302,7 @@ namespace ECONOMITOR2
                             SPO2_Status = data[0];
                             Spo2Sat = data[1];
                             PulseRate = data[2];
+                            Data.updateSPO2params(SPO2_Status, Spo2Sat, PulseRate);
                             break;
 
                         case TEMP:
@@ -319,14 +320,13 @@ namespace ECONOMITOR2
                             break;
 
                         case SPO2_WAVE:
-                            
                             SPO2_Wave_amplitude = data[0];
                             SPO2_WAVEdat[indexSPO2] = SPO2_Wave_amplitude;
                             indexSPO2++;
                             if (indexSPO2 == SPO2_WAVEdat.Length)
                             {
                                 // Enviar datos a Data
-                                
+                                Data.updateSPO2(SPO2_WAVEdat);
                                 indexSPO2 = 0;
                             }
                             break;
@@ -338,7 +338,7 @@ namespace ECONOMITOR2
                             if (indexRESP == RESP_WAVEdat.Length)
                             {
                                 // Enviar datos a Data
-
+                                Data.updateRESP(RESP_WAVEdat);
                                 indexRESP = 0;
                             }
                             break;
