@@ -16,7 +16,6 @@ namespace ECONOMITOR2
     public class Acqsign
     {
 
-
         const int ECG_WAVE = 1;
         const int ECG_PARAM = 2;
         const int NIBP_PARAM = 3;
@@ -271,84 +270,87 @@ namespace ECONOMITOR2
                             data[i] = port.ReadByte();                           
                         }
 
-                        switch (tiposenal)
-                        {
-                        case ECG_WAVE:
-                            ECG_Wave_Amplitud = data[0];
-                            ECG_WAVEdat[indexECG] = ECG_Wave_Amplitud;
-                            indexECG++;
-                            if (indexECG == ECG_WAVEdat.LongLength)
-                            {
-                                // Enviar datos a Data
-                                Data.updateECG(ECG_WAVEdat);
-                                indexECG = 0;
-                            }
-                            break;
-
-                        case ECG_PARAM:
-                            ECG_Status = data[0];
-                            HeartRate = data[1];
-                            RespRate = data[2];
-                            ST_Level = data[3];
-                            ARR_code = data[4];
-                            Data.updateECGparams(ECG_Status, HeartRate, RespRate, ST_Level);
-                            break;
-
-                        case NIBP_PARAM:
-
-                            break;
-
-                        case SPO2_PARAM:
-                            SPO2_Status = data[0];
-                            Spo2Sat = data[1];
-                            PulseRate = data[2];
-                            Data.updateSPO2params(SPO2_Status, Spo2Sat, PulseRate);
-                            break;
-
-                        case TEMP:
-                            TEMP_Status = data[0];
-                            TEMP1_Integral = data[1];
-                            TEMP1_Decimal = data[2];
-                            TEMPval = TEMP1_Integral + TEMP1_Decimal / 10;
-                            Data.updateTemperatura(TEMPval);
-                            break;
-
-                        case SOFT_VERSION:
-                            break;
-
-                        case HARD_VERSION:
-                            break;
-
-                        case SPO2_WAVE:
-                            SPO2_Wave_amplitude = data[0];
-                            SPO2_WAVEdat[indexSPO2] = SPO2_Wave_amplitude;
-                            indexSPO2++;
-                            if (indexSPO2 == SPO2_WAVEdat.Length)
-                            {
-                                // Enviar datos a Data
-                                Data.updateSPO2(SPO2_WAVEdat);
-                                indexSPO2 = 0;
-                            }
-                            break;
-
-                        case RESP_WAVE:
-                            RESP_WAVEval = data[0];
-                            RESP_WAVEdat[indexRESP] = RESP_WAVEval;
-                            indexRESP++;
-                            if (indexRESP == RESP_WAVEdat.Length)
-                            {
-                                // Enviar datos a Data
-                                Data.updateRESP(RESP_WAVEdat);
-                                indexRESP = 0;
-                            }
-                            break;
-
-                        default:
-                            break;
-                        }
                         bytesRead++;
                         checksum = port.ReadByte();
-                        // Si esta todo bien hay que derivar el dato que se leyo
+                        int sum = 255 - (package_length + tiposenal + data.Sum());
+                        if (checksum == sum)
+                        {
+                            switch (tiposenal)
+                            {
+                                case ECG_WAVE:
+                                    ECG_Wave_Amplitud = data[0];
+                                    ECG_WAVEdat[indexECG] = ECG_Wave_Amplitud;
+                                    indexECG++;
+                                    if (indexECG == ECG_WAVEdat.LongLength)
+                                    {
+                                        // Enviar datos a Data
+                                        Data.updateECG(ECG_WAVEdat);
+                                        indexECG = 0;
+                                    }
+                                    break;
+
+                                case ECG_PARAM:
+                                    ECG_Status = data[0];
+                                    HeartRate = data[1];
+                                    RespRate = data[2];
+                                    ST_Level = data[3];
+                                    ARR_code = data[4];
+                                    Data.updateECGparams(ECG_Status, HeartRate, RespRate, ST_Level);
+                                    break;
+
+                                case NIBP_PARAM:
+
+                                    break;
+
+                                case SPO2_PARAM:
+                                    SPO2_Status = data[0];
+                                    Spo2Sat = data[1];
+                                    PulseRate = data[2];
+                                    Data.updateSPO2params(SPO2_Status, Spo2Sat, PulseRate);
+                                    break;
+
+                                case TEMP:
+                                    TEMP_Status = data[0];
+                                    TEMP1_Integral = data[1];
+                                    TEMP1_Decimal = data[2];
+                                    TEMPval = TEMP1_Integral + TEMP1_Decimal / 10;
+                                    Data.updateTemperatura(TEMPval);
+                                    break;
+
+                                case SOFT_VERSION:
+                                    break;
+
+                                case HARD_VERSION:
+                                    break;
+
+                                case SPO2_WAVE:
+                                    SPO2_Wave_amplitude = data[0];
+                                    SPO2_WAVEdat[indexSPO2] = SPO2_Wave_amplitude;
+                                    indexSPO2++;
+                                    if (indexSPO2 == SPO2_WAVEdat.Length)
+                                    {
+                                        // Enviar datos a Data
+                                        Data.updateSPO2(SPO2_WAVEdat);
+                                        indexSPO2 = 0;
+                                    }
+                                    break;
+
+                                case RESP_WAVE:
+                                    RESP_WAVEval = data[0];
+                                    RESP_WAVEdat[indexRESP] = RESP_WAVEval;
+                                    indexRESP++;
+                                    if (indexRESP == RESP_WAVEdat.Length)
+                                    {
+                                        // Enviar datos a Data
+                                        Data.updateRESP(RESP_WAVEdat);
+                                        indexRESP = 0;
+                                    }
+                                    break;
+
+                                default:
+                                    break;
+                            }
+                        }                        
                     }
                 }
             }
@@ -356,7 +358,6 @@ namespace ECONOMITOR2
             reading = false;
             return 0;
         }
-
 
     }
 }
