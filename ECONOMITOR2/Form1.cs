@@ -76,7 +76,9 @@ namespace ECONOMITOR2
                 counter = 0;
             }
 
-            AudioVisual.Draw(derivacion1, Data.getNewECGpackages());
+            double[] newData = Data.getNewECGpackages();
+            if (newData != null)
+                AudioVisual.Draw(derivacion1, newData);
             AudioVisual.Draw(derivacion2, data);
             AudioVisual.Draw(derivacion3, data);
             AudioVisual.Draw(spo2, data);
