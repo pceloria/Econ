@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.Diagnostics;
 
 namespace ECONOMITOR2
 {
@@ -42,6 +43,7 @@ namespace ECONOMITOR2
         private void buttonStart_Click(object sender, EventArgs e)
         {
             Acqsign.init(textPort.Text);
+
         }
 
         void timer1_Tick(object sender, EventArgs e)
