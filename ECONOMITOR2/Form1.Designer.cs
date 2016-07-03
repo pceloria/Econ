@@ -44,15 +44,11 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.derivacion1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.derivacion2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.derivacion3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.respiracion = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.spo2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.capnografia = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.labelTemperatura = new System.Windows.Forms.Label();
             this.textTemperatura = new System.Windows.Forms.TextBox();
             this.labelRR = new System.Windows.Forms.Label();
@@ -104,7 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.derivacion3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.respiracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spo2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.capnografia)).BeginInit();
             this.groupAlarmas.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -120,14 +115,14 @@
             this.derivacion1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.derivacion1.Legends.Add(legend1);
-            this.derivacion1.Location = new System.Drawing.Point(1, 20);
+            this.derivacion1.Location = new System.Drawing.Point(1, 27);
             this.derivacion1.Name = "derivacion1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
-            series1.Name = "D1";
+            series1.Name = "Series1";
             this.derivacion1.Series.Add(series1);
-            this.derivacion1.Size = new System.Drawing.Size(531, 77);
+            this.derivacion1.Size = new System.Drawing.Size(517, 77);
             this.derivacion1.TabIndex = 0;
             this.derivacion1.Tag = "derivacion1";
             this.derivacion1.Text = "chart1";
@@ -145,7 +140,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.derivacion2.Series.Add(series2);
-            this.derivacion2.Size = new System.Drawing.Size(531, 83);
+            this.derivacion2.Size = new System.Drawing.Size(517, 83);
             this.derivacion2.TabIndex = 1;
             this.derivacion2.Text = "chart2";
             // 
@@ -162,7 +157,7 @@
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             this.derivacion3.Series.Add(series3);
-            this.derivacion3.Size = new System.Drawing.Size(531, 83);
+            this.derivacion3.Size = new System.Drawing.Size(517, 83);
             this.derivacion3.TabIndex = 2;
             this.derivacion3.Text = "chart3";
             // 
@@ -179,7 +174,7 @@
             series4.Legend = "Legend1";
             series4.Name = "Series1";
             this.respiracion.Series.Add(series4);
-            this.respiracion.Size = new System.Drawing.Size(531, 83);
+            this.respiracion.Size = new System.Drawing.Size(517, 83);
             this.respiracion.TabIndex = 3;
             this.respiracion.Text = "chart4";
             // 
@@ -196,26 +191,9 @@
             series5.Legend = "Legend1";
             series5.Name = "Series1";
             this.spo2.Series.Add(series5);
-            this.spo2.Size = new System.Drawing.Size(531, 83);
+            this.spo2.Size = new System.Drawing.Size(517, 83);
             this.spo2.TabIndex = 4;
             this.spo2.Text = "chart5";
-            // 
-            // capnografia
-            // 
-            chartArea6.Name = "ChartArea1";
-            this.capnografia.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.capnografia.Legends.Add(legend6);
-            this.capnografia.Location = new System.Drawing.Point(1, 432);
-            this.capnografia.Name = "capnografia";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.capnografia.Series.Add(series6);
-            this.capnografia.Size = new System.Drawing.Size(531, 83);
-            this.capnografia.TabIndex = 5;
-            this.capnografia.Text = "chart6";
             // 
             // labelTemperatura
             // 
@@ -621,6 +599,7 @@
             this.buttonSilenciar.Tag = "buttonSilenciar";
             this.buttonSilenciar.Text = "Silence";
             this.buttonSilenciar.UseVisualStyleBackColor = true;
+            this.buttonSilenciar.Click += new System.EventHandler(this.buttonSilenciar_Click);
             // 
             // label9
             // 
@@ -664,7 +643,6 @@
             this.Controls.Add(this.labelRR);
             this.Controls.Add(this.textTemperatura);
             this.Controls.Add(this.labelTemperatura);
-            this.Controls.Add(this.capnografia);
             this.Controls.Add(this.spo2);
             this.Controls.Add(this.respiracion);
             this.Controls.Add(this.derivacion3);
@@ -681,7 +659,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.derivacion3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.respiracion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spo2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.capnografia)).EndInit();
             this.groupAlarmas.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -702,12 +679,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart derivacion1;
+        public System.Windows.Forms.DataVisualization.Charting.Chart derivacion1;
         private System.Windows.Forms.DataVisualization.Charting.Chart derivacion2;
         private System.Windows.Forms.DataVisualization.Charting.Chart derivacion3;
         private System.Windows.Forms.DataVisualization.Charting.Chart respiracion;
         private System.Windows.Forms.DataVisualization.Charting.Chart spo2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart capnografia;
         private System.Windows.Forms.Label labelTemperatura;
         private System.Windows.Forms.TextBox textTemperatura;
         private System.Windows.Forms.Label labelRR;
