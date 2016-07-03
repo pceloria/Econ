@@ -54,7 +54,9 @@ namespace ECONOMITOR2
         {
             // llamar a funcion de Nacho y Pau que actualice en pantalla el valor de temperatura
         }
+
         private static void drawECG(int[] dataECG)
+
         {
             // llamar a funcion de Nacho y Pau que actualice en pantalla el plot de ECG
         }

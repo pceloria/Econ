@@ -62,5 +62,6 @@ namespace ECONOMITOR2
             // llamar a funciones de data (ej: fetch(ECG))
             // actualizo el grafico llamando a audiovisual(data y eje x)
         }
+
     }
 }
