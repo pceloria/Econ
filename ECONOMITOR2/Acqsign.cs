@@ -252,15 +252,15 @@ namespace ECONOMITOR2
     //     }
 
 
-        public static int[] tedoyECG(int longitud) {
+        //public static int[] tedoyECG(int longitud) {
 
-            for (int i = 0; i < longitud; i++) {
-                ECG_WAVEdat[i] = armarpaquete();
-            }
-            return ECG_WAVEdat;
+        //    for (int i = 0; i < longitud; i++) {
+        //        ECG_WAVEdat[i] = armarpaquete();
+        //    }
+        //    return ECG_WAVEdat;
 
         
-        }
+        //}
     }
 }
 
