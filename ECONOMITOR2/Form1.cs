@@ -14,10 +14,12 @@ namespace ECONOMITOR2
 {
     public partial class Economitor : Form
     {
-        public SerialPort myport;
-        public double[] s;
-        public int index = 0;
-        public double tiempo = 0;
+        private SerialPort myport;
+        private double[] data;
+        private double s;
+        private double temp;
+        private int counter;
+
 
         public Economitor()
         {
@@ -28,10 +30,17 @@ namespace ECONOMITOR2
             timer1.Enabled = true;                       // Enable the timer
             timer1.Start();                              // Start the timer
 
-            s = new double[100];
-            for (int j = 0; j < s.Length; j++)
-                derivacion1.Series["D1"].Points.AddY(s[j]);
+            s = 0;
 
+            for (int j = 0; j < data.Length; j++)
+                data[j] = s;
+                s = s + 0.1;
+
+            AudioVisual.init_Draw(derivacion1);
+            AudioVisual.init_Draw(derivacion2);
+            AudioVisual.init_Draw(derivacion3);
+            AudioVisual.init_Draw(spo2);
+            AudioVisual.init_Draw(respiracion);
             Data.init();
             
         }
@@ -46,33 +55,39 @@ namespace ECONOMITOR2
         {
             if (!Acqsign.isPortOpen)
                 Acqsign.init(textPort.Text);
-            else
-                //Acqsign.tedoyECG();
-
-                ;
 
         }
-
-        void timer1_Tick(object sender, EventArgs e)
+        public double GetRandomNumber(double minimum, double maximum)
         {
-            //if (index == 100)
-            //    index = 0;
-
-            //s[index] = Math.Sin(tiempo);
-
-            //derivacion1.Series["D1"].Points.ElementAt(index).SetValueY(s[index]);
-            //derivacion1.Refresh();
-            
-
-            tiempo = tiempo + 0.05;
-            //index++;
-
-            derivacion1.Series["D1"].Points.AddY(Math.Sin(tiempo));
-            derivacion1.Update();
-            derivacion1.Series["D1"].Points.RemoveAt(0);
-            // llamar a funciones de data (ej: fetch(ECG))
-            // actualizo el grafico llamando a audiovisual(data y eje x)
+            Random random = new Random();
+            return random.NextDouble() * (maximum - minimum) + minimum;
         }
 
-    }
+        void timer1_Tick(object sender, EventArgs e){
+
+            if (counter == 20) {
+                temp = GetRandomNumber(37, 40);
+                AudioVisual.actualiza_text(textTemperatura,temp);
+                AudioVisual.actualiza_text(textRR,temp);
+                AudioVisual.actualiza_text(textSpO2,temp);
+                AudioVisual.actualiza_text(textDiastolica,temp);
+                AudioVisual.actualiza_text(textSistolica,temp);
+                counter = 0;
+            }
+
+            AudioVisual.Draw(derivacion1, data);
+            AudioVisual.Draw(derivacion2, data);
+            AudioVisual.Draw(derivacion3, data);
+            AudioVisual.Draw(spo2, data);
+            AudioVisual.Draw(respiracion, data);
+
+            counter++;
+        
+        }
+
+        void buttonSilenciar_Click(object sender, EventArgs e) { 
+        
+        }
+
+     }
 }
