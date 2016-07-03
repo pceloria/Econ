@@ -67,5 +67,6 @@ namespace ECONOMITOR2
             this.Close();
             this.Dispose();
         }
+
     }
 }
