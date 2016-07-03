@@ -16,9 +16,11 @@ namespace ECONOMITOR2
     {
         private SerialPort myport;
         private double[] data;
-        private double s;
-        private double temp;
         private int counter;
+        
+        //para probar graficar rampas
+        //private double s;
+        //private double temp;
 
 
         public Economitor()
@@ -30,12 +32,13 @@ namespace ECONOMITOR2
             timer1.Enabled = true;                       // Enable the timer
             timer1.Start();                              // Start the timer
 
-            s = 0;
+            // para probar graifcar rampas
+            //s = 0;
 
-            data = new double[100];
-            for (int j = 0; j < data.Length; j++)
-                data[j] = s;
-                s = s + 0.1;
+            //data = new double[100];
+            //for (int j = 0; j < data.Length; j++)
+            //    data[j] = s;
+            //    s = s + 0.1;
 
             AudioVisual.init_Draw(derivacion1);
             AudioVisual.init_Draw(derivacion2);
@@ -66,23 +69,49 @@ namespace ECONOMITOR2
 
         void timer1_Tick(object sender, EventArgs e){
 
+            double[] newECGData = Data.getNewECGpackages();
+            double[] newSPO2Data = Data.getNewSPO2packages();
+            double[] newRESPData = Data.getNewRESPpackages();
+
             if (counter == 20) {
-                temp = GetRandomNumber(37, 40);
-                AudioVisual.actualiza_text(textTemperatura,temp);
-                AudioVisual.actualiza_text(textRR,temp);
-                AudioVisual.actualiza_text(textSpO2,temp);
-                AudioVisual.actualiza_text(textDiastolica,temp);
-                AudioVisual.actualiza_text(textSistolica,temp);
+                //temp = GetRandomNumber(37, 40);
+
+                AudioVisual.actualiza_text(textTemperatura, Data.getCurrentTemperatura());
+
+
+                AudioVisual.actualiza_text(textRR, Data.getCurrentRR());
+                
+                // recuperamos el primer valor de los 5 paquetes de SPO2 
+                if (newSPO2Data != null)
+                {
+                    AudioVisual.actualiza_text(textSpO2, newSPO2Data[0]);
+                }
+                
+                AudioVisual.actualiza_text(textDiastolica,Data.getCurrentDiastolica());
+                AudioVisual.actualiza_text(textSistolica,Data.getCurrentSistolica());
                 counter = 0;
             }
 
-            double[] newData = Data.getNewECGpackages();
-            if (newData != null)
-                AudioVisual.Draw(derivacion1, newData);
-            AudioVisual.Draw(derivacion2, data);
-            AudioVisual.Draw(derivacion3, data);
-            AudioVisual.Draw(spo2, data);
-            AudioVisual.Draw(respiracion, data);
+
+            if (newECGData != null)
+            {
+                AudioVisual.Draw(derivacion1, newECGData);
+            }
+
+            if (newSPO2Data != null)
+            {
+                AudioVisual.Draw(spo2, newSPO2Data);
+            }
+
+            if (newRESPData != null)
+            {
+                AudioVisual.Draw(respiracion, newRESPData);
+            }
+
+            // no encontramos en el protocolo de comunicacion como se pasan las otras leads
+            //AudioVisual.Draw(derivacion2, data);
+            //AudioVisual.Draw(derivacion3, data);
+
 
             counter++;
         
