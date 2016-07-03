@@ -22,7 +22,7 @@ namespace ECONOMITOR2
         public Economitor()
         {
             InitializeComponent();
-
+            
             timer1.Tick += new EventHandler(timer1_Tick);  // Everytime timer ticks, timer_Tick will be called
             timer1.Interval = (50);                     // Timer will tick evert second
             timer1.Enabled = true;                       // Enable the timer
@@ -31,6 +31,8 @@ namespace ECONOMITOR2
             s = new double[100];
             for (int j = 0; j < s.Length; j++)
                 derivacion1.Series["D1"].Points.AddY(s[j]);
+
+            Data.init();
             
         }
 
@@ -42,7 +44,12 @@ namespace ECONOMITOR2
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            Acqsign.init(textPort.Text);
+            if (!Acqsign.isPortOpen)
+                Acqsign.init(textPort.Text);
+            else
+                //Acqsign.tedoyECG();
+
+                ;
 
         }
 
@@ -55,6 +62,8 @@ namespace ECONOMITOR2
 
             //derivacion1.Series["D1"].Points.ElementAt(index).SetValueY(s[index]);
             //derivacion1.Refresh();
+            
+
             tiempo = tiempo + 0.05;
             //index++;
 
