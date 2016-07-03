@@ -32,6 +32,7 @@ namespace ECONOMITOR2
 
             s = 0;
 
+            data = new double[100];
             for (int j = 0; j < data.Length; j++)
                 data[j] = s;
                 s = s + 0.1;
@@ -75,7 +76,7 @@ namespace ECONOMITOR2
                 counter = 0;
             }
 
-            AudioVisual.Draw(derivacion1, data);
+            AudioVisual.Draw(derivacion1, Data.getNewECGpackages());
             AudioVisual.Draw(derivacion2, data);
             AudioVisual.Draw(derivacion3, data);
             AudioVisual.Draw(spo2, data);
