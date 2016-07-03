@@ -25,6 +25,7 @@ namespace ECONOMITOR2
         private static int newSPO2packages = 0;
 
 
+<<<<<<< HEAD
         private static double Temperatura;
         private static double RR;
         private static double Diastolica;
@@ -33,13 +34,41 @@ namespace ECONOMITOR2
         private static double [] ECG;
         private static double[] SPO2;
         private static double[] RESP;
+=======
+        private static int Temperatura;
+        // Parametros del ECG
+        private static int ECG_Status;
+        private static int HeartRate;
+        private static int RespRate;
+        private static int ST_Level;
+        // Parametros del SPO2
+        private static int SPO2_Status;
+        private static int Spo2Sat;
+        private static int PulseRate;
+        // Señales para plotear
+        private static int[] ECG;
+        private static int[] SPO2;
+        private static int[] RESP;
+>>>>>>> origin/master
         
         public static void updateTemperatura(int Temperatura)
         {
             Data.Temperatura = Temperatura;
-
         }
-
+        public static void updateECGparams(int ECG_Status, int HeartRate, int RespRate, int ST_Level)
+        {
+            // No recibe el arritmia code porque no esta disponible en esta version
+            Data.ECG_Status = ECG_Status;
+            Data.HeartRate = HeartRate;
+            Data.RespRate = RespRate;
+            Data.ST_Level = ST_Level;
+        }
+        public static void updateSPO2params(int SPO2_Status, int Spo2Sat, int PulseRate)
+        {
+            Data.SPO2_Status = SPO2_Status;
+            Data.Spo2Sat = Spo2Sat;
+            Data.PulseRate = PulseRate;
+        }
 
         public static void updateECG(int[] newData)
         {
