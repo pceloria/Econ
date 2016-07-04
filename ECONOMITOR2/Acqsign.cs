@@ -76,8 +76,8 @@ namespace ECONOMITOR2
         static int[] NIBP_PARAMdat = new int[TIME * NIBP_PARAMfreq];
         static int[] SPO2_PARAMdat = new int[TIME * SPO2_PARAMfreq];
         static int[] TEMPdat = new int[TIME * TEMPfreq];
-        static int[] SPO2_WAVEdat = new int[(int)(TIMEpackage * SPO2_WAVEfreq)];
-        static int[] RESP_WAVEdat = new int[(int)(TIMEpackage * RESP_WAVEfreq)];
+        static double[] SPO2_WAVEdat = new double[(int)(TIMEpackage * SPO2_WAVEfreq)];
+        static double[] RESP_WAVEdat = new double[(int)(TIMEpackage * RESP_WAVEfreq)];
 
         static int indexECG = 0;
         static int indexSPO2 = 0;
@@ -105,6 +105,9 @@ namespace ECONOMITOR2
                     port.Open();
                     isPortOpen = true;
                     port.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(DataRecievedHandler);
+
+                    //enableSPO2();
+                    //enableRESP();
                     return true;
                 }
                 catch (Exception ex)
@@ -171,7 +174,7 @@ namespace ECONOMITOR2
                     {                //verifica segundo
                         bytesRead++;
                         package_length = port.ReadByte();
-                        int[] data = new int[package_length];
+                        int[] data = new int[package_length-3];
                         bytesRead++;
                         int tiposenal = port.ReadByte();
 
@@ -182,9 +185,9 @@ namespace ECONOMITOR2
 
                         bytesRead++;
                         checksum = port.ReadByte();
-                        int sum = 255 - (package_length + tiposenal + data.Sum());
-                        if (sum > 255)
-                            MessageBox.Show("Placa al limite, Evacue las inmediaciones! Peligro de explosion!", "PELIGRO");
+                        int sum = (255 - (package_length + tiposenal + data.Sum()));
+                        if (sum < 0)
+                            sum = 256 + sum;
                         if (checksum == sum)
                         {
                             switch (tiposenal)
@@ -276,6 +279,38 @@ namespace ECONOMITOR2
             return 0;
         }
 
+        public static void enableSPO2()
+        {
+            if (isPortOpen)
+            {
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
+                buffer[3] = 0xFE;
+                // Adult (default)
+                buffer[4] = 0x01;
+                buffer[5] = 0xFC;
+
+                port.Write(buffer, 0, 6);
+            }
+        }
+        public static void enableRESP()
+        {
+            if (isPortOpen)
+            {
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
+                buffer[3] = 0xFF;
+                // Adult (default)
+                buffer[4] = 0x01;
+                buffer[5] = 0xFB;
+
+                port.Write(buffer, 0, 6);
+            }
+        }
         // patientMode es 1 o 2 o 3 (Adult, Child, Neonate, respectivamente)
         public static void sendNewPatientMode(int patientMode)
         {

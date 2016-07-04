@@ -12,8 +12,8 @@ namespace ECONOMITOR2
         {
             // inicializo los vectores a graficar
             ECG = new double[5000];
-            SPO2 = new int[1000];
-            RESP = new int[1000];
+            SPO2 = new double[1000];
+            RESP = new double[1000];
 
             HeartRate = 80;
             RespRate = 60;
@@ -53,8 +53,8 @@ namespace ECONOMITOR2
         private static int Dia_Pressure;
         // Señales para plotear
         private static double[] ECG;
-        private static int[] SPO2;
-        private static int[] RESP;
+        private static double[] SPO2;
+        private static double[] RESP;
 
         // Guardado de variables lentas luego de la adquisicion
         public static void updateTemperatura(int Temperatura)
@@ -100,7 +100,7 @@ namespace ECONOMITOR2
 
             newECGpackages++;
         }
-        public static void updateRESP(int[] newData)
+        public static void updateRESP(double[] newData)
         {
             // hacer un for a partir del indice j (guardar ese dato) y actualizar con newData
             // Data.ECG[lastPositionInECGArray: (lastPositionInECGArray + newData.Length)] = newData;
@@ -116,7 +116,7 @@ namespace ECONOMITOR2
 
             newRESPpackages++;
         }
-        public static void updateSPO2(int[] newData)
+        public static void updateSPO2(double[] newData)
         {
             // hacer un for a partir del indice j (guardar ese dato) y actualizar con newData
             // Data.ECG[lastPositionInECGArray: (lastPositionInECGArray + newData.Length)] = newData;

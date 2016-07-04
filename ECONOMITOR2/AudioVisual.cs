@@ -14,14 +14,12 @@ namespace ECONOMITOR2
         public static void Draw(System.Windows.Forms.DataVisualization.Charting.Chart chart, double[] data) {
 
 
-            for (int j = 0; j < data.Length; j++) 
-                chart.Series["Series1"].Points.AddY(data[j]);
-
-            chart.Update();
-
             for (int j = 0; j < data.Length; j++)
+            {
+                chart.Series["Series1"].Points.AddY(data[j]);
                 chart.Series["Series1"].Points.RemoveAt(0);
-                
+            }
+            chart.ResetAutoValues();
         }
 
         public static void init_Draw(System.Windows.Forms.DataVisualization.Charting.Chart chart) {
