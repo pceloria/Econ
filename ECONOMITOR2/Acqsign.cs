@@ -299,7 +299,12 @@ namespace ECONOMITOR2
                                     break;
 
                                 case NIBP_PARAM:
-
+                                    NIBP_Status = data[0];
+                                    Cuff_Pressure = data[1];
+                                    Sys_Pressure = data[2];
+                                    Mean_Pressure = data[3];
+                                    Dia_Pressure = data[4];
+                                    Data.updateNIBPparams(NIBP_Status, Cuff_Pressure, Sys_Pressure, Mean_Pressure, Dia_Pressure);
                                     break;
 
                                 case SPO2_PARAM:

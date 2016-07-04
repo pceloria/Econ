@@ -45,6 +45,12 @@ namespace ECONOMITOR2
         private static int SPO2_Status;
         private static int Spo2Sat;
         private static int PulseRate;
+        // Parametros del NIBP
+        private static int NIBP_Status;
+        private static int Cuff_Pressure;
+        private static int Sys_Pressure;
+        private static int Mean_Pressure;
+        private static int Dia_Pressure;
         // Señales para plotear
         private static int[] ECG;
         private static int[] SPO2;
@@ -68,6 +74,14 @@ namespace ECONOMITOR2
             Data.SPO2_Status = SPO2_Status;
             Data.Spo2Sat = Spo2Sat;
             Data.PulseRate = PulseRate;
+        }
+        public static void updateNIBPparams(int NIBP_Status, int Cuff_Pressure, int Sys_Pressure, int Mean_Pressure, int Dia_Pressure)
+        {
+            Data.NIBP_Status = NIBP_Status;
+            Data.Cuff_Pressure = Cuff_Pressure;
+            Data.Sys_Pressure = Sys_Pressure;
+            Data.Mean_Pressure = Mean_Pressure;
+            Data.Dia_Pressure = Dia_Pressure;
         }
 
         public static void updateECG(int[] newData)
