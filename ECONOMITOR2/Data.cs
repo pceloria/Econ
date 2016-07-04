@@ -138,70 +138,38 @@ namespace ECONOMITOR2
         {
             return Temperatura;
         }
-<<<<<<< HEAD
-        public static double getCurrentRespRate()
-        {
-            return RespRate;
-        }
-        public static double getCurrentHeartRate()
-        {
-            return HeartRate;
-        }
-        public static double getCurrentDiastolica()
-        {
-            return Dia_Pressure;
-        }
-        public static double getCurrentSistolica()
-        {
-            return Sys_Pressure;
-        }
-        public static double getCurrentMedia()
-        {
-            return Mean_Pressure;
-        }
-        public static double getCurrentSpo2Sat()
-=======
-
         public static int getCurrentRespRate()
         {
             return RespRate;
         }
-
         public static int getCurrentHeartRate()
         {
             return HeartRate;
         }
-
         public static int getCurrentDiastolica()
         {
             return Dia_Pressure;
         }
-
         public static int getCurrentSistolica()
         {
             return Sys_Pressure;
         }
-
         public static int getCurrentMedia()
         {
             return Mean_Pressure;
         }
 
         public static int getCurrentSpo2Sat()
->>>>>>> origin/master
+
         {
             return Spo2Sat;
         }
-
-<<<<<<< HEAD
-=======
         public static int getCurrentMean_Pressure()
         {
             return Mean_Pressure;
         }
 
 
->>>>>>> origin/master
         // metodos para devolver paquetes sin leer de variables rapidas doubles[] 
         public static double[] getNewECGpackages()
         {
