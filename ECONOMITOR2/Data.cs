@@ -47,7 +47,7 @@ namespace ECONOMITOR2
         private static int[] SPO2;
         private static int[] RESP;
 
-        
+        // Guardado de variables lentas luego de la adquisicion
         public static void updateTemperatura(int Temperatura)
         {
             Data.Temperatura = Temperatura;
@@ -74,7 +74,7 @@ namespace ECONOMITOR2
             Data.Mean_Pressure = Mean_Pressure;
             Data.Dia_Pressure = Dia_Pressure;
         }
-
+        // Guardado de variables rapidas luego de la adquisicion
         public static void updateECG(int[] newData)
         {
             // hacer un for a partir del indice j (guardar ese dato) y actualizar con newData
@@ -129,37 +129,30 @@ namespace ECONOMITOR2
         {
             return Temperatura;
         }
-
         public static double getCurrentRespRate()
         {
             return RespRate;
         }
-
         public static double getCurrentHeartRate()
         {
             return HeartRate;
         }
-
         public static double getCurrentDiastolica()
         {
             return Dia_Pressure;
         }
-
         public static double getCurrentSistolica()
         {
             return Sys_Pressure;
         }
-
         public static double getCurrentMedia()
         {
             return Mean_Pressure;
         }
-
         public static double getCurrentSpo2Sat()
         {
             return Spo2Sat;
         }
-
 
         // metodos para devolver paquetes sin leer de variables rapidas doubles[] 
         public static double[] getNewECGpackages()
@@ -180,7 +173,6 @@ namespace ECONOMITOR2
                 return newECGdata;
             }
         }
-
         public static double[] getNewRESPpackages()
         {
             if (newRESPpackages == 0)
@@ -199,7 +191,6 @@ namespace ECONOMITOR2
                 return newRESPdata;
             }
         }
-
         public static double[] getNewSPO2packages()
         {
             if (newSPO2packages == 0)

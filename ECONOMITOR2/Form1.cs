@@ -14,7 +14,6 @@ namespace ECONOMITOR2
 {
     public partial class Economitor : Form
     {
-        private SerialPort myport;
         private double[] data;
         private int counter;
 
@@ -27,11 +26,6 @@ namespace ECONOMITOR2
         {
             InitializeComponent();
             
-            timer1.Tick += new EventHandler(timer1_Tick);  // Everytime timer ticks, timer_Tick will be called
-            timer1.Interval = (50);                     // Timer will tick evert second
-            timer1.Enabled = true;                       // Enable the timer
-            timer1.Start();                              // Start the timer
-
             // para probar graifcar rampas
             //s = 0;
 
@@ -58,9 +52,20 @@ namespace ECONOMITOR2
         private void buttonStart_Click(object sender, EventArgs e)
         {
             if (!Acqsign.isPortOpen)
-                Acqsign.init(textPort.Text);
+            {
+                if (Acqsign.init(textPort.Text))
+                {
+                    // Se inicia el timer si se logro abrir el puerto
+                    timer1.Tick += new EventHandler(timer1_Tick);  // Everytime timer ticks, timer_Tick will be called
+                    timer1.Interval = (50);                     // Timer will tick evert second
+                    timer1.Enabled = true;                       // Enable the timer
+                    timer1.Start();                              // Start the timer
+                }
 
+            }
+                
         }
+        
         public double GetRandomNumber(double minimum, double maximum)
         {
             Random random = new Random();

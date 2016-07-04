@@ -12,7 +12,6 @@ using System.Diagnostics;
 
 namespace ECONOMITOR2
 {
-
     public class Acqsign
     {
 
@@ -84,14 +83,13 @@ namespace ECONOMITOR2
         static int indexSPO2 = 0;
         static int indexRESP = 0;
 
-        static bool flagPaquete = false;
         public static bool isPortOpen = false;
-        static int package_length;
         static bool reading = false;
         private static SerialPort port;
 
         // Incia la comunicación con el puerto serie que se elige 
-        public static void init(String portName)
+        // Si se logra abrir el puerto devuelve true. Si hubo algun problema devuelve false
+        public static bool init(String portName)
         {
             if (portName != null && !portName.Equals(""))
             {
@@ -102,27 +100,24 @@ namespace ECONOMITOR2
                 port.DataBits = 8;
                 port.StopBits = StopBits.One;
                 
-
                 try
                 {
                     port.Open();
                     isPortOpen = true;
                     port.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(DataRecievedHandler);
-
-                    //string indata = port.ReadExisting();
-                    //Console.WriteLine("Data Received");
-                    //Console.Write(indata);
+                    return true;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Error");
+                    return false;
                 }
             }
             else
             {
                 MessageBox.Show("Se debe asignar el nombre del puerto que se desea leer", "Error");
             }
-
+            return false;
         }
 
         //Cierra la comunicación con el puerto serie
@@ -139,7 +134,6 @@ namespace ECONOMITOR2
                 }
         }
 
-
         private static void DataRecievedHandler(object sender, SerialDataReceivedEventArgs e)
         {
 
@@ -150,97 +144,15 @@ namespace ECONOMITOR2
             int byteCount = sp.BytesToRead;
             if (!reading)
                 armarPaquetes(byteCount);
+                if (byteCount > 5000)
+                    MessageBox.Show("Procesamiento lento. Se acumularon " + byteCount + " bytes en el buffer", "Warning");
             else
             {
-                Console.WriteLine("Procesando paquetes. Bytes acumulados = " + byteCount);
+                if (byteCount > 500)
+                    Console.WriteLine("Procesando paquetes. Bytes acumulados = " + byteCount);
             }
             
         }
-
-
-        //// Funcion para identificar entrada -> 55 aa
-        //private static bool initpaquete()
-        //{
-        //    if (port.ReadByte() == 85)
-        //    {
-        //        if (port.ReadByte() == 170)
-        //        {
-        //            flagPaquete = true;
-        //        }
-        //        else
-        //        {
-        //            flagPaquete = false;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        flagPaquete = false;
-        //    }
-        //    return flagPaquete;
-        //}
-
-
-        //// Funcion para identificar tipo de paquete -> devuelve byte de tipo
-
-        //private static int tipopaquete()
-        //{
-        //    package_length = port.ReadByte();
-        //    return package_length;
-        //}
-
-
-
-        //// Para devolver valores(tipo) -> switch
-
-        //static int ECG_WAVEindex = 0;
-
-        //private static void armarpaquete()
-        //{
-
-
-        //    while (initpaquete())
-        //    {
-
-        //        int tiposenal = tipopaquete();
-
-        //        switch (tiposenal)
-        //        {
-        //            case ECG_WAVE:
-
-        //                ECG_WAVEdat[ECG_WAVEindex] = port.ReadByte();
-        //                ECG_WAVEindex++;
-
-        //                if (ECG_WAVEindex > 250)
-        //                {
-        //                    ECG_WAVEindex = 0;
-        //                }
-
-        //                break;
-
-
-        //            case ECG_PARAM:
-        //                break;
-        //            case NIBP_PARAM:
-        //                break;
-        //            case SPO2_PARAM:
-        //                break;
-        //            case TEMP:
-        //                break;
-
-        //            case SOFT_VERSION:
-
-        //                break;
-        //            case HARD_VERSION:
-        //                break;
-        //            case SPO2_WAVE:
-        //                break;
-        //            case RESP_WAVE:
-        //                break;
-
-        //        }
-        //    }
-
-        //}
 
         private static int armarPaquetes(int BytesToRead)
         {
@@ -273,6 +185,8 @@ namespace ECONOMITOR2
                         bytesRead++;
                         checksum = port.ReadByte();
                         int sum = 255 - (package_length + tiposenal + data.Sum());
+                        if (sum > 255)
+                            MessageBox.Show("Placa al limite, Evacue las inmediaciones! Peligro de explosion!", "PELIGRO");
                         if (checksum == sum)
                         {
                             switch (tiposenal)
@@ -364,31 +278,37 @@ namespace ECONOMITOR2
             return 0;
         }
 
+        // patientMode es 1 o 2 o 3 (Adult, Child, Neonate, respectivamente)
+        public static void sendNewPatientMode(int patientMode)
+        {
+            if (isPortOpen)
+            {
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
+                buffer[3] = 0x09;
+                switch (patientMode)
+                {
+                    case 1:
+                        // Adult (default)
+                        buffer[4] = 0x01;
+                        buffer[5] = 0xF1;
+                        break;
+                    case 2:
+                        // Child
+                        buffer[4] = 0x02;
+                        buffer[5] = 0xF2;
+                        break;
+                    case 3:
+                        // Neonate
+                        buffer[4] = 0x03;
+                        buffer[5] = 0xF3;
+                        break;
+                }
+
+                port.Write(buffer, 0, 6);
+            }
+        }
     }
 }
-
-
-
-//    port.ReadByte()
-
-//    private static void aq(){
-
-//        if (){
-
-//        switch(varAd){
-//            case 1:
-//                data.updatetemperatura(100);
-//                break;
-//            case 2:
-//                addecgdata(valor);
-//                if (full)
-//                    data.updateecg();
-//                break;
-//            default:
-//                break;
-
-
-//        }
-//    }
-//}
-
