@@ -13,15 +13,15 @@ namespace ECONOMITOR2
     {
 
             // inicializo los vectores a graficar
-            private static double low_temperatura = 36;
-            private static double high_temperatura = 39;
-            private static int low_HR = 50;
+            private static double low_temperatura = 0;
+            private static double high_temperatura = 100;
+            private static int low_HR = 0;
             private static int high_HR = 200;
-            private static int low_RR = 30;
-            private static int high_RR = 90;
-            private static int low_Spo2 = 95;
-            private static int low_NIBP = 70;
-            private static int high_NIBP = 140;
+            private static int low_RR = 00;
+            private static int high_RR = 200;
+            private static int low_Spo2 = 0;
+            private static int low_NIBP = 00;
+            private static int high_NIBP = 200;
             public static Boolean flag_alarma = true;
             private static System.Media.SoundPlayer player = new System.Media.SoundPlayer();
             public static Stream audio_HR = Properties.Resources.audio_HR;
