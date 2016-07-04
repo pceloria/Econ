@@ -41,8 +41,8 @@ namespace ECONOMITOR2
             //s = s + 0.1;
 
             AudioVisual.init_Draw(derivacion1);
-            AudioVisual.init_Draw(derivacion2);
-            AudioVisual.init_Draw(derivacion3);
+            //AudioVisual.init_Draw(derivacion2);
+            //AudioVisual.init_Draw(derivacion3);
             AudioVisual.init_Draw(spo2);
             AudioVisual.init_Draw(respiracion);
             Data.init();
