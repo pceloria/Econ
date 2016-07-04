@@ -25,7 +25,7 @@ namespace ECONOMITOR2
         const int SPO2_WAVE = 254;
         const int RESP_WAVE = 255;
 
-        private static int ECG_Wave_Amplitud;
+        private static double ECG_Wave_Amplitud;
 
         private static int ECG_Status;
         private static int HeartRate;
@@ -71,7 +71,7 @@ namespace ECONOMITOR2
         const int TIME = 1;
         const double TIMEpackage = 0.1;
 
-        static int[] ECG_WAVEdat = new int[(int)(TIMEpackage * ECG_WAVEfreq)];
+        static double[] ECG_WAVEdat = new double[(int)(TIMEpackage * ECG_WAVEfreq)];
         static int[] ECG_PARAMdat = new int[TIME * ECG_PARAMfreq];
         static int[] NIBP_PARAMdat = new int[TIME * NIBP_PARAMfreq];
         static int[] SPO2_PARAMdat = new int[TIME * SPO2_PARAMfreq];
@@ -158,8 +158,6 @@ namespace ECONOMITOR2
         {
             int package_length;
             int checksum;
-
- 
             reading = true;
             int bytesRead = 0;
 
@@ -192,7 +190,7 @@ namespace ECONOMITOR2
                             switch (tiposenal)
                             {
                                 case ECG_WAVE:
-                                    ECG_Wave_Amplitud = data[0];
+                                    ECG_Wave_Amplitud = (data[0]-127.0)*5.0/127;
                                     ECG_WAVEdat[indexECG] = ECG_Wave_Amplitud;
                                     indexECG++;
                                     if (indexECG == ECG_WAVEdat.LongLength)

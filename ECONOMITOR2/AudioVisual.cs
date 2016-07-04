@@ -27,7 +27,7 @@ namespace ECONOMITOR2
         public static void init_Draw(System.Windows.Forms.DataVisualization.Charting.Chart chart) {
 
 
-            s = new double[250];
+            s = new double[1000];
 
             for (int j = 0; j < s.Length; j++)
   
