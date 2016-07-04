@@ -95,6 +95,8 @@
             this.textPort = new System.Windows.Forms.TextBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label10 = new System.Windows.Forms.Label();
+            this.textHeartRate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.derivacion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.derivacion2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.derivacion3)).BeginInit();
@@ -111,11 +113,13 @@
             // 
             // derivacion1
             // 
+            this.derivacion1.BorderSkin.BackSecondaryColor = System.Drawing.Color.Yellow;
+            this.derivacion1.BorderSkin.PageColor = System.Drawing.Color.DarkGray;
             chartArea1.Name = "ChartArea1";
             this.derivacion1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.derivacion1.Legends.Add(legend1);
-            this.derivacion1.Location = new System.Drawing.Point(1, 27);
+            this.derivacion1.Location = new System.Drawing.Point(1, 90);
             this.derivacion1.Name = "derivacion1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -133,7 +137,7 @@
             this.derivacion2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.derivacion2.Legends.Add(legend2);
-            this.derivacion2.Location = new System.Drawing.Point(1, 103);
+            this.derivacion2.Location = new System.Drawing.Point(1, 171);
             this.derivacion2.Name = "derivacion2";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -150,7 +154,7 @@
             this.derivacion3.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.derivacion3.Legends.Add(legend3);
-            this.derivacion3.Location = new System.Drawing.Point(1, 184);
+            this.derivacion3.Location = new System.Drawing.Point(1, 259);
             this.derivacion3.Name = "derivacion3";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -167,7 +171,7 @@
             this.respiracion.ChartAreas.Add(chartArea4);
             legend4.Name = "Legend1";
             this.respiracion.Legends.Add(legend4);
-            this.respiracion.Location = new System.Drawing.Point(1, 267);
+            this.respiracion.Location = new System.Drawing.Point(1, 347);
             this.respiracion.Name = "respiracion";
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -184,7 +188,7 @@
             this.spo2.ChartAreas.Add(chartArea5);
             legend5.Name = "Legend1";
             this.spo2.Legends.Add(legend5);
-            this.spo2.Location = new System.Drawing.Point(1, 349);
+            this.spo2.Location = new System.Drawing.Point(1, 432);
             this.spo2.Name = "spo2";
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -198,7 +202,7 @@
             // labelTemperatura
             // 
             this.labelTemperatura.AutoSize = true;
-            this.labelTemperatura.Location = new System.Drawing.Point(3, 4);
+            this.labelTemperatura.Location = new System.Drawing.Point(12, 50);
             this.labelTemperatura.Name = "labelTemperatura";
             this.labelTemperatura.Size = new System.Drawing.Size(37, 13);
             this.labelTemperatura.TabIndex = 6;
@@ -207,7 +211,7 @@
             // 
             // textTemperatura
             // 
-            this.textTemperatura.Location = new System.Drawing.Point(43, 1);
+            this.textTemperatura.Location = new System.Drawing.Point(50, 46);
             this.textTemperatura.Name = "textTemperatura";
             this.textTemperatura.Size = new System.Drawing.Size(46, 20);
             this.textTemperatura.TabIndex = 7;
@@ -216,7 +220,7 @@
             // labelRR
             // 
             this.labelRR.AutoSize = true;
-            this.labelRR.Location = new System.Drawing.Point(98, 4);
+            this.labelRR.Location = new System.Drawing.Point(23, 14);
             this.labelRR.Name = "labelRR";
             this.labelRR.Size = new System.Drawing.Size(23, 13);
             this.labelRR.TabIndex = 8;
@@ -226,7 +230,7 @@
             // labelSpO2
             // 
             this.labelSpO2.AutoSize = true;
-            this.labelSpO2.Location = new System.Drawing.Point(179, 4);
+            this.labelSpO2.Location = new System.Drawing.Point(157, 50);
             this.labelSpO2.Name = "labelSpO2";
             this.labelSpO2.Size = new System.Drawing.Size(34, 13);
             this.labelSpO2.TabIndex = 9;
@@ -235,7 +239,7 @@
             // 
             // textRR
             // 
-            this.textRR.Location = new System.Drawing.Point(125, 1);
+            this.textRR.Location = new System.Drawing.Point(49, 11);
             this.textRR.Name = "textRR";
             this.textRR.Size = new System.Drawing.Size(46, 20);
             this.textRR.TabIndex = 10;
@@ -243,16 +247,16 @@
             // 
             // textSpO2
             // 
-            this.textSpO2.Location = new System.Drawing.Point(217, 1);
+            this.textSpO2.Location = new System.Drawing.Point(197, 47);
             this.textSpO2.Name = "textSpO2";
-            this.textSpO2.Size = new System.Drawing.Size(46, 20);
+            this.textSpO2.Size = new System.Drawing.Size(51, 20);
             this.textSpO2.TabIndex = 11;
             this.textSpO2.Tag = "textSpO2";
             // 
             // labelSistolica
             // 
             this.labelSistolica.AutoSize = true;
-            this.labelSistolica.Location = new System.Drawing.Point(271, 4);
+            this.labelSistolica.Location = new System.Drawing.Point(318, 49);
             this.labelSistolica.Name = "labelSistolica";
             this.labelSistolica.Size = new System.Drawing.Size(28, 13);
             this.labelSistolica.TabIndex = 12;
@@ -261,16 +265,16 @@
             // 
             // textSistolica
             // 
-            this.textSistolica.Location = new System.Drawing.Point(303, 1);
+            this.textSistolica.Location = new System.Drawing.Point(350, 47);
             this.textSistolica.Name = "textSistolica";
-            this.textSistolica.Size = new System.Drawing.Size(49, 20);
+            this.textSistolica.Size = new System.Drawing.Size(51, 20);
             this.textSistolica.TabIndex = 13;
             this.textSistolica.Tag = "textSistolica";
             // 
             // labelDiastolica
             // 
             this.labelDiastolica.AutoSize = true;
-            this.labelDiastolica.Location = new System.Drawing.Point(360, 4);
+            this.labelDiastolica.Location = new System.Drawing.Point(323, 14);
             this.labelDiastolica.Name = "labelDiastolica";
             this.labelDiastolica.Size = new System.Drawing.Size(25, 13);
             this.labelDiastolica.TabIndex = 14;
@@ -279,7 +283,7 @@
             // 
             // textDiastolica
             // 
-            this.textDiastolica.Location = new System.Drawing.Point(389, 1);
+            this.textDiastolica.Location = new System.Drawing.Point(350, 12);
             this.textDiastolica.Name = "textDiastolica";
             this.textDiastolica.Size = new System.Drawing.Size(51, 20);
             this.textDiastolica.TabIndex = 15;
@@ -569,7 +573,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(556, 4);
+            this.buttonStart.Location = new System.Drawing.Point(457, 46);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(74, 23);
             this.buttonStart.TabIndex = 17;
@@ -581,7 +585,7 @@
             // buttonShutdown
             // 
             this.buttonShutdown.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonShutdown.Location = new System.Drawing.Point(643, 4);
+            this.buttonShutdown.Location = new System.Drawing.Point(607, 4);
             this.buttonShutdown.Name = "buttonShutdown";
             this.buttonShutdown.Size = new System.Drawing.Size(75, 23);
             this.buttonShutdown.TabIndex = 18;
@@ -604,7 +608,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(454, 4);
+            this.label9.Location = new System.Drawing.Point(443, 14);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 20;
@@ -613,11 +617,29 @@
             // 
             // textPort
             // 
-            this.textPort.Location = new System.Drawing.Point(491, 1);
+            this.textPort.Location = new System.Drawing.Point(486, 11);
             this.textPort.Name = "textPort";
             this.textPort.Size = new System.Drawing.Size(51, 20);
             this.textPort.TabIndex = 21;
             this.textPort.Tag = "textPort";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(163, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(23, 13);
+            this.label10.TabIndex = 22;
+            this.label10.Tag = "labelDiastolica";
+            this.label10.Text = "HR";
+            // 
+            // textHeartRate
+            // 
+            this.textHeartRate.Location = new System.Drawing.Point(197, 12);
+            this.textHeartRate.Name = "textHeartRate";
+            this.textHeartRate.Size = new System.Drawing.Size(51, 20);
+            this.textHeartRate.TabIndex = 23;
+            this.textHeartRate.Tag = "";
             // 
             // Economitor
             // 
@@ -627,6 +649,8 @@
             this.CancelButton = this.buttonShutdown;
             this.ClientSize = new System.Drawing.Size(733, 523);
             this.ControlBox = false;
+            this.Controls.Add(this.textHeartRate);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.textPort);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.buttonSilenciar);
@@ -730,6 +754,8 @@
         private System.Windows.Forms.TextBox textHRbajo;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textHeartRate;
     }
 }
 

@@ -17,7 +17,7 @@ namespace ECONOMITOR2
         private SerialPort myport;
         private double[] data;
         private int counter;
-        
+
         //para probar graficar rampas
         //private double s;
         //private double temp;
@@ -38,7 +38,7 @@ namespace ECONOMITOR2
             //data = new double[100];
             //for (int j = 0; j < data.Length; j++)
             //    data[j] = s;
-            //    s = s + 0.1;
+            //s = s + 0.1;
 
             AudioVisual.init_Draw(derivacion1);
             AudioVisual.init_Draw(derivacion2);
@@ -77,21 +77,16 @@ namespace ECONOMITOR2
                 //temp = GetRandomNumber(37, 40);
 
                 AudioVisual.actualiza_text(textTemperatura, Data.getCurrentTemperatura());
-
-
-                AudioVisual.actualiza_text(textRR, Data.getCurrentRR());
-                
-                // recuperamos el primer valor de los 5 paquetes de SPO2 
-                if (newSPO2Data != null)
-                {
-                    AudioVisual.actualiza_text(textSpO2, newSPO2Data[0]);
-                }
-                
-                AudioVisual.actualiza_text(textDiastolica,Data.getCurrentDiastolica());
-                AudioVisual.actualiza_text(textSistolica,Data.getCurrentSistolica());
+                AudioVisual.actualiza_text(textRR, Data.getCurrentRespRate());
+                AudioVisual.actualiza_text(textRR, Data.getCurrentHeartRate());
+                AudioVisual.actualiza_text(textRR, Data.getCurrentSpo2Sat());
+                //AudioVisual.actualiza_text(textDiastolica,Data.getCurrentDiastolica());
+                //AudioVisual.actualiza_text(textSistolica,Data.getCurrentSistolica());
                 counter = 0;
             }
-
+            
+            //para probar graficar
+            //AudioVisual.Draw(derivacion1, data);
 
             if (newECGData != null)
             {

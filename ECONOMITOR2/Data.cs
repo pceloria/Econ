@@ -11,9 +11,9 @@ namespace ECONOMITOR2
         public static void init()
         {
             // inicializo los vectores a graficar
-            ECG = new double[5000];
-            SPO2 = new double[1000];
-            RESP = new double[1000];
+            ECG = new int[5000];
+            SPO2 = new int[1000];
+            RESP = new int[1000];
         }
 
         // declaro e inicializo variables privadas de clase
@@ -25,17 +25,8 @@ namespace ECONOMITOR2
         private static int newSPO2packages = 0;
 
 
-<<<<<<< HEAD
+        // Parametro de Temperatura
         private static double Temperatura;
-        private static double RR;
-        private static double Diastolica;
-        private static double Sistolica;
-        private static double SPo2;
-        private static double [] ECG;
-        private static double[] SPO2;
-        private static double[] RESP;
-=======
-        private static int Temperatura;
         // Parametros del ECG
         private static int ECG_Status;
         private static int HeartRate;
@@ -55,7 +46,7 @@ namespace ECONOMITOR2
         private static int[] ECG;
         private static int[] SPO2;
         private static int[] RESP;
->>>>>>> origin/master
+
         
         public static void updateTemperatura(int Temperatura)
         {
@@ -139,19 +130,29 @@ namespace ECONOMITOR2
             return Temperatura;
         }
 
-        public static double getCurrentRR()
+        public static double getCurrentRespRate()
         {
-            return RR;
+            return RespRate;
         }
 
-        public static double getCurrentDiastolica()
+        public static double getCurrentHeartRate()
         {
-            return Diastolica;
+            return HeartRate;
         }
 
-        public static double getCurrentSistolica()
+        //public static double getCurrentDiastolica()
+        //{
+        //    return Diastolica;
+        //}
+
+        //public static double getCurrentSistolica()
+        //{
+        //    return Sistolica;
+        //}
+
+        public static double getCurrentSpo2Sat()
         {
-            return Sistolica;
+            return Spo2Sat;
         }
 
 
