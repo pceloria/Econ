@@ -14,6 +14,15 @@ namespace ECONOMITOR2
             ECG = new int[5000];
             SPO2 = new int[1000];
             RESP = new int[1000];
+
+            HeartRate = 80;
+            RespRate = 60;
+            Spo2Sat = 99;
+            Temperatura = 37;
+            Sys_Pressure = 110;
+            Dia_Pressure = 90;
+            Mean_Pressure = 100;
+            
         }
 
         // declaro e inicializo variables privadas de clase
@@ -130,34 +139,39 @@ namespace ECONOMITOR2
             return Temperatura;
         }
 
-        public static double getCurrentRespRate()
+        public static int getCurrentRespRate()
         {
             return RespRate;
         }
 
-        public static double getCurrentHeartRate()
+        public static int getCurrentHeartRate()
         {
             return HeartRate;
         }
 
-        public static double getCurrentDiastolica()
+        public static int getCurrentDiastolica()
         {
             return Dia_Pressure;
         }
 
-        public static double getCurrentSistolica()
+        public static int getCurrentSistolica()
         {
             return Sys_Pressure;
         }
 
-        public static double getCurrentMedia()
+        public static int getCurrentMedia()
         {
             return Mean_Pressure;
         }
 
-        public static double getCurrentSpo2Sat()
+        public static int getCurrentSpo2Sat()
         {
             return Spo2Sat;
+        }
+
+        public static int getCurrentMean_Pressure()
+        {
+            return Mean_Pressure;
         }
 
 
