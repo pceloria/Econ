@@ -16,6 +16,14 @@ namespace ECONOMITOR2
     {
         private double[] data;
         private int counter;
+        private double currentTemperatura;
+        private int currentHR;
+        private int currentRR;
+        private int currentspo2;
+        private int currentSistolica;
+        private int currentDiastolica;
+        private int currentMean_Pressure;
+        
 
         //para probar graficar rampas
         //private double s;
@@ -78,15 +86,33 @@ namespace ECONOMITOR2
             double[] newSPO2Data = Data.getNewSPO2packages();
             double[] newRESPData = Data.getNewRESPpackages();
 
+            if (Alarmas.counter1 == 100 && Alarmas.flag_alarma == false) {
+                Alarmas.flag_alarma = true;
+                Alarmas.counter1 = 0;
+            }
+
+
             if (counter == 20) {
                 //temp = GetRandomNumber(37, 40);
+                currentHR = Data.getCurrentHeartRate();
+                currentSistolica = Data.getCurrentSistolica();
+                currentDiastolica = Data.getCurrentDiastolica();
+                currentRR = Data.getCurrentRespRate();
+                currentspo2 = Data.getCurrentSpo2Sat();
+                currentTemperatura = Data.getCurrentTemperatura();
+                currentMean_Pressure = Data.getCurrentMean_Pressure();
 
-                AudioVisual.actualiza_text(textTemperatura, Data.getCurrentTemperatura());
-                AudioVisual.actualiza_text(textRR, Data.getCurrentRespRate());
-                AudioVisual.actualiza_text(textRR, Data.getCurrentHeartRate());
-                AudioVisual.actualiza_text(textRR, Data.getCurrentSpo2Sat());
-                //AudioVisual.actualiza_text(textDiastolica,Data.getCurrentDiastolica());
-                //AudioVisual.actualiza_text(textSistolica,Data.getCurrentSistolica());
+                AudioVisual.actualiza_text(textTemperatura, currentTemperatura);
+                AudioVisual.actualiza_text(textRR, currentRR);
+                AudioVisual.actualiza_text(textHeartRate, currentHR);
+                AudioVisual.actualiza_text(textSpO2, currentspo2);
+                AudioVisual.actualiza_text(textDiastolica, currentDiastolica);
+                AudioVisual.actualiza_text(textSistolica, currentSistolica);
+                AudioVisual.actualiza_text(textMean_Pressure, currentMean_Pressure);
+
+                Alarmas.toma_de_decisiones(currentHR, currentRR, currentTemperatura, currentDiastolica,
+                    currentSistolica, currentspo2,textHRbajo,textHRalto,textRRbajo,textRRalto,textSpO2bajo,
+                    textTEMPbajo,textTEMPalto,textNIBPbajo,textNIBPalto);
                 counter = 0;
             }
             
@@ -114,12 +140,59 @@ namespace ECONOMITOR2
 
 
             counter++;
+            Alarmas.counter1++;
         
         }
 
-        void buttonSilenciar_Click(object sender, EventArgs e) { 
+        void buttonSilenciar_Click(object sender, EventArgs e) {
+        
+            Alarmas.silenciarAlarma();
         
         }
 
-     }
+        private void textHRbajo_TextChanged(object sender, EventArgs e)
+        {
+            Alarmas.set_low_HR(textHRbajo);
+        }
+
+        private void textHRalto_TextChanged(object sender, EventArgs e)
+        {
+            Alarmas.set_high_HR(textHRalto);
+        }
+
+        private void textRRbajo_TextChanged(object sender, EventArgs e)
+        {
+            Alarmas.set_low_RR(textRRbajo);
+        }
+
+        private void textRRalto_TextChanged(object sender, EventArgs e)
+        {
+            Alarmas.set_high_RR(textRRalto);
+        }
+
+        private void textSpO2bajo_TextChanged(object sender, EventArgs e)
+        {
+            Alarmas.set_low_Spo2(textSpO2bajo);
+        }
+
+        private void textNIBPbajo_TextChanged(object sender, EventArgs e)
+        {
+            Alarmas.set_low_NIBP(textNIBPbajo);
+        }
+
+        private void textNIBPalto_TextChanged(object sender, EventArgs e)
+        {
+            Alarmas.set_high_NIBP(textNIBPalto);
+        }
+
+        private void textTEMPbajo_TextChanged(object sender, EventArgs e)
+        {
+            Alarmas.set_low_temperatura(textTEMPbajo);
+        }
+
+        private void textTEMPalto_TextChanged(object sender, EventArgs e)
+        {
+            Alarmas.set_high_temperatura(textTEMPalto);
+        }
+    }
 }

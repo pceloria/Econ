@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.derivacion1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.respiracion = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.spo2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -57,11 +57,6 @@
             this.textTEMPalto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textEtCO2alto = new System.Windows.Forms.TextBox();
-            this.textEtCO2bajo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelEtCO2bajo = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textNIBPbajo = new System.Windows.Forms.TextBox();
             this.textNIBPalto = new System.Windows.Forms.TextBox();
@@ -90,13 +85,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textHeartRate = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textMean_Pressure = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.derivacion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.respiracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spo2)).BeginInit();
             this.groupAlarmas.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -107,17 +101,17 @@
             // 
             this.derivacion1.BorderSkin.BackSecondaryColor = System.Drawing.Color.Yellow;
             this.derivacion1.BorderSkin.PageColor = System.Drawing.Color.DarkGray;
-            chartArea1.Name = "ChartArea1";
-            this.derivacion1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.derivacion1.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.derivacion1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.derivacion1.Legends.Add(legend4);
             this.derivacion1.Location = new System.Drawing.Point(1, 96);
             this.derivacion1.Name = "derivacion1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.derivacion1.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.derivacion1.Series.Add(series4);
             this.derivacion1.Size = new System.Drawing.Size(536, 138);
             this.derivacion1.TabIndex = 0;
             this.derivacion1.Tag = "derivacion1";
@@ -125,34 +119,34 @@
             // 
             // respiracion
             // 
-            chartArea2.Name = "ChartArea1";
-            this.respiracion.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.respiracion.Legends.Add(legend2);
+            chartArea5.Name = "ChartArea1";
+            this.respiracion.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.respiracion.Legends.Add(legend5);
             this.respiracion.Location = new System.Drawing.Point(1, 239);
             this.respiracion.Name = "respiracion";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.respiracion.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.respiracion.Series.Add(series5);
             this.respiracion.Size = new System.Drawing.Size(536, 138);
             this.respiracion.TabIndex = 3;
             this.respiracion.Text = "chart4";
             // 
             // spo2
             // 
-            chartArea3.Name = "ChartArea1";
-            this.spo2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.spo2.Legends.Add(legend3);
+            chartArea6.Name = "ChartArea1";
+            this.spo2.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.spo2.Legends.Add(legend6);
             this.spo2.Location = new System.Drawing.Point(1, 382);
             this.spo2.Name = "spo2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.spo2.Series.Add(series3);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.spo2.Series.Add(series6);
             this.spo2.Size = new System.Drawing.Size(536, 138);
             this.spo2.TabIndex = 4;
             this.spo2.Text = "chart5";
@@ -250,12 +244,12 @@
             // groupAlarmas
             // 
             this.groupAlarmas.Controls.Add(this.groupBox5);
-            this.groupAlarmas.Controls.Add(this.groupBox6);
             this.groupAlarmas.Controls.Add(this.groupBox4);
             this.groupAlarmas.Controls.Add(this.groupBox3);
             this.groupAlarmas.Controls.Add(this.groupBox2);
             this.groupAlarmas.Controls.Add(this.groupBox1);
-            this.groupAlarmas.Location = new System.Drawing.Point(543, 33);
+            this.groupAlarmas.Controls.Add(this.buttonSilenciar);
+            this.groupAlarmas.Location = new System.Drawing.Point(543, 63);
             this.groupAlarmas.Name = "groupAlarmas";
             this.groupAlarmas.Size = new System.Drawing.Size(175, 457);
             this.groupAlarmas.TabIndex = 16;
@@ -283,6 +277,7 @@
             this.textTEMPbajo.Size = new System.Drawing.Size(39, 20);
             this.textTEMPbajo.TabIndex = 9;
             this.textTEMPbajo.Tag = "textTEMPbajo";
+            this.textTEMPbajo.TextChanged += new System.EventHandler(this.textTEMPbajo_TextChanged);
             // 
             // textTEMPalto
             // 
@@ -291,6 +286,7 @@
             this.textTEMPalto.Size = new System.Drawing.Size(39, 20);
             this.textTEMPalto.TabIndex = 4;
             this.textTEMPalto.Tag = "textTEMPalto";
+            this.textTEMPalto.TextChanged += new System.EventHandler(this.textTEMPalto_TextChanged);
             // 
             // label2
             // 
@@ -309,54 +305,6 @@
             this.label8.Size = new System.Drawing.Size(27, 13);
             this.label8.TabIndex = 7;
             this.label8.Text = "Low";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.textEtCO2alto);
-            this.groupBox6.Controls.Add(this.textEtCO2bajo);
-            this.groupBox6.Controls.Add(this.label1);
-            this.groupBox6.Controls.Add(this.labelEtCO2bajo);
-            this.groupBox6.Location = new System.Drawing.Point(27, 383);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(147, 65);
-            this.groupBox6.TabIndex = 13;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "EtCO2";
-            // 
-            // textEtCO2alto
-            // 
-            this.textEtCO2alto.Location = new System.Drawing.Point(73, 32);
-            this.textEtCO2alto.Name = "textEtCO2alto";
-            this.textEtCO2alto.Size = new System.Drawing.Size(39, 20);
-            this.textEtCO2alto.TabIndex = 6;
-            this.textEtCO2alto.Tag = "textEtCO2bajo";
-            // 
-            // textEtCO2bajo
-            // 
-            this.textEtCO2bajo.Location = new System.Drawing.Point(8, 32);
-            this.textEtCO2bajo.Name = "textEtCO2bajo";
-            this.textEtCO2bajo.Size = new System.Drawing.Size(39, 20);
-            this.textEtCO2bajo.TabIndex = 8;
-            this.textEtCO2bajo.Tag = "textEtCO2bajo";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(79, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Alto";
-            // 
-            // labelEtCO2bajo
-            // 
-            this.labelEtCO2bajo.AutoSize = true;
-            this.labelEtCO2bajo.Location = new System.Drawing.Point(12, 16);
-            this.labelEtCO2bajo.Name = "labelEtCO2bajo";
-            this.labelEtCO2bajo.Size = new System.Drawing.Size(28, 13);
-            this.labelEtCO2bajo.TabIndex = 8;
-            this.labelEtCO2bajo.Tag = "labelEtCO2bajo";
-            this.labelEtCO2bajo.Text = "Bajo";
             // 
             // groupBox4
             // 
@@ -378,6 +326,7 @@
             this.textNIBPbajo.Size = new System.Drawing.Size(39, 20);
             this.textNIBPbajo.TabIndex = 10;
             this.textNIBPbajo.Tag = "textNIBPbajo";
+            this.textNIBPbajo.TextChanged += new System.EventHandler(this.textNIBPbajo_TextChanged);
             // 
             // textNIBPalto
             // 
@@ -386,6 +335,7 @@
             this.textNIBPalto.Size = new System.Drawing.Size(39, 20);
             this.textNIBPalto.TabIndex = 5;
             this.textNIBPalto.Tag = "textNIBPalto";
+            this.textNIBPalto.TextChanged += new System.EventHandler(this.textNIBPalto_TextChanged);
             // 
             // label7
             // 
@@ -423,6 +373,7 @@
             this.textSpO2bajo.Size = new System.Drawing.Size(39, 20);
             this.textSpO2bajo.TabIndex = 11;
             this.textSpO2bajo.Tag = "textSpO2bajo";
+            this.textSpO2bajo.TextChanged += new System.EventHandler(this.textSpO2bajo_TextChanged);
             // 
             // label5
             // 
@@ -453,6 +404,7 @@
             this.textRRalto.Size = new System.Drawing.Size(39, 20);
             this.textRRalto.TabIndex = 7;
             this.textRRalto.Tag = "textRRalto";
+            this.textRRalto.TextChanged += new System.EventHandler(this.textRRalto_TextChanged);
             // 
             // textRRbajo
             // 
@@ -461,6 +413,7 @@
             this.textRRbajo.Size = new System.Drawing.Size(39, 20);
             this.textRRbajo.TabIndex = 12;
             this.textRRbajo.Tag = "textRRbajo";
+            this.textRRbajo.TextChanged += new System.EventHandler(this.textRRbajo_TextChanged);
             // 
             // label4
             // 
@@ -500,14 +453,17 @@
             this.textHRalto.Size = new System.Drawing.Size(39, 20);
             this.textHRalto.TabIndex = 3;
             this.textHRalto.Tag = "textHRalto";
+            this.textHRalto.TextChanged += new System.EventHandler(this.textHRalto_TextChanged);
             // 
             // textHRbajo
             // 
+            this.textHRbajo.BackColor = System.Drawing.Color.White;
             this.textHRbajo.Location = new System.Drawing.Point(7, 32);
             this.textHRbajo.Name = "textHRbajo";
             this.textHRbajo.Size = new System.Drawing.Size(39, 20);
             this.textHRbajo.TabIndex = 2;
             this.textHRbajo.Tag = "textHRbajo";
+            this.textHRbajo.TextChanged += new System.EventHandler(this.textHRbajo_TextChanged);
             // 
             // labelTaquicardia
             // 
@@ -531,9 +487,9 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(444, 46);
+            this.buttonStart.Location = new System.Drawing.Point(441, 41);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(74, 23);
+            this.buttonStart.Size = new System.Drawing.Size(93, 32);
             this.buttonStart.TabIndex = 17;
             this.buttonStart.Tag = "buttonStart";
             this.buttonStart.Text = "Start";
@@ -543,9 +499,9 @@
             // buttonShutdown
             // 
             this.buttonShutdown.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonShutdown.Location = new System.Drawing.Point(607, 8);
+            this.buttonShutdown.Location = new System.Drawing.Point(599, 14);
             this.buttonShutdown.Name = "buttonShutdown";
-            this.buttonShutdown.Size = new System.Drawing.Size(75, 23);
+            this.buttonShutdown.Size = new System.Drawing.Size(88, 37);
             this.buttonShutdown.TabIndex = 18;
             this.buttonShutdown.Tag = "buttonShutdown";
             this.buttonShutdown.Text = "Shutdown";
@@ -554,7 +510,7 @@
             // 
             // buttonSilenciar
             // 
-            this.buttonSilenciar.Location = new System.Drawing.Point(578, 482);
+            this.buttonSilenciar.Location = new System.Drawing.Point(35, 394);
             this.buttonSilenciar.Name = "buttonSilenciar";
             this.buttonSilenciar.Size = new System.Drawing.Size(123, 33);
             this.buttonSilenciar.TabIndex = 19;
@@ -609,13 +565,13 @@
             this.label11.Tag = "labelDiastolica";
             this.label11.Text = "MEAN";
             // 
-            // textBox1
+            // textMean_Pressure
             // 
-            this.textBox1.Location = new System.Drawing.Point(358, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(51, 20);
-            this.textBox1.TabIndex = 25;
-            this.textBox1.Tag = "textDiastolica";
+            this.textMean_Pressure.Location = new System.Drawing.Point(358, 31);
+            this.textMean_Pressure.Name = "textMean_Pressure";
+            this.textMean_Pressure.Size = new System.Drawing.Size(51, 20);
+            this.textMean_Pressure.TabIndex = 25;
+            this.textMean_Pressure.Tag = "";
             // 
             // Economitor
             // 
@@ -625,13 +581,12 @@
             this.CancelButton = this.buttonShutdown;
             this.ClientSize = new System.Drawing.Size(733, 523);
             this.ControlBox = false;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textMean_Pressure);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textHeartRate);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textPort);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.buttonSilenciar);
             this.Controls.Add(this.buttonShutdown);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.groupAlarmas);
@@ -660,8 +615,6 @@
             this.groupAlarmas.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -693,8 +646,6 @@
         private System.Windows.Forms.GroupBox groupAlarmas;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label labelEtCO2bajo;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -707,7 +658,6 @@
         private System.Windows.Forms.Label labelTaquicardia;
         private System.Windows.Forms.Label labelBradicardia;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonShutdown;
         private System.Windows.Forms.Button buttonSilenciar;
@@ -715,8 +665,6 @@
         private System.Windows.Forms.TextBox textPort;
         private System.Windows.Forms.TextBox textTEMPbajo;
         private System.Windows.Forms.TextBox textTEMPalto;
-        private System.Windows.Forms.TextBox textEtCO2alto;
-        private System.Windows.Forms.TextBox textEtCO2bajo;
         private System.Windows.Forms.TextBox textNIBPbajo;
         private System.Windows.Forms.TextBox textNIBPalto;
         private System.Windows.Forms.TextBox textSpO2bajo;
@@ -729,7 +677,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textHeartRate;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textMean_Pressure;
     }
 }
 
