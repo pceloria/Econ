@@ -30,6 +30,8 @@ namespace ECONOMITOR2
             private static Stream audio_spo2 = Properties.Resources.audio_spo2;
             private static Stream audio_temp = Properties.Resources.audio_temp;
             public static int counter1;
+            public static int counter_color;
+            public static Boolean flag_color = true;
 
         //getters
         public static double get_low_temperatura()
@@ -174,21 +176,19 @@ namespace ECONOMITOR2
             {
                 if (flag_alarma == true)
                 { 
-                sonarAlarma(audio_HR);
+                    sonarAlarma(audio_HR);
                 }
-                text_low_HR.BackColor = System.Drawing.Color.Red;
-
-                //Boolean color = true;
-                //if (color == true)
-                //{ 
-                //    text_low_HR.BackColor = System.Drawing.Color.Red;
-                //    color = false;
-                //}
-                //if (color == false)
-                //{
-                //    text_low_HR.BackColor = System.Drawing.Color.HotPink;
-                //    color = true;
-                //}
+                if (flag_color == true)
+                {
+                    text_low_HR.BackColor = System.Drawing.Color.Red;
+                    flag_color = false;
+                }
+                else
+                {
+                    text_low_HR.BackColor = System.Drawing.Color.Yellow;
+                    flag_color = true;
+                }
+                
             }
             else
             {
