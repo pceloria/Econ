@@ -16,8 +16,9 @@ namespace ECONOMITOR2
 
             for (int j = 0; j < data.Length; j++)
             {
-                chart.Series["Series1"].Points.AddY(data[j]);
-                chart.Series["Series1"].Points.RemoveAt(0);
+                //chart.Series["Series1"].Points.AddY(data[j]);
+                //chart.Series["Series1"].Points.RemoveAt(0);
+                chart.Series["Series1"].Points[j].SetValueY(data[j]);
             }
             chart.ResetAutoValues();
         }

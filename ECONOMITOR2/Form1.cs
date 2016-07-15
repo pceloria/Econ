@@ -98,7 +98,6 @@ namespace ECONOMITOR2
 
             }
 
-
             if (counter == 20) {
                 //temp = GetRandomNumber(37, 40);
                 currentHR = Data.getCurrentHeartRate();

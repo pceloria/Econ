@@ -343,5 +343,31 @@ namespace ECONOMITOR2
                 port.Write(buffer, 0, 6);
             }
         }
+
+        public static void enableECG(bool enable)
+        {
+            if (isPortOpen) {
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55; 
+                buffer[1] = 0xAA; 
+                buffer[2] = 0x04; 
+                buffer[3] = 0x01;
+                if (enable == true)
+                {
+                    buffer[4] = 0x01;
+                    buffer[5] = 0xF9;
+                }
+                else {
+                    buffer[4] = 0x00;
+                    buffer[5] = 0xFA; 
+                }
+                
+
+
+
+            }
+
+
+        }
     }
 }
