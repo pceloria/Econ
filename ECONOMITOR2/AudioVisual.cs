@@ -11,13 +11,14 @@ namespace ECONOMITOR2
         // init variables de la clase
         private static double[] s;
 
-        public static void Draw(System.Windows.Forms.DataVisualization.Charting.Chart chart, double[] data) {
+        public static void Draw(System.Windows.Forms.DataVisualization.Charting.Chart chart, double[] data, int currentIndex) {
 
 
             for (int j = 0; j < data.Length; j++)
             {
-                chart.Series["Series1"].Points.AddY(data[j]);
-                chart.Series["Series1"].Points.RemoveAt(0);
+                //chart.Series["Series1"].Points.AddY(data[j]);
+                //chart.Series["Series1"].Points.RemoveAt(0);
+                chart.Series["Series1"].Points[j+currentIndex].SetValueY(data[j]);
             }
             chart.ResetAutoValues();
         }
