@@ -361,12 +361,9 @@ namespace ECONOMITOR2
                     buffer[4] = 0x00;
                     buffer[5] = 0xFA; 
                 }
-                
 
-
-
+                port.Write(buffer, 0, 6);
             }
-
 
         }
     }
