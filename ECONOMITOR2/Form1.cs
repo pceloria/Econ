@@ -23,8 +23,10 @@ namespace ECONOMITOR2
         private int currentSistolica;
         private int currentDiastolica;
         private int currentMean_Pressure;
-        
 
+        private int currentIndexECG = 0;
+        private int currentIndexSPO2 = 0;
+        private int currentIndexRESP = 0;
         //para probar graficar rampas
         //private double s;
         //private double temp;
@@ -33,7 +35,10 @@ namespace ECONOMITOR2
         public Economitor()
         {
             InitializeComponent();
-            
+            currentIndexECG = 0;
+            currentIndexSPO2 = 0;
+            currentIndexRESP = 0;
+
             // para probar graifcar rampas
             //s = 0;
 
@@ -127,17 +132,26 @@ namespace ECONOMITOR2
 
             if (newECGData != null)
             {
-                AudioVisual.Draw(derivacion1, newECGData);
+                if (currentIndexECG + newECGData.Length > 1000)
+                    currentIndexECG = 0;
+                AudioVisual.Draw(derivacion1, newECGData, currentIndexECG);
+                currentIndexECG += newECGData.Length;
+                
             }
 
             if (newSPO2Data != null)
             {
-                AudioVisual.Draw(spo2, newSPO2Data);
+                if (currentIndexSPO2 + newSPO2Data.Length > 1000)
+                    currentIndexSPO2 = 0;
+                AudioVisual.Draw(spo2, newSPO2Data, currentIndexSPO2);
+                currentIndexSPO2 += newSPO2Data.Length;
             }
 
-            if (newRESPData != null)
-            {
-                AudioVisual.Draw(respiracion, newRESPData);
+            if (newRESPData != null) {
+                if (currentIndexRESP + newRESPData.Length > 1000)
+                    currentIndexRESP = 0;
+                //AudioVisual.Draw(respiracion, newRESPData, currentIndexRESP);
+                currentIndexRESP += newRESPData.Length;
             }
 
             // no encontramos en el protocolo de comunicacion como se pasan las otras leads
@@ -153,7 +167,8 @@ namespace ECONOMITOR2
 
         void buttonSilenciar_Click(object sender, EventArgs e) {
         
-            Alarmas.silenciarAlarma();
+            //Alarmas.silenciarAlarma();
+            Acqsign.enableECG(true);
         
         }
 

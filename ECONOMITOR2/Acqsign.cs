@@ -295,6 +295,7 @@ namespace ECONOMITOR2
                 port.Write(buffer, 0, 6);
             }
         }
+        
         public static void enableRESP()
         {
             if (isPortOpen)
@@ -347,6 +348,9 @@ namespace ECONOMITOR2
         public static void enableECG(bool enable)
         {
             if (isPortOpen) {
+
+                Console.WriteLine("Los parametros de ECG se deshabilitaron");
+
                 Byte[] buffer = new Byte[6];
                 buffer[0] = 0x55; 
                 buffer[1] = 0xAA; 
