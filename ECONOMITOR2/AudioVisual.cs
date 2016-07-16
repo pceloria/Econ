@@ -47,8 +47,8 @@ namespace ECONOMITOR2
             for (int j = 0; j < s.Length; j++)
                     chart.Series["Series1"].Points.AddY(s[j]);
 
-            chart.ChartAreas[0].AxisY.Minimum = -5;
-            chart.ChartAreas[0].AxisY.Maximum = 5;
+            //chart.ChartAreas[0].AxisY.Minimum = -5;
+            //chart.ChartAreas[0].AxisY.Maximum = 5;
         }
         public static void actualiza_text(System.Windows.Forms.TextBox text, double data) {
 

@@ -46,11 +46,9 @@ namespace ECONOMITOR2
         private static int TEMP_Status;
         private static int TEMP1_Integral;
         private static int TEMP1_Decimal;
-        
+
         private static int SPO2_Wave_amplitude;
         private static int RR_Wave_amplitude;
-
-
 
         private static int ECG_WAVEval;
         private static int ECG_PARAMval;
@@ -99,7 +97,7 @@ namespace ECONOMITOR2
                 port.Parity = Parity.None;
                 port.DataBits = 8;
                 port.StopBits = StopBits.One;
-                
+
                 try
                 {
                     port.Open();
@@ -147,14 +145,14 @@ namespace ECONOMITOR2
             int byteCount = sp.BytesToRead;
             if (!reading)
                 armarPaquetes(byteCount);
-                if (byteCount > 5000)
-                    MessageBox.Show("Procesamiento lento. Se acumularon " + byteCount + " bytes en el buffer", "Warning");
+            if (byteCount > 5000)
+                MessageBox.Show("Procesamiento lento. Se acumularon " + byteCount + " bytes en el buffer", "Warning");
             else
             {
                 if (byteCount > 500)
                     Console.WriteLine("Procesando paquetes. Bytes acumulados = " + byteCount);
             }
-            
+
         }
 
         private static int armarPaquetes(int BytesToRead)
@@ -164,7 +162,8 @@ namespace ECONOMITOR2
             reading = true;
             int bytesRead = 0;
 
-            while (bytesRead < BytesToRead) {
+            while (bytesRead < BytesToRead)
+            {
 
                 bytesRead++;
                 if (port.ReadByte() == 85)
@@ -174,13 +173,14 @@ namespace ECONOMITOR2
                     {                //verifica segundo
                         bytesRead++;
                         package_length = port.ReadByte();
-                        int[] data = new int[package_length-3];
+                        int[] data = new int[package_length - 3];
                         bytesRead++;
                         int tiposenal = port.ReadByte();
 
-                        for(int i = 0; i<package_length-3; i++){
+                        for (int i = 0; i < package_length - 3; i++)
+                        {
                             bytesRead++;
-                            data[i] = port.ReadByte();                           
+                            data[i] = port.ReadByte();
                         }
 
                         bytesRead++;
@@ -193,7 +193,7 @@ namespace ECONOMITOR2
                             switch (tiposenal)
                             {
                                 case ECG_WAVE:
-                                    ECG_Wave_Amplitud = (data[0]-127.0)*5.0/127;
+                                    ECG_Wave_Amplitud = (data[0] - 128.0) * 5.0 / 127;
                                     ECG_WAVEdat[indexECG] = ECG_Wave_Amplitud;
                                     indexECG++;
                                     if (indexECG == ECG_WAVEdat.LongLength)
@@ -270,7 +270,7 @@ namespace ECONOMITOR2
                                 default:
                                     break;
                             }
-                        }                        
+                        }
                     }
                 }
             }
@@ -279,40 +279,10 @@ namespace ECONOMITOR2
             return 0;
         }
 
-        public static void enableSPO2()
-        {
-            if (isPortOpen)
-            {
-                Byte[] buffer = new Byte[6];
-                buffer[0] = 0x55;
-                buffer[1] = 0xAA;
-                buffer[2] = 0x04;
-                buffer[3] = 0xFE;
-                // Adult (default)
-                buffer[4] = 0x01;
-                buffer[5] = 0xFC;
 
-                port.Write(buffer, 0, 6);
-            }
-        }
-        
-        public static void enableRESP()
-        {
-            if (isPortOpen)
-            {
-                Byte[] buffer = new Byte[6];
-                buffer[0] = 0x55;
-                buffer[1] = 0xAA;
-                buffer[2] = 0x04;
-                buffer[3] = 0xFF;
-                // Adult (default)
-                buffer[4] = 0x01;
-                buffer[5] = 0xFB;
-
-                port.Write(buffer, 0, 6);
-            }
-        }
-        // patientMode es 1 o 2 o 3 (Adult, Child, Neonate, respectivamente)
+        public const int NEONATE = 1;
+        public const int CHILD = 2;
+        public const int ADULT = 3;
         public static void sendNewPatientMode(int patientMode)
         {
             if (isPortOpen)
@@ -324,17 +294,17 @@ namespace ECONOMITOR2
                 buffer[3] = 0x09;
                 switch (patientMode)
                 {
-                    case 1:
+                    case ADULT:
                         // Adult (default)
                         buffer[4] = 0x01;
                         buffer[5] = 0xF1;
                         break;
-                    case 2:
+                    case CHILD:
                         // Child
                         buffer[4] = 0x02;
                         buffer[5] = 0xF2;
                         break;
-                    case 3:
+                    case NEONATE:
                         // Neonate
                         buffer[4] = 0x03;
                         buffer[5] = 0xF3;
@@ -347,31 +317,258 @@ namespace ECONOMITOR2
 
         public static void enableECG(bool enable)
         {
-            if (isPortOpen) {
-
-                Console.WriteLine("Los parametros de ECG se deshabilitaron");
+            if (isPortOpen)
+            {
 
                 Byte[] buffer = new Byte[6];
-                buffer[0] = 0x55; 
-                buffer[1] = 0xAA; 
-                buffer[2] = 0x04; 
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
                 buffer[3] = 0x01;
                 if (enable == true)
                 {
                     buffer[4] = 0x01;
                     buffer[5] = 0xF9;
                 }
-                else {
+                else
+                {
                     buffer[4] = 0x00;
-                    buffer[5] = 0xFA; 
+                    buffer[5] = 0xFA;
                 }
-                
+                port.Write(buffer, 0, 6);
+            }
+        }
 
+        public static void enableSPO2(bool enable)
+        {
+            if (isPortOpen)
+            {
 
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
+                buffer[3] = 0x03;
+                if (enable == true)
+                {
+                    buffer[4] = 0x01;
+                    buffer[5] = 0xF7;
+                }
+                else
+                {
+                    buffer[4] = 0x00;
+                    buffer[5] = 0xF8;
+                }
+                port.Write(buffer, 0, 6);
+            }
+        }
 
+        public static void enableTEMP(bool enable)
+        {
+            if (isPortOpen)
+            {
+
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
+                buffer[3] = 0x04;
+                if (enable == true)
+                {
+                    buffer[4] = 0x01;
+                    buffer[5] = 0xF6;
+                }
+                else
+                {
+                    buffer[4] = 0x00;
+                    buffer[5] = 0xF7;
+                }
+                port.Write(buffer, 0, 6);
+            }
+        }
+
+        public const int GAINX025 = 1;
+        public const int GAINX050 = 2;
+        public const int GAINX100 = 3;
+        public const int GAINX200 = 4;
+        public static void setECGgain(int gain)
+        {
+            if (isPortOpen)
+            {
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
+                buffer[3] = 0x07;
+                switch (gain)
+                {
+                    case GAINX025:
+                        // x0.25
+                        buffer[4] = 0x01;
+                        buffer[5] = 0xF3;
+                        break;
+                    case GAINX050:
+                        // x0.5
+                        buffer[4] = 0x02;
+                        buffer[5] = 0xF2;
+                        break;
+                    case GAINX100:
+                        // x1
+                        buffer[4] = 0x03;
+                        buffer[5] = 0xF1;
+                        break;
+
+                    case GAINX200:
+                        buffer[4] = 0x04;
+                        buffer[5] = 0xF0;
+                        break;
+                }
+                port.Write(buffer, 0, 6);
             }
 
+        }
+
+        //operation mode，1 ~ 25Hz (3dB)
+        //monitor mode，0.5 ~ 75Hz (3dB)
+        //diagnose mode，0.05 ~ 100Hz (3dB)
+        public const int OPERATION = 1;
+        public const int MONITOR = 2;
+        public const int DIAGNOSE = 3;
+        public static void setECGfilter(int mode)
+        {
+            if (isPortOpen)
+            {
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
+                buffer[3] = 0x08;
+                switch (mode)
+                {
+                    case OPERATION:
+                        // operation
+                        buffer[4] = 0x01;
+                        buffer[5] = 0xF2;
+                        break;
+                    case MONITOR:
+                        // monitor
+                        buffer[4] = 0x02;
+                        buffer[5] = 0xF1;
+                        break;
+                    case DIAGNOSE:
+                        // diagnose
+                        buffer[4] = 0x03;
+                        buffer[5] = 0xF0;
+                        break;
+                }
+                port.Write(buffer, 0, 6);
+            }
 
         }
+
+        public static void setRESPgain(int gain)
+        {
+            if (isPortOpen)
+            {
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
+                buffer[3] = 0x0F;
+                switch (gain)
+                {
+                    case GAINX025:
+                        // x0.25
+                        buffer[4] = 0x01;
+                        buffer[5] = 0xEB;
+                        break;
+                    case GAINX050:
+                        // x0.5
+                        buffer[4] = 0x02;
+                        buffer[5] = 0xEA;
+                        break;
+                    case GAINX100:
+                        // x1
+                        buffer[4] = 0x03;
+                        buffer[5] = 0xE9;
+                        break;
+
+                    case GAINX200:
+                        buffer[4] = 0x04;
+                        buffer[5] = 0xE8;
+                        break;
+                }
+                port.Write(buffer, 0, 6);
+            }
+
+        }
+
+        public static void enableECGwave(bool enable) {
+            if (isPortOpen)
+            {
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
+                buffer[3] = 0xFB;
+                if (enable == true)
+                {
+                    buffer[4] = 0x01;
+                    buffer[5] = 0xFF;
+                }
+                else
+                {
+                    buffer[4] = 0x00;
+                    buffer[5] = 0x00;
+                }
+                port.Write(buffer, 0, 6);
+            }
+        }
+
+        public static void enableSPO2wave(bool enable) {
+            if (isPortOpen)
+            {
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
+                buffer[3] = 0xFE;
+                if (enable == true)
+                {
+                    buffer[4] = 0x01;
+                    buffer[5] = 0xFC;
+                }
+                else
+                {
+                    buffer[4] = 0x00;
+                    buffer[5] = 0xFD;
+                }
+                port.Write(buffer, 0, 6);
+            }
+        }
+    
+        public static void enableRESPwave(bool enable) {
+            if (isPortOpen)
+            {
+                Byte[] buffer = new Byte[6];
+                buffer[0] = 0x55;
+                buffer[1] = 0xAA;
+                buffer[2] = 0x04;
+                buffer[3] = 0xFF;
+                if (enable == true)
+                {
+                    buffer[4] = 0x01;
+                    buffer[5] = 0xFB;
+                }
+                else
+                {
+                    buffer[4] = 0x00;
+                    buffer[5] = 0xFC;
+                }
+                port.Write(buffer, 0, 6);
+            }
+        }    
+
     }
+
 }

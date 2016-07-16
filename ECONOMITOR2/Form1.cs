@@ -150,7 +150,7 @@ namespace ECONOMITOR2
             if (newRESPData != null) {
                 if (currentIndexRESP + newRESPData.Length > 1000)
                     currentIndexRESP = 0;
-                //AudioVisual.Draw(respiracion, newRESPData, currentIndexRESP);
+                AudioVisual.Draw(respiracion, newRESPData, currentIndexRESP);
                 currentIndexRESP += newRESPData.Length;
             }
 
@@ -166,9 +166,10 @@ namespace ECONOMITOR2
         }
 
         void buttonSilenciar_Click(object sender, EventArgs e) {
-        
-            //Alarmas.silenciarAlarma();
-            Acqsign.enableECG(true);
+            
+            
+            Alarmas.silenciarAlarma();
+
         
         }
 
@@ -251,6 +252,11 @@ namespace ECONOMITOR2
                 Alarmas.set_high_temperatura(textTEMPalto);
             else
                 MessageBox.Show("Ingrese valores enteros");
+        }
+
+        private void spo2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
