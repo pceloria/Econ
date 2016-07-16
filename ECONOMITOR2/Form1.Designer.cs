@@ -77,9 +77,10 @@
             chartArea1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
             chartArea1.Name = "ChartArea1";
             this.derivacion1.ChartAreas.Add(chartArea1);
+            this.derivacion1.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend1.Name = "Legend1";
             this.derivacion1.Legends.Add(legend1);
-            this.derivacion1.Location = new System.Drawing.Point(1, 79);
+            this.derivacion1.Location = new System.Drawing.Point(0, 324);
             this.derivacion1.Name = "derivacion1";
             series1.BackImageTransparentColor = System.Drawing.Color.Black;
             series1.BackSecondaryColor = System.Drawing.Color.Black;
@@ -94,7 +95,7 @@
             series1.MarkerBorderColor = System.Drawing.Color.White;
             series1.Name = "Series1";
             this.derivacion1.Series.Add(series1);
-            this.derivacion1.Size = new System.Drawing.Size(533, 108);
+            this.derivacion1.Size = new System.Drawing.Size(749, 108);
             this.derivacion1.TabIndex = 0;
             this.derivacion1.TabStop = false;
             this.derivacion1.Tag = "derivacion1";
@@ -108,9 +109,10 @@
             chartArea2.BackColor = System.Drawing.Color.Black;
             chartArea2.Name = "ChartArea1";
             this.respiracion.ChartAreas.Add(chartArea2);
+            this.respiracion.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend2.Name = "Legend1";
             this.respiracion.Legends.Add(legend2);
-            this.respiracion.Location = new System.Drawing.Point(1, 193);
+            this.respiracion.Location = new System.Drawing.Point(0, 216);
             this.respiracion.Name = "respiracion";
             series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
@@ -118,7 +120,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.respiracion.Series.Add(series2);
-            this.respiracion.Size = new System.Drawing.Size(533, 108);
+            this.respiracion.Size = new System.Drawing.Size(749, 108);
             this.respiracion.TabIndex = 3;
             this.respiracion.Text = "chart4";
             // 
@@ -128,9 +130,10 @@
             chartArea3.BackColor = System.Drawing.Color.Black;
             chartArea3.Name = "ChartArea1";
             this.spo2.ChartAreas.Add(chartArea3);
+            this.spo2.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend3.Name = "Legend1";
             this.spo2.Legends.Add(legend3);
-            this.spo2.Location = new System.Drawing.Point(1, 307);
+            this.spo2.Location = new System.Drawing.Point(0, 108);
             this.spo2.Name = "spo2";
             series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
@@ -139,7 +142,7 @@
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             this.spo2.Series.Add(series3);
-            this.spo2.Size = new System.Drawing.Size(533, 108);
+            this.spo2.Size = new System.Drawing.Size(749, 108);
             this.spo2.TabIndex = 4;
             this.spo2.Text = "chart5";
             this.spo2.Click += new System.EventHandler(this.spo2_Click);
@@ -232,7 +235,7 @@
             // 
             // textDiastolica
             // 
-            this.textDiastolica.Location = new System.Drawing.Point(253, 8);
+            this.textDiastolica.Location = new System.Drawing.Point(253, 14);
             this.textDiastolica.Name = "textDiastolica";
             this.textDiastolica.ReadOnly = true;
             this.textDiastolica.Size = new System.Drawing.Size(51, 20);
@@ -304,7 +307,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CancelButton = this.buttonShutdown;
             this.ClientSize = new System.Drawing.Size(749, 432);
