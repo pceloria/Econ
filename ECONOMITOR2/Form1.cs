@@ -265,5 +265,10 @@ namespace ECONOMITOR2
         {
 
         }
+
+        private void labelRR_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
