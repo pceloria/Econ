@@ -260,5 +260,10 @@ namespace ECONOMITOR2
         {
 
         }
+
+        private void Economitor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
