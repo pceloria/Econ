@@ -14,13 +14,9 @@ namespace ECONOMITOR2
         public static void Draw(System.Windows.Forms.DataVisualization.Charting.Chart chart, double[] data, int currentIndex) {
 
             if (currentIndex != 0)
-            {
-                chart.Series["Series1"].Points[currentIndex].IsEmpty = false;
-                chart.Series["Series1"].Points[currentIndex+1].IsEmpty = false;
-                chart.Series["Series1"].Points[currentIndex+2].IsEmpty = false;
-                chart.Series["Series1"].Points[currentIndex+3].IsEmpty = false;
-                chart.Series["Series1"].Points[currentIndex+4].IsEmpty = false;
-            }
+                for (int j = 0; j < 5; j++)
+                    chart.Series["Series1"].Points[currentIndex+j].IsEmpty = false;
+            
             for (int j = 0; j < data.Length; j++)
             {
                 //chart.Series["Series1"].Points.AddY(data[j]);
@@ -28,13 +24,8 @@ namespace ECONOMITOR2
                 chart.Series["Series1"].Points[j+currentIndex].SetValueY(data[j]);
             }
             if (data.Length + 4 + currentIndex < 1000)
-            {
-                chart.Series["Series1"].Points[data.Length + currentIndex].IsEmpty = true;
-                chart.Series["Series1"].Points[data.Length + 1 + currentIndex].IsEmpty = true;
-                chart.Series["Series1"].Points[data.Length + 2 + currentIndex].IsEmpty = true;
-                chart.Series["Series1"].Points[data.Length + 3 + currentIndex].IsEmpty = true;
-                chart.Series["Series1"].Points[data.Length + 4 + currentIndex].IsEmpty = true;
-            }
+                for (int j = 0; j < 5; j++)
+                    chart.Series["Series1"].Points[data.Length + currentIndex + j].IsEmpty = true;
             
             chart.ResetAutoValues();
         }
