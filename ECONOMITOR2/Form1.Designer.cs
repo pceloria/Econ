@@ -51,31 +51,7 @@
             this.textSistolica = new System.Windows.Forms.TextBox();
             this.labelDiastolica = new System.Windows.Forms.Label();
             this.textDiastolica = new System.Windows.Forms.TextBox();
-            this.groupAlarmas = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textTEMPbajo = new System.Windows.Forms.TextBox();
-            this.textTEMPalto = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textNIBPbajo = new System.Windows.Forms.TextBox();
-            this.textNIBPalto = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textSpO2bajo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textRRalto = new System.Windows.Forms.TextBox();
-            this.textRRbajo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textHRalto = new System.Windows.Forms.TextBox();
-            this.textHRbajo = new System.Windows.Forms.TextBox();
-            this.labelTaquicardia = new System.Windows.Forms.Label();
-            this.labelBradicardia = new System.Windows.Forms.Label();
-            this.buttonSilenciar = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonShutdown = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
@@ -87,12 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.derivacion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.respiracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spo2)).BeginInit();
-            this.groupAlarmas.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // derivacion1
@@ -109,7 +79,7 @@
             this.derivacion1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.derivacion1.Legends.Add(legend1);
-            this.derivacion1.Location = new System.Drawing.Point(1, 96);
+            this.derivacion1.Location = new System.Drawing.Point(1, 79);
             this.derivacion1.Name = "derivacion1";
             series1.BackImageTransparentColor = System.Drawing.Color.Black;
             series1.BackSecondaryColor = System.Drawing.Color.Black;
@@ -124,7 +94,7 @@
             series1.MarkerBorderColor = System.Drawing.Color.White;
             series1.Name = "Series1";
             this.derivacion1.Series.Add(series1);
-            this.derivacion1.Size = new System.Drawing.Size(536, 138);
+            this.derivacion1.Size = new System.Drawing.Size(533, 108);
             this.derivacion1.TabIndex = 0;
             this.derivacion1.TabStop = false;
             this.derivacion1.Tag = "derivacion1";
@@ -140,7 +110,7 @@
             this.respiracion.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.respiracion.Legends.Add(legend2);
-            this.respiracion.Location = new System.Drawing.Point(1, 239);
+            this.respiracion.Location = new System.Drawing.Point(1, 193);
             this.respiracion.Name = "respiracion";
             series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
@@ -148,7 +118,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.respiracion.Series.Add(series2);
-            this.respiracion.Size = new System.Drawing.Size(536, 138);
+            this.respiracion.Size = new System.Drawing.Size(533, 108);
             this.respiracion.TabIndex = 3;
             this.respiracion.Text = "chart4";
             // 
@@ -160,7 +130,7 @@
             this.spo2.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.spo2.Legends.Add(legend3);
-            this.spo2.Location = new System.Drawing.Point(1, 382);
+            this.spo2.Location = new System.Drawing.Point(1, 307);
             this.spo2.Name = "spo2";
             series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
@@ -169,7 +139,7 @@
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             this.spo2.Series.Add(series3);
-            this.spo2.Size = new System.Drawing.Size(536, 138);
+            this.spo2.Size = new System.Drawing.Size(533, 108);
             this.spo2.TabIndex = 4;
             this.spo2.Text = "chart5";
             this.spo2.Click += new System.EventHandler(this.spo2_Click);
@@ -269,273 +239,9 @@
             this.textDiastolica.TabIndex = 15;
             this.textDiastolica.Tag = "textDiastolica";
             // 
-            // groupAlarmas
-            // 
-            this.groupAlarmas.Controls.Add(this.groupBox5);
-            this.groupAlarmas.Controls.Add(this.groupBox4);
-            this.groupAlarmas.Controls.Add(this.groupBox3);
-            this.groupAlarmas.Controls.Add(this.groupBox2);
-            this.groupAlarmas.Controls.Add(this.groupBox1);
-            this.groupAlarmas.Controls.Add(this.buttonSilenciar);
-            this.groupAlarmas.Location = new System.Drawing.Point(543, 63);
-            this.groupAlarmas.Name = "groupAlarmas";
-            this.groupAlarmas.Size = new System.Drawing.Size(175, 457);
-            this.groupAlarmas.TabIndex = 16;
-            this.groupAlarmas.TabStop = false;
-            this.groupAlarmas.Tag = "groupAlarmas";
-            this.groupAlarmas.Text = "Alarmas";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textTEMPbajo);
-            this.groupBox5.Controls.Add(this.textTEMPalto);
-            this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Location = new System.Drawing.Point(23, 309);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(151, 66);
-            this.groupBox5.TabIndex = 13;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "TEMP";
-            // 
-            // textTEMPbajo
-            // 
-            this.textTEMPbajo.Location = new System.Drawing.Point(8, 40);
-            this.textTEMPbajo.MaxLength = 4;
-            this.textTEMPbajo.Name = "textTEMPbajo";
-            this.textTEMPbajo.Size = new System.Drawing.Size(39, 20);
-            this.textTEMPbajo.TabIndex = 9;
-            this.textTEMPbajo.Tag = "textTEMPbajo";
-            this.textTEMPbajo.TextChanged += new System.EventHandler(this.textTEMPbajo_TextChanged);
-            // 
-            // textTEMPalto
-            // 
-            this.textTEMPalto.Location = new System.Drawing.Point(72, 40);
-            this.textTEMPalto.MaxLength = 4;
-            this.textTEMPalto.Name = "textTEMPalto";
-            this.textTEMPalto.Size = new System.Drawing.Size(39, 20);
-            this.textTEMPalto.TabIndex = 4;
-            this.textTEMPalto.Tag = "textTEMPalto";
-            this.textTEMPalto.TextChanged += new System.EventHandler(this.textTEMPalto_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "High";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 19);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Low";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.textNIBPbajo);
-            this.groupBox4.Controls.Add(this.textNIBPalto);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Location = new System.Drawing.Point(20, 240);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(155, 63);
-            this.groupBox4.TabIndex = 12;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "NIBP";
-            // 
-            // textNIBPbajo
-            // 
-            this.textNIBPbajo.Location = new System.Drawing.Point(8, 36);
-            this.textNIBPbajo.MaxLength = 5;
-            this.textNIBPbajo.Name = "textNIBPbajo";
-            this.textNIBPbajo.Size = new System.Drawing.Size(39, 20);
-            this.textNIBPbajo.TabIndex = 10;
-            this.textNIBPbajo.Tag = "textNIBPbajo";
-            this.textNIBPbajo.TextChanged += new System.EventHandler(this.textNIBPbajo_TextChanged);
-            // 
-            // textNIBPalto
-            // 
-            this.textNIBPalto.Location = new System.Drawing.Point(72, 37);
-            this.textNIBPalto.MaxLength = 5;
-            this.textNIBPalto.Name = "textNIBPalto";
-            this.textNIBPalto.Size = new System.Drawing.Size(39, 20);
-            this.textNIBPalto.TabIndex = 5;
-            this.textNIBPalto.Tag = "textNIBPalto";
-            this.textNIBPalto.TextChanged += new System.EventHandler(this.textNIBPalto_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(79, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "High";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Low";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textSpO2bajo);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(19, 170);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(156, 64);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Sp02";
-            // 
-            // textSpO2bajo
-            // 
-            this.textSpO2bajo.Location = new System.Drawing.Point(6, 38);
-            this.textSpO2bajo.MaxLength = 5;
-            this.textSpO2bajo.Name = "textSpO2bajo";
-            this.textSpO2bajo.Size = new System.Drawing.Size(39, 20);
-            this.textSpO2bajo.TabIndex = 11;
-            this.textSpO2bajo.Tag = "textSpO2bajo";
-            this.textSpO2bajo.TextChanged += new System.EventHandler(this.textSpO2bajo_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Low";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textRRalto);
-            this.groupBox2.Controls.Add(this.textRRbajo);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(18, 102);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(156, 62);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "RR";
-            // 
-            // textRRalto
-            // 
-            this.textRRalto.Location = new System.Drawing.Point(74, 36);
-            this.textRRalto.MaxLength = 4;
-            this.textRRalto.Name = "textRRalto";
-            this.textRRalto.Size = new System.Drawing.Size(39, 20);
-            this.textRRalto.TabIndex = 7;
-            this.textRRalto.Tag = "textRRalto";
-            this.textRRalto.TextChanged += new System.EventHandler(this.textRRalto_TextChanged);
-            // 
-            // textRRbajo
-            // 
-            this.textRRbajo.Location = new System.Drawing.Point(6, 32);
-            this.textRRbajo.MaxLength = 4;
-            this.textRRbajo.Name = "textRRbajo";
-            this.textRRbajo.Size = new System.Drawing.Size(39, 20);
-            this.textRRbajo.TabIndex = 12;
-            this.textRRbajo.Tag = "textRRbajo";
-            this.textRRbajo.TextChanged += new System.EventHandler(this.textRRbajo_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "High";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Low";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textHRalto);
-            this.groupBox1.Controls.Add(this.textHRbajo);
-            this.groupBox1.Controls.Add(this.labelTaquicardia);
-            this.groupBox1.Controls.Add(this.labelBradicardia);
-            this.groupBox1.Location = new System.Drawing.Point(21, 29);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(153, 67);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "HR";
-            // 
-            // textHRalto
-            // 
-            this.textHRalto.Location = new System.Drawing.Point(71, 32);
-            this.textHRalto.MaxLength = 3;
-            this.textHRalto.Name = "textHRalto";
-            this.textHRalto.Size = new System.Drawing.Size(39, 20);
-            this.textHRalto.TabIndex = 3;
-            this.textHRalto.Tag = "textHRalto";
-            this.textHRalto.TextChanged += new System.EventHandler(this.textHRalto_TextChanged);
-            // 
-            // textHRbajo
-            // 
-            this.textHRbajo.BackColor = System.Drawing.Color.White;
-            this.textHRbajo.Location = new System.Drawing.Point(7, 32);
-            this.textHRbajo.MaxLength = 3;
-            this.textHRbajo.Name = "textHRbajo";
-            this.textHRbajo.Size = new System.Drawing.Size(39, 20);
-            this.textHRbajo.TabIndex = 2;
-            this.textHRbajo.Tag = "textHRbajo";
-            this.textHRbajo.TextChanged += new System.EventHandler(this.textHRbajo_TextChanged);
-            // 
-            // labelTaquicardia
-            // 
-            this.labelTaquicardia.AutoSize = true;
-            this.labelTaquicardia.Location = new System.Drawing.Point(75, 16);
-            this.labelTaquicardia.Name = "labelTaquicardia";
-            this.labelTaquicardia.Size = new System.Drawing.Size(29, 13);
-            this.labelTaquicardia.TabIndex = 1;
-            this.labelTaquicardia.Tag = "labelTaquicardia";
-            this.labelTaquicardia.Text = "High";
-            // 
-            // labelBradicardia
-            // 
-            this.labelBradicardia.AutoSize = true;
-            this.labelBradicardia.Location = new System.Drawing.Point(6, 16);
-            this.labelBradicardia.Name = "labelBradicardia";
-            this.labelBradicardia.Size = new System.Drawing.Size(27, 13);
-            this.labelBradicardia.TabIndex = 0;
-            this.labelBradicardia.Tag = "labelBradicardia";
-            this.labelBradicardia.Text = "Low";
-            // 
-            // buttonSilenciar
-            // 
-            this.buttonSilenciar.Location = new System.Drawing.Point(35, 394);
-            this.buttonSilenciar.Name = "buttonSilenciar";
-            this.buttonSilenciar.Size = new System.Drawing.Size(123, 33);
-            this.buttonSilenciar.TabIndex = 19;
-            this.buttonSilenciar.Tag = "buttonSilenciar";
-            this.buttonSilenciar.Text = "Silence";
-            this.buttonSilenciar.UseVisualStyleBackColor = true;
-            this.buttonSilenciar.Click += new System.EventHandler(this.buttonSilenciar_Click);
-            // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(441, 41);
+            this.buttonStart.Location = new System.Drawing.Point(474, 16);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(93, 32);
             this.buttonStart.TabIndex = 17;
@@ -598,10 +304,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CancelButton = this.buttonShutdown;
-            this.ClientSize = new System.Drawing.Size(733, 523);
+            this.ClientSize = new System.Drawing.Size(749, 432);
             this.ControlBox = false;
             this.Controls.Add(this.textMean_Pressure);
             this.Controls.Add(this.label11);
@@ -609,7 +315,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.buttonShutdown);
             this.Controls.Add(this.buttonStart);
-            this.Controls.Add(this.groupAlarmas);
             this.Controls.Add(this.textDiastolica);
             this.Controls.Add(this.labelDiastolica);
             this.Controls.Add(this.textSistolica);
@@ -634,17 +339,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.derivacion1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.respiracion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spo2)).EndInit();
-            this.groupAlarmas.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,33 +359,8 @@
         private System.Windows.Forms.TextBox textSistolica;
         private System.Windows.Forms.Label labelDiastolica;
         private System.Windows.Forms.TextBox textDiastolica;
-        private System.Windows.Forms.GroupBox groupAlarmas;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label labelTaquicardia;
-        private System.Windows.Forms.Label labelBradicardia;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonShutdown;
-        private System.Windows.Forms.Button buttonSilenciar;
-        private System.Windows.Forms.TextBox textTEMPbajo;
-        private System.Windows.Forms.TextBox textTEMPalto;
-        private System.Windows.Forms.TextBox textNIBPbajo;
-        private System.Windows.Forms.TextBox textNIBPalto;
-        private System.Windows.Forms.TextBox textSpO2bajo;
-        private System.Windows.Forms.TextBox textRRalto;
-        private System.Windows.Forms.TextBox textRRbajo;
-        private System.Windows.Forms.TextBox textHRalto;
-        private System.Windows.Forms.TextBox textHRbajo;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label10;
