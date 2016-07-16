@@ -166,7 +166,10 @@ namespace ECONOMITOR2
             
             
             Alarmas.silenciarAlarma();
-
+            System.Diagnostics.Process keyboard = new System.Diagnostics.Process();
+            keyboard = System.Diagnostics.Process.Start("osk.exe");
+            
+            //keyboard.Kill();
         
         }
 
