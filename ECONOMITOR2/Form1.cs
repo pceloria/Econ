@@ -47,11 +47,7 @@ namespace ECONOMITOR2
             //    data[j] = s;
             //s = s + 0.1;
 
-            AudioVisual.init_Draw(derivacion1);
-            //AudioVisual.init_Draw(derivacion2);
-            //AudioVisual.init_Draw(derivacion3);
-            AudioVisual.init_Draw(spo2);
-            AudioVisual.init_Draw(respiracion);
+            AudioVisual.init_Draw(derivacion1, respiracion, spo2);;
             Data.init();
             
         }
@@ -133,25 +129,25 @@ namespace ECONOMITOR2
 
             if (newECGData != null)
             {
-                if (currentIndexECG + newECGData.Length > 1000)
+                if (currentIndexECG + newECGData.Length > AudioVisual.getPointsOfECG())
                     currentIndexECG = 0;
-                AudioVisual.Draw(derivacion1, newECGData, currentIndexECG);
+                AudioVisual.DrawECG(newECGData, currentIndexECG);
                 currentIndexECG += newECGData.Length;
                 
             }
 
             if (newSPO2Data != null)
             {
-                if (currentIndexSPO2 + newSPO2Data.Length > 1000)
+                if (currentIndexSPO2 + newSPO2Data.Length > AudioVisual.getPointsOfSPO2())
                     currentIndexSPO2 = 0;
-                AudioVisual.Draw(spo2, newSPO2Data, currentIndexSPO2);
+                AudioVisual.DrawSPO2(newSPO2Data, currentIndexSPO2);
                 currentIndexSPO2 += newSPO2Data.Length;
             }
 
             if (newRESPData != null) {
-                if (currentIndexRESP + newRESPData.Length > 1000)
+                if (currentIndexRESP + newRESPData.Length > AudioVisual.getPointsOfRESP())
                     currentIndexRESP = 0;
-                AudioVisual.Draw(respiracion, newRESPData, currentIndexRESP);
+                AudioVisual.DrawRESP(newRESPData, currentIndexRESP);
                 currentIndexRESP += newRESPData.Length;
             }
 
