@@ -78,8 +78,6 @@
             this.buttonSilenciar = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonShutdown = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textPort = new System.Windows.Forms.TextBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label10 = new System.Windows.Forms.Label();
@@ -99,8 +97,12 @@
             // 
             // derivacion1
             // 
+            this.derivacion1.BackColor = System.Drawing.Color.Black;
+            this.derivacion1.BackSecondaryColor = System.Drawing.Color.Black;
+            this.derivacion1.BorderlineColor = System.Drawing.Color.Black;
+            this.derivacion1.BorderSkin.BackColor = System.Drawing.Color.Black;
             this.derivacion1.BorderSkin.BackSecondaryColor = System.Drawing.Color.Yellow;
-            this.derivacion1.BorderSkin.PageColor = System.Drawing.Color.DarkGray;
+            this.derivacion1.BorderSkin.PageColor = System.Drawing.Color.Gray;
             chartArea1.Name = "ChartArea1";
             this.derivacion1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -114,6 +116,7 @@
             this.derivacion1.Series.Add(series1);
             this.derivacion1.Size = new System.Drawing.Size(536, 138);
             this.derivacion1.TabIndex = 0;
+            this.derivacion1.TabStop = false;
             this.derivacion1.Tag = "derivacion1";
             this.derivacion1.Text = "chart1";
             // 
@@ -534,25 +537,6 @@
             this.buttonShutdown.UseVisualStyleBackColor = true;
             this.buttonShutdown.Click += new System.EventHandler(this.buttonShutdown_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(438, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Tag = "labelDiastolica";
-            this.label9.Text = "PORT";
-            // 
-            // textPort
-            // 
-            this.textPort.Location = new System.Drawing.Point(481, 11);
-            this.textPort.Name = "textPort";
-            this.textPort.Size = new System.Drawing.Size(37, 20);
-            this.textPort.TabIndex = 21;
-            this.textPort.Tag = "textPort";
-            this.textPort.Text = "COM14";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -595,6 +579,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CancelButton = this.buttonShutdown;
             this.ClientSize = new System.Drawing.Size(733, 523);
@@ -603,8 +588,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textHeartRate);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textPort);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.buttonShutdown);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.groupAlarmas);
@@ -622,6 +605,7 @@
             this.Controls.Add(this.respiracion);
             this.Controls.Add(this.derivacion1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.ForeColor = System.Drawing.SystemColors.Control;
             this.Name = "Economitor";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -678,8 +662,6 @@
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonShutdown;
         private System.Windows.Forms.Button buttonSilenciar;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textPort;
         private System.Windows.Forms.TextBox textTEMPbajo;
         private System.Windows.Forms.TextBox textTEMPalto;
         private System.Windows.Forms.TextBox textNIBPbajo;

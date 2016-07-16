@@ -66,7 +66,8 @@ namespace ECONOMITOR2
         {
             if (!Acqsign.isPortOpen)
             {
-                if (Acqsign.init(textPort.Text))
+                //                if (Acqsign.init(textPort.Text))
+                if (Acqsign.init("COM14"))
                 {
                     // Se inicia el timer si se logro abrir el puerto
                     timer1.Tick += new EventHandler(timer1_Tick);  // Everytime timer ticks, timer_Tick will be called
@@ -255,6 +256,11 @@ namespace ECONOMITOR2
         }
 
         private void spo2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textPort_TextChanged(object sender, EventArgs e)
         {
 
         }
