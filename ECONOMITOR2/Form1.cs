@@ -118,9 +118,9 @@ namespace ECONOMITOR2
                 AudioVisual.actualiza_text(textSistolica, currentSistolica);
                 AudioVisual.actualiza_text(textMean_Pressure, currentMean_Pressure);
 
-                Alarmas.toma_de_decisiones(currentHR, currentRR, currentTemperatura, currentDiastolica,
-                    currentSistolica, currentspo2,textHRbajo,textHRalto,textRRbajo,textRRalto,textSpO2bajo,
-                    textTEMPbajo,textTEMPalto,textNIBPbajo,textNIBPalto);
+                //Alarmas.toma_de_decisiones(currentHR, currentRR, currentTemperatura, currentDiastolica,
+                //    currentSistolica, currentspo2,textHRbajo,textHRalto,textRRbajo,textRRalto,textSpO2bajo,
+                //    textTEMPbajo,textTEMPalto,textNIBPbajo,textNIBPalto);
                 counter = 0;
             }
             
@@ -173,86 +173,86 @@ namespace ECONOMITOR2
         
         }
 
-        private void textHRbajo_TextChanged(object sender, EventArgs e)
-        {
-            int n;
-            if (int.TryParse(textHRbajo.Text, out n))
-                Alarmas.set_low_HR(textHRbajo);
-            else
-                MessageBox.Show("Ingrese valores enteros");
-        }
+        //private void textHRbajo_TextChanged(object sender, EventArgs e)
+        //{
+        //    int n;
+        //    if (int.TryParse(textHRbajo.Text, out n))
+        //        Alarmas.set_low_HR(textHRbajo);
+        //    else
+        //        MessageBox.Show("Ingrese valores enteros");
+        //}
 
-        private void textHRalto_TextChanged(object sender, EventArgs e)
-        {
-            int n;
-            if (int.TryParse(textHRalto.Text, out n))
-                Alarmas.set_high_HR(textHRalto);
-            else
-                MessageBox.Show("Ingrese valores enteros");
-        }
+        //private void textHRalto_TextChanged(object sender, EventArgs e)
+        //{
+        //    int n;
+        //    if (int.TryParse(textHRalto.Text, out n))
+        //        Alarmas.set_high_HR(textHRalto);
+        //    else
+        //        MessageBox.Show("Ingrese valores enteros");
+        //}
 
-        private void textRRbajo_TextChanged(object sender, EventArgs e)
-        {
-            int n;
-            if (int.TryParse(textRRbajo.Text, out n))
-                Alarmas.set_low_RR(textRRbajo);
-            else
-                MessageBox.Show("Ingrese valores enteros");
-        }
+        //private void textRRbajo_TextChanged(object sender, EventArgs e)
+        //{
+        //    int n;
+        //    if (int.TryParse(textRRbajo.Text, out n))
+        //        Alarmas.set_low_RR(textRRbajo);
+        //    else
+        //        MessageBox.Show("Ingrese valores enteros");
+        //}
 
-        private void textRRalto_TextChanged(object sender, EventArgs e)
-        {
-            int n;
-            if (int.TryParse(textRRalto.Text, out n))
-                Alarmas.set_high_RR(textRRalto);
-            else
-                MessageBox.Show("Ingrese valores enteros");
-        }
+        //private void textRRalto_TextChanged(object sender, EventArgs e)
+        //{
+        //    int n;
+        //    if (int.TryParse(textRRalto.Text, out n))
+        //        Alarmas.set_high_RR(textRRalto);
+        //    else
+        //        MessageBox.Show("Ingrese valores enteros");
+        //}
 
-        private void textSpO2bajo_TextChanged(object sender, EventArgs e)
-        {
-            int n;
-            if (int.TryParse(textSpO2bajo.Text, out n))
-                Alarmas.set_low_Spo2(textSpO2bajo);
-            else
-                MessageBox.Show("Ingrese valores enteros");
-        }
+        //private void textSpO2bajo_TextChanged(object sender, EventArgs e)
+        //{
+        //    int n;
+        //    if (int.TryParse(textSpO2bajo.Text, out n))
+        //        Alarmas.set_low_Spo2(textSpO2bajo);
+        //    else
+        //        MessageBox.Show("Ingrese valores enteros");
+        //}
 
-        private void textNIBPbajo_TextChanged(object sender, EventArgs e)
-        {
-            int n;
-            if (int.TryParse(textNIBPbajo.Text, out n))
-                Alarmas.set_low_NIBP(textNIBPbajo);
-            else
-                MessageBox.Show("Ingrese valores enteros");
-        }
+        //private void textNIBPbajo_TextChanged(object sender, EventArgs e)
+        //{
+        //    int n;
+        //    if (int.TryParse(textNIBPbajo.Text, out n))
+        //        Alarmas.set_low_NIBP(textNIBPbajo);
+        //    else
+        //        MessageBox.Show("Ingrese valores enteros");
+        //}
 
-        private void textNIBPalto_TextChanged(object sender, EventArgs e)
-        {
-            int n;
-            if (int.TryParse(textNIBPalto.Text, out n))
-                Alarmas.set_high_NIBP(textNIBPalto);
-            else
-                MessageBox.Show("Ingrese valores enteros");
-        }
+        //private void textNIBPalto_TextChanged(object sender, EventArgs e)
+        //{
+        //    int n;
+        //    if (int.TryParse(textNIBPalto.Text, out n))
+        //        Alarmas.set_high_NIBP(textNIBPalto);
+        //    else
+        //        MessageBox.Show("Ingrese valores enteros");
+        //}
 
-        private void textTEMPbajo_TextChanged(object sender, EventArgs e)
-        {
-            int n;
-            if (int.TryParse(textTEMPbajo.Text, out n))
-                Alarmas.set_low_temperatura(textTEMPbajo);
-            else
-                MessageBox.Show("Ingrese valores enteros");
-        }
+        //private void textTEMPbajo_TextChanged(object sender, EventArgs e)
+        //{
+        //    int n;
+        //    if (int.TryParse(textTEMPbajo.Text, out n))
+        //        Alarmas.set_low_temperatura(textTEMPbajo);
+        //    else
+        //        MessageBox.Show("Ingrese valores enteros");
+        //}
 
-        private void textTEMPalto_TextChanged(object sender, EventArgs e)
-        {
-            int n;
-            if (int.TryParse(textTEMPalto.Text, out n))
-                Alarmas.set_high_temperatura(textTEMPalto);
-            else
-                MessageBox.Show("Ingrese valores enteros");
-        }
+        //private void textTEMPalto_TextChanged(object sender, EventArgs e)
+        //{
+        //    int n;
+        //    if (int.TryParse(textTEMPalto.Text, out n))
+        //        Alarmas.set_high_temperatura(textTEMPalto);
+        //    else
+        //        MessageBox.Show("Ingrese valores enteros");
+        //}
 
         private void spo2_Click(object sender, EventArgs e)
         {
@@ -267,6 +267,12 @@ namespace ECONOMITOR2
         private void Economitor_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void botonAlarma_Click(object sender, EventArgs e)
+        {
+            Form2 alarmsSetupForm = new Form2();
+            alarmsSetupForm.Show();
         }
     }
 }
