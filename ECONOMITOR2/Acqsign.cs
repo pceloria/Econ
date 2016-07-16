@@ -280,6 +280,7 @@ namespace ECONOMITOR2
         }
 
 
+        // Communication user --> board
         public const int NEONATE = 1;
         public const int CHILD = 2;
         public const int ADULT = 3;
