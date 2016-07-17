@@ -74,10 +74,9 @@
             chartArea1.Name = "ChartArea1";
             this.derivacion1.ChartAreas.Add(chartArea1);
             this.derivacion1.Dock = System.Windows.Forms.DockStyle.Bottom;
-<<<<<<< HEAD
-=======
+
             legend1.Enabled = false;
->>>>>>> origin/master
+
             legend1.Name = "Legend1";
             this.derivacion1.Legends.Add(legend1);
             this.derivacion1.Location = new System.Drawing.Point(0, 324);
@@ -128,18 +127,14 @@
             // spo2
             // 
             this.spo2.BackColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
-            chartArea3.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
-=======
->>>>>>> origin/master
+
             chartArea3.BackColor = System.Drawing.Color.Black;
             chartArea3.Name = "ChartArea1";
             this.spo2.ChartAreas.Add(chartArea3);
             this.spo2.Dock = System.Windows.Forms.DockStyle.Bottom;
-<<<<<<< HEAD
-=======
+
             legend3.Enabled = false;
->>>>>>> origin/master
+
             legend3.Name = "Legend1";
             this.spo2.Legends.Add(legend3);
             this.spo2.Location = new System.Drawing.Point(0, 108);
