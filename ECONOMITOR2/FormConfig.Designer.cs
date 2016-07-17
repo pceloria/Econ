@@ -370,6 +370,7 @@
             this.Controls.Add(this.ECG);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormConfig";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

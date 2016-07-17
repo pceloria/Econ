@@ -286,12 +286,54 @@
             this.textHeartRate.Text = "-";
             this.textHeartRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+
+            // buttonAlarma
+            // 
+            this.buttonAlarma.BackColor = System.Drawing.Color.Black;
+            this.buttonAlarma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonAlarma.BackgroundImage")));
+            this.buttonAlarma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonAlarma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAlarma.Location = new System.Drawing.Point(588, 13);
+            this.buttonAlarma.Name = "buttonAlarma";
+            this.buttonAlarma.Size = new System.Drawing.Size(39, 35);
+            this.buttonAlarma.TabIndex = 26;
+            this.buttonAlarma.UseVisualStyleBackColor = false;
+            this.buttonAlarma.Click += new System.EventHandler(this.botonAlarma_Click);
+            // 
+            // buttonPause
+            // 
+            this.buttonPause.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPause.BackgroundImage")));
+            this.buttonPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPause.ForeColor = System.Drawing.Color.White;
+            this.buttonPause.Location = new System.Drawing.Point(543, 13);
+            this.buttonPause.Name = "buttonPause";
+            this.buttonPause.Size = new System.Drawing.Size(39, 35);
+            this.buttonPause.TabIndex = 27;
+            this.buttonPause.UseVisualStyleBackColor = true;
+            this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
+            // 
+            // buttonSilenciar
+            // 
+            this.buttonSilenciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSilenciar.BackgroundImage")));
+            this.buttonSilenciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonSilenciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSilenciar.Location = new System.Drawing.Point(437, 26);
+            this.buttonSilenciar.Name = "buttonSilenciar";
+            this.buttonSilenciar.Size = new System.Drawing.Size(55, 52);
+            this.buttonSilenciar.TabIndex = 28;
+            this.buttonSilenciar.UseVisualStyleBackColor = true;
+            this.buttonSilenciar.Click += new System.EventHandler(this.buttonSilenciar_Click);
+            // 
+
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.Black;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(317, 13);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 83);
+            this.textBox1.Size = new System.Drawing.Size(100, 76);
             this.textBox1.TabIndex = 29;
             // 
             // buttonShutdown
@@ -401,6 +443,7 @@
             this.Controls.Add(this.spo2);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Economitor";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

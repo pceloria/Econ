@@ -126,7 +126,7 @@ namespace ECONOMITOR2
             }
             else
             {
-                text_HR.BackColor = System.Drawing.Color.White;
+                text_HR.BackColor = System.Drawing.Color.Black;
             }
 
             //high_HR
@@ -140,7 +140,7 @@ namespace ECONOMITOR2
             }
             else
             {
-                text_HR.BackColor = System.Drawing.Color.White;
+                text_HR.BackColor = System.Drawing.Color.Black;
             }
 
             //low_RR
@@ -154,7 +154,7 @@ namespace ECONOMITOR2
             }
             else
             {
-                text_RR.BackColor = System.Drawing.Color.White;
+                text_RR.BackColor = System.Drawing.Color.Black;
             }
 
             //high_RR
@@ -168,7 +168,7 @@ namespace ECONOMITOR2
             }
             else
             {
-                text_RR.BackColor = System.Drawing.Color.White;
+                text_RR.BackColor = System.Drawing.Color.Black;
             }
 
            //low_SpO2
@@ -182,7 +182,7 @@ namespace ECONOMITOR2
             }
             else
             {
-                text_spo2.BackColor = System.Drawing.Color.White;
+                text_spo2.BackColor = System.Drawing.Color.Black;
             }
 
             //low_temperatura
@@ -196,7 +196,7 @@ namespace ECONOMITOR2
             }
             else
             {
-                text_temp.BackColor = System.Drawing.Color.White;
+                text_temp.BackColor = System.Drawing.Color.Black;
             }
             //high_temperatura
             if (currentTemperatura > high_temperatura && flag_TEMP_enable)
@@ -209,7 +209,7 @@ namespace ECONOMITOR2
             }
             else
             {
-                text_temp.BackColor = System.Drawing.Color.White;
+                text_temp.BackColor = System.Drawing.Color.Black;
             }
 
         }
