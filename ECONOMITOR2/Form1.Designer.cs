@@ -242,6 +242,7 @@
             this.buttonStart.TabIndex = 17;
             this.buttonStart.Tag = "buttonStart";
             this.buttonStart.UseVisualStyleBackColor = false;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // buttonShutdown
             // 

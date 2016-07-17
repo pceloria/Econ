@@ -85,8 +85,9 @@ namespace ECONOMITOR2
 
         private void thresholdsTextChanged(object sender, EventArgs e)
         {
-            double n;
-            if (System.Text.RegularExpressions.Regex.IsMatch(((TextBox)sender).Text, " ^ [0-9]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(((TextBox)sender).Text, " ^ [0-9]")||
+                System.Text.RegularExpressions.Regex.IsMatch(((TextBox)sender).Text, "(\\.){2,}")||
+                System.Text.RegularExpressions.Regex.IsMatch(((TextBox)sender).Text, "([0-9]\\.){2,}"))
             {
                 ((TextBox)sender).Text = "";
             }
