@@ -118,9 +118,29 @@ namespace ECONOMITOR2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buttonAlarma1 {
+            get {
+                object obj = ResourceManager.GetObject("buttonAlarma1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonShutdown_BackgroundImage {
             get {
                 object obj = ResourceManager.GetObject("buttonShutdown.BackgroundImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonSilenciar_BackgroundImage {
+            get {
+                object obj = ResourceManager.GetObject("buttonSilenciar.BackgroundImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

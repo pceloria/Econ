@@ -117,20 +117,19 @@ namespace ECONOMITOR2
             }
 
 
-
-            if (comboBox2.SelectedItem.ToString() == "x 0.25")
+            if (comboBox2.SelectedIndex == 0)
             {
                 Acqsign.setRESPgain(Acqsign.GAINX025);
             }
-            else if (comboBox2.SelectedItem.ToString() == "x 0.5")
+            else if (comboBox2.SelectedIndex == 1)
             {
                 Acqsign.setRESPgain(Acqsign.GAINX050);
             }
-            else if (comboBox2.SelectedItem.ToString() == "x 1")
+            else if (comboBox2.SelectedIndex == 2)
             {
                 Acqsign.setRESPgain(Acqsign.GAINX100);
             }
-            else if (comboBox2.SelectedItem.ToString() == "x 2")
+            else if (comboBox2.SelectedIndex == 3)
             {
                 Acqsign.setRESPgain(Acqsign.GAINX200);
             }
