@@ -57,6 +57,7 @@
             this.buttonAlarma = new System.Windows.Forms.Button();
             this.buttonPause = new System.Windows.Forms.Button();
             this.buttonSilenciar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.derivacion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.respiracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spo2)).BeginInit();
@@ -138,7 +139,7 @@
             series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series3.Color = System.Drawing.Color.LightSalmon;
+            series3.Color = System.Drawing.Color.Lime;
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             this.spo2.Series.Add(series3);
@@ -150,10 +151,11 @@
             // labelTemperatura
             // 
             this.labelTemperatura.AutoSize = true;
+            this.labelTemperatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTemperatura.ForeColor = System.Drawing.Color.Yellow;
-            this.labelTemperatura.Location = new System.Drawing.Point(241, 15);
+            this.labelTemperatura.Location = new System.Drawing.Point(134, 28);
             this.labelTemperatura.Name = "labelTemperatura";
-            this.labelTemperatura.Size = new System.Drawing.Size(37, 13);
+            this.labelTemperatura.Size = new System.Drawing.Size(52, 20);
             this.labelTemperatura.TabIndex = 6;
             this.labelTemperatura.Tag = "labelTemperatura";
             this.labelTemperatura.Text = "TEMP";
@@ -162,11 +164,12 @@
             // 
             this.textTemperatura.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textTemperatura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textTemperatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTemperatura.ForeColor = System.Drawing.Color.Yellow;
-            this.textTemperatura.Location = new System.Drawing.Point(294, 11);
+            this.textTemperatura.Location = new System.Drawing.Point(209, 11);
             this.textTemperatura.Name = "textTemperatura";
             this.textTemperatura.ReadOnly = true;
-            this.textTemperatura.Size = new System.Drawing.Size(46, 13);
+            this.textTemperatura.Size = new System.Drawing.Size(57, 55);
             this.textTemperatura.TabIndex = 7;
             this.textTemperatura.Tag = "textTemperatura";
             this.textTemperatura.Text = "-";
@@ -175,10 +178,11 @@
             // labelRR
             // 
             this.labelRR.AutoSize = true;
+            this.labelRR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRR.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.labelRR.Location = new System.Drawing.Point(23, 14);
+            this.labelRR.Location = new System.Drawing.Point(12, 26);
             this.labelRR.Name = "labelRR";
-            this.labelRR.Size = new System.Drawing.Size(23, 13);
+            this.labelRR.Size = new System.Drawing.Size(33, 20);
             this.labelRR.TabIndex = 8;
             this.labelRR.Tag = "labelRR";
             this.labelRR.Text = "RR";
@@ -186,10 +190,11 @@
             // labelSpO2
             // 
             this.labelSpO2.AutoSize = true;
+            this.labelSpO2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpO2.ForeColor = System.Drawing.Color.Lime;
-            this.labelSpO2.Location = new System.Drawing.Point(358, 12);
+            this.labelSpO2.Location = new System.Drawing.Point(136, 73);
             this.labelSpO2.Name = "labelSpO2";
-            this.labelSpO2.Size = new System.Drawing.Size(34, 13);
+            this.labelSpO2.Size = new System.Drawing.Size(50, 20);
             this.labelSpO2.TabIndex = 9;
             this.labelSpO2.Tag = "labelSpO2";
             this.labelSpO2.Text = "SpO2";
@@ -198,11 +203,12 @@
             // 
             this.textRR.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textRR.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textRR.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textRR.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.textRR.Location = new System.Drawing.Point(49, 11);
+            this.textRR.Location = new System.Drawing.Point(56, 11);
             this.textRR.Name = "textRR";
             this.textRR.ReadOnly = true;
-            this.textRR.Size = new System.Drawing.Size(46, 13);
+            this.textRR.Size = new System.Drawing.Size(57, 55);
             this.textRR.TabIndex = 10;
             this.textRR.Tag = "textRR";
             this.textRR.Text = "-";
@@ -212,11 +218,12 @@
             // 
             this.textSpO2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textSpO2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textSpO2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSpO2.ForeColor = System.Drawing.Color.Lime;
-            this.textSpO2.Location = new System.Drawing.Point(398, 12);
+            this.textSpO2.Location = new System.Drawing.Point(209, 57);
             this.textSpO2.Name = "textSpO2";
             this.textSpO2.ReadOnly = true;
-            this.textSpO2.Size = new System.Drawing.Size(51, 13);
+            this.textSpO2.Size = new System.Drawing.Size(57, 55);
             this.textSpO2.TabIndex = 11;
             this.textSpO2.Tag = "textSpO2";
             this.textSpO2.Text = "-";
@@ -229,7 +236,7 @@
             this.buttonStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonStart.ForeColor = System.Drawing.Color.White;
-            this.buttonStart.Location = new System.Drawing.Point(455, 11);
+            this.buttonStart.Location = new System.Drawing.Point(519, 13);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(39, 35);
             this.buttonStart.TabIndex = 17;
@@ -242,9 +249,9 @@
             this.buttonShutdown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonShutdown.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonShutdown.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonShutdown.Location = new System.Drawing.Point(642, 10);
+            this.buttonShutdown.Location = new System.Drawing.Point(698, 12);
             this.buttonShutdown.Name = "buttonShutdown";
-            this.buttonShutdown.Size = new System.Drawing.Size(45, 37);
+            this.buttonShutdown.Size = new System.Drawing.Size(39, 35);
             this.buttonShutdown.TabIndex = 18;
             this.buttonShutdown.Tag = "buttonShutdown";
             this.buttonShutdown.UseVisualStyleBackColor = true;
@@ -253,10 +260,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(123, 14);
+            this.label10.Location = new System.Drawing.Point(12, 76);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 13);
+            this.label10.Size = new System.Drawing.Size(33, 20);
             this.label10.TabIndex = 22;
             this.label10.Tag = "labelDiastolica";
             this.label10.Text = "HR";
@@ -265,11 +273,12 @@
             // 
             this.textHeartRate.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textHeartRate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textHeartRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textHeartRate.ForeColor = System.Drawing.Color.Red;
-            this.textHeartRate.Location = new System.Drawing.Point(152, 12);
+            this.textHeartRate.Location = new System.Drawing.Point(56, 57);
             this.textHeartRate.Name = "textHeartRate";
             this.textHeartRate.ReadOnly = true;
-            this.textHeartRate.Size = new System.Drawing.Size(51, 13);
+            this.textHeartRate.Size = new System.Drawing.Size(57, 55);
             this.textHeartRate.TabIndex = 23;
             this.textHeartRate.Tag = "";
             this.textHeartRate.Text = "-";
@@ -279,11 +288,11 @@
             // 
             this.buttonAlarma.BackColor = System.Drawing.Color.Black;
             this.buttonAlarma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonAlarma.BackgroundImage")));
-            this.buttonAlarma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonAlarma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonAlarma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAlarma.Location = new System.Drawing.Point(579, 9);
+            this.buttonAlarma.Location = new System.Drawing.Point(599, 14);
             this.buttonAlarma.Name = "buttonAlarma";
-            this.buttonAlarma.Size = new System.Drawing.Size(40, 42);
+            this.buttonAlarma.Size = new System.Drawing.Size(63, 35);
             this.buttonAlarma.TabIndex = 26;
             this.buttonAlarma.UseVisualStyleBackColor = false;
             this.buttonAlarma.Click += new System.EventHandler(this.botonAlarma_Click);
@@ -294,22 +303,30 @@
             this.buttonPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPause.ForeColor = System.Drawing.Color.White;
-            this.buttonPause.Location = new System.Drawing.Point(514, 13);
+            this.buttonPause.Location = new System.Drawing.Point(564, 14);
             this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(38, 32);
+            this.buttonPause.Size = new System.Drawing.Size(39, 35);
             this.buttonPause.TabIndex = 27;
             this.buttonPause.UseVisualStyleBackColor = true;
             // 
             // buttonSilenciar
             // 
             this.buttonSilenciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSilenciar.BackgroundImage")));
-            this.buttonSilenciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonSilenciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonSilenciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSilenciar.Location = new System.Drawing.Point(693, 8);
+            this.buttonSilenciar.Location = new System.Drawing.Point(437, 28);
             this.buttonSilenciar.Name = "buttonSilenciar";
-            this.buttonSilenciar.Size = new System.Drawing.Size(45, 39);
+            this.buttonSilenciar.Size = new System.Drawing.Size(55, 52);
             this.buttonSilenciar.TabIndex = 28;
             this.buttonSilenciar.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(317, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 83);
+            this.textBox1.TabIndex = 29;
             // 
             // Economitor
             // 
@@ -320,6 +337,7 @@
             this.CancelButton = this.buttonShutdown;
             this.ClientSize = new System.Drawing.Size(749, 432);
             this.ControlBox = false;
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.derivacion1);
             this.Controls.Add(this.respiracion);
             this.Controls.Add(this.buttonSilenciar);
@@ -370,6 +388,7 @@
         private System.Windows.Forms.Button buttonPause;
         private System.Windows.Forms.DataVisualization.Charting.Chart spo2;
         private System.Windows.Forms.Button buttonSilenciar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
