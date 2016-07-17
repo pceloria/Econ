@@ -24,17 +24,19 @@ namespace ECONOMITOR2
         private int currentIndexECG = 0;
         private int currentIndexSPO2 = 0;
         private int currentIndexRESP = 0;
-        //para probar graficar rampas
-        //private double s;
-        //private double temp;
-
+        private Form Welcome;
+        private Boolean flag_pause;
+   
 
         public Economitor()
         {
+            Welcome_init();
+            
             InitializeComponent();
             currentIndexECG = 0;
             currentIndexSPO2 = 0;
             currentIndexRESP = 0;
+            flag_pause = false;
 
             // para probar graifcar rampas
             //s = 0;
@@ -70,6 +72,11 @@ namespace ECONOMITOR2
                 }
                 else
                     MessageBox.Show("Cannot find COM port");
+                if (flag_pause == true)
+                {
+                    timer1.Start();
+                    flag_pause = false;
+                }
             }
                 
         }
@@ -86,7 +93,7 @@ namespace ECONOMITOR2
             double[] newSPO2Data = Data.getNewSPO2packages();
             double[] newRESPData = Data.getNewRESPpackages();
 
-            if (Alarmas.counter1 == 100 && Alarmas.flag_alarma == false) {
+            if (Alarmas.counter1 == 100 && Alarmas.flag_alarma == false ) {
                 Alarmas.flag_alarma = true;
                 Alarmas.counter1 = 0;
             }
@@ -98,7 +105,7 @@ namespace ECONOMITOR2
 
             }
 
-            if (counter == 20) {
+            if (counter == 20 ) {
                 //temp = GetRandomNumber(37, 40);
                 currentHR = Data.getCurrentHeartRate();
                 currentRR = Data.getCurrentRespRate();
@@ -117,10 +124,9 @@ namespace ECONOMITOR2
                 counter = 0;
             }
             
-            //para probar graficar
-            //AudioVisual.Draw(derivacion1, data);
+           
 
-            if (newECGData != null)
+            if (newECGData != null )
             {
                 if (currentIndexECG + newECGData.Length > AudioVisual.getPointsOfECG())
                     currentIndexECG = 0;
@@ -192,6 +198,18 @@ namespace ECONOMITOR2
             FormConfig configForm = new FormConfig();        
             configForm.Show();
             //configForm.Close();
+        }
+
+        private void Welcome_init()
+        {
+            Welcome = new Welcome();
+            Welcome.Show();
+        }
+
+        private void buttonPause_Click(object sender, EventArgs e)
+        {
+            flag_pause = true;
+            timer1.Stop();
         }
     }
 }

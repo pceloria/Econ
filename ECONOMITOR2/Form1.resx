@@ -165,7 +165,7 @@
         XTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriXeW/h/sYH6AdFD6UeVjxS
         fNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2dmnafvvF05dOJZ+nPFmYKf5X+
         tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/MF72Rf3P4LeNt37vwd5MLWe+x7ys/
-        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAACw8BkvkDpQAAArJJREFUWEfFlFlT0nEU
+        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAACw4BQL7hQQAAArJJREFUWEfFlFlT0nEU
         hv1UfYA+TLkrAgIKIoqoKC65L6WINaUgi6CoqASIoLKm5dLo5LTqtHyDt9/BYaZpzoXAP7p4bp6L877n
         /JcKAP8VVpYTVpYTVnI8tDwA8bcvFVZyULh+TSl5CVZyUPDJr5TkJVjJkS8Qvw1LWoKVHPkCjkubpCVY
         yZEvsHg+nSsRuwmhzVd6CVZy/FnAdjaFpQsrot+C0PnkJZVgJcddgSQWTidhfTeOuZNRvDidReTTNrTe
@@ -312,7 +312,7 @@
   <data name="buttonConfiguration.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAAB8CAYAAAChbripAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAFDlJREFUeF7tXQm0JFV5niGbZlOjxuwxSkxCAkxXv8EBX1W9QdCRmarqIfNMxMSc
+        DgAACw4BQL7hQQAAFDlJREFUeF7tXQm0JFV5niGbZlOjxuwxSkxCAkxXv8EBX1W9QdCRmarqIfNMxMSc
         BBRiRJDEiAiOhs1EnUAAlYmgJiTiviAOIRrDiQG3JLLFsMRE4wgCmREMxAHnJd9X9ffQXf131a2qW1Xd
         Pf2d8533znv3v/e/S9373/9uq6YZncXgkK4fXNnxwg8ddNDy98qfa4fv+4/peNHHun50xdr1wS/Ln+do
         Ch2vd7hUwP/toxde1UQjiCvfD/9mIO0VNkD8bUGCzFEXFvzwqI4bfGqg8IdZcyNQKn+Ijhv9LX4uSfA5
@@ -402,6 +402,6 @@
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>49</value>
   </metadata>
 </root>
