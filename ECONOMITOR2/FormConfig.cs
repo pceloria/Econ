@@ -8,8 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ECONOMITOR2
 {
+
     public partial class FormConfig : Form
     {
         public FormConfig()
@@ -77,9 +79,8 @@ namespace ECONOMITOR2
             else
             {
                 Acqsign.enableECG(false);
+                
             }
-
-
             if (checkBox_SpO2.Checked)
             {
                 Acqsign.enableSPO2(true);
@@ -97,6 +98,43 @@ namespace ECONOMITOR2
             {
                 Acqsign.enableTEMP(false);
             }
+
+            if (comboBox1.SelectedItem.ToString() == "x 0.25")
+            {
+                Acqsign.setECGgain(Acqsign.GAINX025);
+            }
+            else if(comboBox1.SelectedItem.ToString() == "x 0.5")
+            {
+                Acqsign.setECGgain(Acqsign.GAINX050);
+            }
+            else if (comboBox1.SelectedItem.ToString() == "x 1")
+            {
+                Acqsign.setECGgain(Acqsign.GAINX100);
+            }
+            else if (comboBox1.SelectedItem.ToString() == "x 2")
+            {
+                Acqsign.setECGgain(Acqsign.GAINX200);
+            }
+
+
+
+            if (comboBox2.SelectedItem.ToString() == "x 0.25")
+            {
+                Acqsign.setRESPgain(Acqsign.GAINX025);
+            }
+            else if (comboBox2.SelectedItem.ToString() == "x 0.5")
+            {
+                Acqsign.setRESPgain(Acqsign.GAINX050);
+            }
+            else if (comboBox2.SelectedItem.ToString() == "x 1")
+            {
+                Acqsign.setRESPgain(Acqsign.GAINX100);
+            }
+            else if (comboBox2.SelectedItem.ToString() == "x 2")
+            {
+                Acqsign.setRESPgain(Acqsign.GAINX200);
+            }
+
 
 
             this.Close();
