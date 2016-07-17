@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="teclado_numerico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teclado_numerico.Designer.cs">
+      <DependentUpon>teclado_numerico.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +82,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teclado_numerico.resx">
+      <DependentUpon>teclado_numerico.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -109,6 +118,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\audio_temp.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\buttonAlarma.BackgroundImage.png" />
+    <Content Include="Resources\buttonConfiguration.BackgroundImage.png" />
+    <Content Include="Resources\buttonPause.BackgroundImage.png" />
+    <Content Include="Resources\buttonShutdown.BackgroundImage.png" />
+    <Content Include="Resources\buttonSilenciar.BackgroundImage.png" />
+    <Content Include="Resources\buttonStart.BackgroundImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

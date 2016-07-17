@@ -321,6 +321,7 @@
             this.buttonSilenciar.Size = new System.Drawing.Size(55, 52);
             this.buttonSilenciar.TabIndex = 28;
             this.buttonSilenciar.UseVisualStyleBackColor = true;
+            this.buttonSilenciar.Click += new System.EventHandler(this.buttonSilenciar_Click);
             // 
             // textBox1
             // 

@@ -125,7 +125,7 @@
             this.onoffTEMP.AutoSize = true;
             this.onoffTEMP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.onoffTEMP.ForeColor = System.Drawing.Color.Yellow;
-            this.onoffTEMP.Location = new System.Drawing.Point(473, 344);
+            this.onoffTEMP.Location = new System.Drawing.Point(456, 344);
             this.onoffTEMP.Name = "onoffTEMP";
             this.onoffTEMP.Size = new System.Drawing.Size(112, 28);
             this.onoffTEMP.TabIndex = 10;
@@ -191,7 +191,7 @@
             this.onoffSpO2.AutoSize = true;
             this.onoffSpO2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.onoffSpO2.ForeColor = System.Drawing.Color.Lime;
-            this.onoffSpO2.Location = new System.Drawing.Point(473, 141);
+            this.onoffSpO2.Location = new System.Drawing.Point(456, 141);
             this.onoffSpO2.Name = "onoffSpO2";
             this.onoffSpO2.Size = new System.Drawing.Size(112, 28);
             this.onoffSpO2.TabIndex = 10;
@@ -204,7 +204,7 @@
             this.textSpO2bajo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textSpO2bajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSpO2bajo.ForeColor = System.Drawing.Color.Lime;
-            this.textSpO2bajo.Location = new System.Drawing.Point(534, 96);
+            this.textSpO2bajo.Location = new System.Drawing.Point(456, 97);
             this.textSpO2bajo.MaxLength = 4;
             this.textSpO2bajo.Name = "textSpO2bajo";
             this.textSpO2bajo.Size = new System.Drawing.Size(100, 29);
@@ -219,7 +219,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Lime;
-            this.label14.Location = new System.Drawing.Point(560, 69);
+            this.label14.Location = new System.Drawing.Point(484, 69);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(45, 24);
             this.label14.TabIndex = 7;
@@ -248,7 +248,6 @@
             this.textHRbajo.Name = "textHRbajo";
             this.textHRbajo.Size = new System.Drawing.Size(100, 29);
             this.textHRbajo.TabIndex = 11;
-            this.textHRbajo.Text = "140";
             this.textHRbajo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textHRbajo.Click += new System.EventHandler(this.thresholdsClick);
             this.textHRbajo.TextChanged += new System.EventHandler(this.thresholdsTextChanged);
@@ -260,12 +259,11 @@
             this.textHRalto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textHRalto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textHRalto.ForeColor = System.Drawing.Color.Red;
-            this.textHRalto.Location = new System.Drawing.Point(205, 96);
+            this.textHRalto.Location = new System.Drawing.Point(200, 97);
             this.textHRalto.MaxLength = 4;
             this.textHRalto.Name = "textHRalto";
             this.textHRalto.Size = new System.Drawing.Size(100, 29);
             this.textHRalto.TabIndex = 12;
-            this.textHRalto.Text = "50";
             this.textHRalto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textHRalto.Click += new System.EventHandler(this.thresholdsClick);
             this.textHRalto.TextChanged += new System.EventHandler(this.thresholdsTextChanged);
@@ -369,7 +367,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(678, 481);
+            this.ClientSize = new System.Drawing.Size(674, 477);
             this.ControlBox = false;
             this.Controls.Add(this.buttonDiscardAlarms);
             this.Controls.Add(this.botonOKalarma);
@@ -396,9 +394,11 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

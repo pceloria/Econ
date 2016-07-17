@@ -13,15 +13,13 @@ namespace ECONOMITOR2
     {
 
             // inicializo los vectores a graficar
-            private static double low_temperatura = 0;
-            private static double high_temperatura = 100;
-            private static int low_HR = 0;
-            private static int high_HR = 200;
-            private static int low_RR = 00;
-            private static int high_RR = 200;
-            private static int low_Spo2 = 0;
-            private static int low_NIBP = 00;
-            private static int high_NIBP = 200;
+            private static double low_temperatura = 34;
+            private static double high_temperatura = 39;
+            private static int low_HR = 40;
+            private static int high_HR = 150;
+            private static int low_RR = 3;
+            private static int high_RR = 15;
+            private static int low_Spo2 = 95;
             public static Boolean flag_alarma = true;
             private static System.Media.SoundPlayer player = new System.Media.SoundPlayer();
             public static Stream audio_HR = Properties.Resources.audio_HR;
@@ -33,45 +31,35 @@ namespace ECONOMITOR2
             public static int counter_color;
             public static Boolean flag_color = true;
 
+            public static Boolean flag_RR_enable = false;
+            public static Boolean flag_HR_enable = false;
+            public static Boolean flag_SpO2_enable = false;
+            public static Boolean flag_TEMP_enable = false;
+
         //getters
         public static double get_low_temperatura()
         {
             return low_temperatura;
         }
-
         public static double get_high_temperatura()
         {
             return high_temperatura;
         }
-
         public static int get_low_HR()
         {
             return low_HR;
         }
-
         public static int get_high_HR()
         {
             return high_HR;
         }
-
         public static int get_low_RR()
         {
             return low_RR;
         }
-
         public static int get_high_RR()
         {
             return high_RR;
-        }
-
-        public static int get_low_NIBP()
-        {
-            return low_NIBP;
-        }
-
-        public static int get_high_NIBP()
-        {
-            return high_NIBP;
         }
         public static int get_low_Spo2()
         {
@@ -81,98 +69,44 @@ namespace ECONOMITOR2
         // setters
         public static void set_low_HR(System.Windows.Forms.TextBox text)
         {
-            if (text.Text != "")
-            {
-                low_HR = Convert.ToInt32(text.Text);
-            }
+            low_HR = Convert.ToInt32(text.Text);
         }
-
         public static void set_high_HR(System.Windows.Forms.TextBox text)
         {
-            if (text.Text != "") { 
-                high_HR = Convert.ToInt32(text.Text);
-            }
-            else
-            {
-                high_HR = 500;
-            }
+            high_HR = Convert.ToInt32(text.Text);
+            
         }
-
         public static void set_low_RR(System.Windows.Forms.TextBox text)
         {
-            if (text.Text != "")
-            {
-                low_RR = Convert.ToInt32(text.Text);
-            }
+            low_RR = Convert.ToInt32(text.Text);
         }
-
         public static void set_high_RR(System.Windows.Forms.TextBox text)
         {
-            if (text.Text != "")
-            {
-                high_RR = Convert.ToInt32(text.Text);
-            }
-            else
-            {
-                high_RR = 600;
-            }
+            high_RR = Convert.ToInt32(text.Text);
         }
-
         public static void set_low_Spo2(System.Windows.Forms.TextBox text)
         {
-            if (text.Text != "")
-            {
-                low_Spo2 = Convert.ToInt32(text.Text);
-            }
+            low_Spo2 = Convert.ToInt32(text.Text);
         }
-
-        public static void set_low_NIBP(System.Windows.Forms.TextBox text)
-        {
-            if (text.Text != "")
-            {
-                low_NIBP = Convert.ToInt32(text.Text);
-            }
-        }
-
-        public static void set_high_NIBP(System.Windows.Forms.TextBox text)
-        {
-            if (text.Text != "")
-            {
-                high_NIBP = Convert.ToInt32(text.Text);
-            }
-            else
-            {
-                high_NIBP = 600;
-            }
-        }
-
         public static void set_high_temperatura(System.Windows.Forms.TextBox text)
         {
-            if (text.Text != "")
-            {
-                high_temperatura = Convert.ToDouble(text.Text);
-            }
-            else
-            {
-                high_temperatura = 600;
-            }
+            high_temperatura = Convert.ToDouble(text.Text);
         }
-
         public static void set_low_temperatura(System.Windows.Forms.TextBox text)
         {
-            if (text.Text != "")
-            {
-                low_temperatura = Convert.ToDouble(text.Text);
-            }
+            low_temperatura = Convert.ToDouble(text.Text);
         }
 
-        public static void toma_de_decisiones(int currentHR, int currentRR, double currentTemperatura, 
-            int currentDiastolica, int currentSistolica, int currentSpo2, System.Windows.Forms.TextBox text_low_HR,
-            System.Windows.Forms.TextBox text_high_HR, System.Windows.Forms.TextBox text_low_RR, System.Windows.Forms.TextBox text_high_RR,
-            System.Windows.Forms.TextBox text_low_spo2, System.Windows.Forms.TextBox text_low_temp, System.Windows.Forms.TextBox text_high_temp,
-            System.Windows.Forms.TextBox text_low_NIBP, System.Windows.Forms.TextBox text_high_NIBP)
+
+        public static void toma_de_decisiones(int currentHR, int currentRR, double currentTemperatura,
+                                                int currentSpo2,
+                                                System.Windows.Forms.TextBox text_HR,
+                                                System.Windows.Forms.TextBox text_RR, 
+                                                System.Windows.Forms.TextBox text_spo2, 
+                                                System.Windows.Forms.TextBox text_temp)
         {
-            if (currentHR < low_HR)
+            //low_HR
+            if (currentHR < low_HR && flag_HR_enable) 
             {
                 if (flag_alarma == true)
                 { 
@@ -180,125 +114,103 @@ namespace ECONOMITOR2
                 }
                 if (flag_color == true)
                 {
-                    text_low_HR.BackColor = System.Drawing.Color.Red;
+                    text_HR.BackColor = System.Drawing.Color.Red;
                     flag_color = false;
                 }
                 else
                 {
-                    text_low_HR.BackColor = System.Drawing.Color.Yellow;
+                    text_HR.BackColor = System.Drawing.Color.Yellow;
                     flag_color = true;
                 }
                 
             }
             else
             {
-                text_low_HR.BackColor = System.Drawing.Color.White;
+                text_HR.BackColor = System.Drawing.Color.White;
             }
 
-            if (currentHR > high_HR)
+            //high_HR
+            if (currentHR > high_HR && flag_HR_enable)
             {
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_HR);
                 }
-                text_high_HR.BackColor = System.Drawing.Color.Red;
+                text_HR.BackColor = System.Drawing.Color.Red;
             }
             else
             {
-                text_high_HR.BackColor = System.Drawing.Color.White;
+                text_HR.BackColor = System.Drawing.Color.White;
             }
 
-            if (currentRR < low_RR)
+            //low_RR
+            if (currentRR < low_RR && flag_RR_enable)
             {
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_RR);
                 }
-                text_low_RR.BackColor = System.Drawing.Color.Red;
+                text_RR.BackColor = System.Drawing.Color.Red;
             }
             else
             {
-                text_low_RR.BackColor = System.Drawing.Color.White;
+                text_RR.BackColor = System.Drawing.Color.White;
             }
 
-            if (currentRR > high_RR)
+            //high_RR
+            if (currentRR > high_RR && flag_RR_enable)
             {
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_RR);
                 }
-                text_high_RR.BackColor = System.Drawing.Color.Red;
+                text_RR.BackColor = System.Drawing.Color.Red;
             }
             else
             {
-                text_high_RR.BackColor = System.Drawing.Color.White;
+                text_RR.BackColor = System.Drawing.Color.White;
             }
 
-            if (currentDiastolica < low_NIBP)
-            {
-                if (flag_alarma == true)
-                {
-                    sonarAlarma(audio_NIBP);
-                }
-                text_low_NIBP.BackColor = System.Drawing.Color.Red;
-            }
-            else
-            {
-                text_low_NIBP.BackColor = System.Drawing.Color.White;
-            }
-
-            if (currentSistolica > high_NIBP)
-            {
-                if (flag_alarma == true)
-                {
-                    sonarAlarma(audio_NIBP);
-                }
-                text_high_NIBP.BackColor = System.Drawing.Color.Red;
-            }
-            else
-            {
-                text_high_NIBP.BackColor = System.Drawing.Color.White;
-            }
-
-            if (currentSpo2 < low_Spo2)
+           //low_SpO2
+            if (currentSpo2 < low_Spo2 && flag_SpO2_enable)
             {
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_spo2);
                 }
-                text_low_spo2.BackColor = System.Drawing.Color.Red;
+                text_spo2.BackColor = System.Drawing.Color.Red;
             }
             else
             {
-                text_low_spo2.BackColor = System.Drawing.Color.White;
+                text_spo2.BackColor = System.Drawing.Color.White;
             }
 
-            if (currentTemperatura < low_temperatura)
+            //low_temperatura
+            if (currentTemperatura < low_temperatura && flag_TEMP_enable)
             {
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_temp);
                 }
-                text_low_temp.BackColor = System.Drawing.Color.Red;
+                text_temp.BackColor = System.Drawing.Color.Red;
             }
             else
             {
-                text_low_temp.BackColor = System.Drawing.Color.White;
+                text_temp.BackColor = System.Drawing.Color.White;
             }
-
-            if (currentTemperatura > high_temperatura)
+            //high_temperatura
+            if (currentTemperatura > high_temperatura && flag_TEMP_enable)
             {
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_temp);
                 }
-                text_high_temp.BackColor = System.Drawing.Color.Red;
+                text_temp.BackColor = System.Drawing.Color.Red;
             }
             else
             {
-                text_high_temp.BackColor = System.Drawing.Color.White;
+                text_temp.BackColor = System.Drawing.Color.White;
             }
-
 
         }
 

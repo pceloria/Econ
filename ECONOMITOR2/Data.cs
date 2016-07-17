@@ -146,19 +146,6 @@ namespace ECONOMITOR2
         {
             return HeartRate;
         }
-        public static int getCurrentDiastolica()
-        {
-            return Dia_Pressure;
-        }
-        public static int getCurrentSistolica()
-        {
-            return Sys_Pressure;
-        }
-        public static int getCurrentMedia()
-        {
-            return Mean_Pressure;
-        }
-
         public static int getCurrentSpo2Sat()
 
         {
