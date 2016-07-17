@@ -188,9 +188,12 @@ namespace ECONOMITOR2
             alarmsSetupForm.Show();
         }
 
+        
         private void buttonConfiguration_Click(object sender, EventArgs e)
-        {
-            Acqsign.enableECGwave(false);
+        {   
+            FormConfig configForm = new FormConfig();        
+            configForm.Show();
+            //configForm.Close();
         }
     }
 }
