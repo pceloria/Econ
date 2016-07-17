@@ -38,9 +38,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Economitor));
-
             this.derivacion1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.respiracion = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.spo2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -76,7 +74,7 @@
             chartArea1.Name = "ChartArea1";
             this.derivacion1.ChartAreas.Add(chartArea1);
             this.derivacion1.Dock = System.Windows.Forms.DockStyle.Bottom;
-
+            legend1.Enabled = false;
             legend1.Name = "Legend1";
             this.derivacion1.Legends.Add(legend1);
             this.derivacion1.Location = new System.Drawing.Point(0, 324);
@@ -109,6 +107,7 @@
             chartArea2.Name = "ChartArea1";
             this.respiracion.ChartAreas.Add(chartArea2);
             this.respiracion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            legend2.Enabled = false;
             legend2.Name = "Legend1";
             this.respiracion.Legends.Add(legend2);
             this.respiracion.Location = new System.Drawing.Point(0, 216);
@@ -126,13 +125,11 @@
             // spo2
             // 
             this.spo2.BackColor = System.Drawing.Color.Black;
-
-            chartArea3.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
             chartArea3.BackColor = System.Drawing.Color.Black;
             chartArea3.Name = "ChartArea1";
             this.spo2.ChartAreas.Add(chartArea3);
             this.spo2.Dock = System.Windows.Forms.DockStyle.Bottom;
-
+            legend3.Enabled = false;
             legend3.Name = "Legend1";
             this.spo2.Legends.Add(legend3);
             this.spo2.Location = new System.Drawing.Point(0, 108);
@@ -147,7 +144,6 @@
             this.spo2.Size = new System.Drawing.Size(749, 108);
             this.spo2.TabIndex = 4;
             this.spo2.Text = "chart5";
-            this.spo2.Visible = false;
             this.spo2.Click += new System.EventHandler(this.spo2_Click);
             // 
             // labelTemperatura
@@ -227,7 +223,6 @@
             // 
             // buttonStart
             // 
-
             this.buttonStart.BackColor = System.Drawing.Color.Black;
             this.buttonStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStart.BackgroundImage")));
             this.buttonStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -238,26 +233,21 @@
             this.buttonStart.Size = new System.Drawing.Size(38, 36);
             this.buttonStart.TabIndex = 17;
             this.buttonStart.Tag = "buttonStart";
-
             this.buttonStart.UseVisualStyleBackColor = false;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // buttonShutdown
             // 
-
             this.buttonShutdown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonShutdown.BackgroundImage")));
             this.buttonShutdown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonShutdown.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonShutdown.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonShutdown.Location = new System.Drawing.Point(676, 9);
-
             this.buttonShutdown.Name = "buttonShutdown";
             this.buttonShutdown.Size = new System.Drawing.Size(27, 28);
             this.buttonShutdown.TabIndex = 18;
             this.buttonShutdown.Tag = "buttonShutdown";
-
             this.buttonShutdown.UseVisualStyleBackColor = true;
-
             this.buttonShutdown.Click += new System.EventHandler(this.buttonShutdown_Click);
             // 
             // label10
@@ -282,7 +272,6 @@
             this.textHeartRate.Size = new System.Drawing.Size(51, 13);
             this.textHeartRate.TabIndex = 23;
             this.textHeartRate.Tag = "";
-
             this.textHeartRate.Text = "-";
             this.textHeartRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -307,18 +296,15 @@
             this.buttonPause.ForeColor = System.Drawing.Color.White;
             this.buttonPause.Location = new System.Drawing.Point(576, 17);
             this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(21, 20);
+            this.buttonPause.Size = new System.Drawing.Size(19, 24);
             this.buttonPause.TabIndex = 27;
             this.buttonPause.UseVisualStyleBackColor = true;
-
             // 
             // Economitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
             this.BackColor = System.Drawing.Color.Black;
-
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CancelButton = this.buttonShutdown;
             this.ClientSize = new System.Drawing.Size(749, 432);
