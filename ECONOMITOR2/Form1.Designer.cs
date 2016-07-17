@@ -373,6 +373,7 @@
             this.Name = "Economitor";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.Economitor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.derivacion1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.respiracion)).EndInit();
