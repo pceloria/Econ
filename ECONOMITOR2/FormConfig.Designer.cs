@@ -78,7 +78,6 @@
             this.ECG.Size = new System.Drawing.Size(73, 31);
             this.ECG.TabIndex = 4;
             this.ECG.Text = "ECG";
-            this.ECG.Click += new System.EventHandler(this.ECG_Click);
             // 
             // label2
             // 
@@ -90,7 +89,6 @@
             this.label2.Size = new System.Drawing.Size(88, 31);
             this.label2.TabIndex = 5;
             this.label2.Text = "RESP";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox2
             // 
@@ -119,7 +117,6 @@
             this.label1.Size = new System.Drawing.Size(244, 31);
             this.label1.TabIndex = 9;
             this.label1.Text = "ENABLE/DISABLE";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // checkBox_ECGwave
             // 
@@ -239,7 +236,6 @@
             this.label3.Size = new System.Drawing.Size(70, 29);
             this.label3.TabIndex = 18;
             this.label3.Text = "GAIN";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -251,7 +247,6 @@
             this.label4.Size = new System.Drawing.Size(85, 29);
             this.label4.TabIndex = 19;
             this.label4.Text = "MODE";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // botonSaveConfig
             // 
@@ -265,7 +260,7 @@
             this.botonSaveConfig.TabIndex = 21;
             this.botonSaveConfig.Text = "Save";
             this.botonSaveConfig.UseVisualStyleBackColor = false;
-            this.botonSaveConfig.Click += new System.EventHandler(this.botonOKalarma_Click);
+            this.botonSaveConfig.Click += new System.EventHandler(this.botonSaveConfig_Click);
             // 
             // buttonDiscardAlarms
             // 

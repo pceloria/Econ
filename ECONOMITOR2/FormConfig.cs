@@ -27,11 +27,6 @@ namespace ECONOMITOR2
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -47,7 +42,7 @@ namespace ECONOMITOR2
             this.Close();
         }
 
-        private void botonOKalarma_Click(object sender, EventArgs e)
+        private void botonSaveConfig_Click(object sender, EventArgs e)
         {
             if (checkBox_ECGwave.Checked)
             {
@@ -102,6 +97,9 @@ namespace ECONOMITOR2
             {
                 Acqsign.enableTEMP(false);
             }
+
+
+            this.Close();
         }
 
         private void checkBox_SpO2wave_CheckedChanged(object sender, EventArgs e)
@@ -136,15 +134,7 @@ namespace ECONOMITOR2
 
         }
 
-        private void ECG_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -152,16 +142,6 @@ namespace ECONOMITOR2
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
         {
 
         }
@@ -175,5 +155,7 @@ namespace ECONOMITOR2
         {
 
         }
+
+
     }
 }
