@@ -74,6 +74,10 @@
             chartArea1.Name = "ChartArea1";
             this.derivacion1.ChartAreas.Add(chartArea1);
             this.derivacion1.Dock = System.Windows.Forms.DockStyle.Bottom;
+<<<<<<< HEAD
+=======
+            legend1.Enabled = false;
+>>>>>>> origin/master
             legend1.Name = "Legend1";
             this.derivacion1.Legends.Add(legend1);
             this.derivacion1.Location = new System.Drawing.Point(0, 324);
@@ -106,6 +110,7 @@
             chartArea2.Name = "ChartArea1";
             this.respiracion.ChartAreas.Add(chartArea2);
             this.respiracion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            legend2.Enabled = false;
             legend2.Name = "Legend1";
             this.respiracion.Legends.Add(legend2);
             this.respiracion.Location = new System.Drawing.Point(0, 216);
@@ -123,11 +128,18 @@
             // spo2
             // 
             this.spo2.BackColor = System.Drawing.Color.Black;
+<<<<<<< HEAD
             chartArea3.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+=======
+>>>>>>> origin/master
             chartArea3.BackColor = System.Drawing.Color.Black;
             chartArea3.Name = "ChartArea1";
             this.spo2.ChartAreas.Add(chartArea3);
             this.spo2.Dock = System.Windows.Forms.DockStyle.Bottom;
+<<<<<<< HEAD
+=======
+            legend3.Enabled = false;
+>>>>>>> origin/master
             legend3.Name = "Legend1";
             this.spo2.Legends.Add(legend3);
             this.spo2.Location = new System.Drawing.Point(0, 108);
@@ -294,7 +306,7 @@
             this.buttonPause.ForeColor = System.Drawing.Color.White;
             this.buttonPause.Location = new System.Drawing.Point(576, 17);
             this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(21, 20);
+            this.buttonPause.Size = new System.Drawing.Size(19, 24);
             this.buttonPause.TabIndex = 27;
             this.buttonPause.UseVisualStyleBackColor = true;
             // 
