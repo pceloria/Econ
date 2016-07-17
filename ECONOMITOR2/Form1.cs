@@ -14,14 +14,11 @@ namespace ECONOMITOR2
 {
     public partial class Economitor : Form
     {
-        private double[] data;
         private int counter;
         private double currentTemperatura;
         private int currentHR;
         private int currentRR;
         private int currentspo2;
-        private int currentSistolica;
-        private int currentDiastolica;
         private int currentMean_Pressure;
 
         private int currentIndexECG = 0;
@@ -71,7 +68,8 @@ namespace ECONOMITOR2
                     timer1.Enabled = true;                       // Enable the timer
                     timer1.Start();                              // Start the timer
                 }
-
+                else
+                    MessageBox.Show("Cannot find COM port");
             }
                 
         }

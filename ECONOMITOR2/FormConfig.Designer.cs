@@ -250,29 +250,30 @@
             // 
             // botonSaveConfig
             // 
-            this.botonSaveConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.botonSaveConfig.BackColor = System.Drawing.Color.Black;
+            this.botonSaveConfig.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonSaveConfig.BackgroundImage")));
+            this.botonSaveConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.botonSaveConfig.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botonSaveConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonSaveConfig.ForeColor = System.Drawing.SystemColors.Control;
-            this.botonSaveConfig.Location = new System.Drawing.Point(507, 341);
+            this.botonSaveConfig.ForeColor = System.Drawing.Color.Black;
+            this.botonSaveConfig.Location = new System.Drawing.Point(518, 341);
             this.botonSaveConfig.Name = "botonSaveConfig";
-            this.botonSaveConfig.Size = new System.Drawing.Size(97, 40);
+            this.botonSaveConfig.Size = new System.Drawing.Size(47, 31);
             this.botonSaveConfig.TabIndex = 21;
-            this.botonSaveConfig.Text = "Save";
             this.botonSaveConfig.UseVisualStyleBackColor = false;
             this.botonSaveConfig.Click += new System.EventHandler(this.botonSaveConfig_Click);
             // 
             // buttonDiscardAlarms
             // 
-            this.buttonDiscardAlarms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.buttonDiscardAlarms.BackgroundImage = global::ECONOMITOR2.Properties.Resources.buttonShutdown_BackgroundImage;
+            this.buttonDiscardAlarms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonDiscardAlarms.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDiscardAlarms.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDiscardAlarms.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonDiscardAlarms.ForeColor = System.Drawing.Color.Black;
             this.buttonDiscardAlarms.Location = new System.Drawing.Point(627, 341);
             this.buttonDiscardAlarms.Name = "buttonDiscardAlarms";
-            this.buttonDiscardAlarms.Size = new System.Drawing.Size(97, 40);
+            this.buttonDiscardAlarms.Size = new System.Drawing.Size(47, 31);
             this.buttonDiscardAlarms.TabIndex = 22;
-            this.buttonDiscardAlarms.Text = "Discard";
             this.buttonDiscardAlarms.UseVisualStyleBackColor = false;
             this.buttonDiscardAlarms.Click += new System.EventHandler(this.buttonDiscardAlarms_Click);
             // 

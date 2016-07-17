@@ -110,7 +110,6 @@ namespace ECONOMITOR2
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error");
                     return false;
                 }
             }
