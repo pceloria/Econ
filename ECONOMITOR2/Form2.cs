@@ -12,17 +12,13 @@ namespace ECONOMITOR2
 {
     public partial class Form2 : Form
     {
+        System.Diagnostics.Process keyboard;
+
         public Form2()
         {
             InitializeComponent();
             loadLimits();
 
-
-
-            System.Diagnostics.Process keyboard = new System.Diagnostics.Process();
-            keyboard = System.Diagnostics.Process.Start("osk.exe");
-            
-            //keyboard.Kill();
         }
 
         private void loadLimits()
@@ -56,6 +52,44 @@ namespace ECONOMITOR2
             // Cerrar Form
             this.Dispose();
             this.Close();
+        }
+
+        private void thresholdsClick(object sender, EventArgs e)
+        {
+
+            if (keyboard == null || keyboard.HasExited)
+            {
+                keyboard = new System.Diagnostics.Process();
+                keyboard = System.Diagnostics.Process.Start("osk.exe");
+                
+            }
+            else
+            {
+                
+                keyboard.Kill();
+                keyboard.Dispose();
+                
+                keyboard.Start();
+                ((TextBox)sender).Focus();
+            }
+            //((TextBox)sender).Focus();
+            //keyboard.Kill();
+        }
+
+        private void thrasholdsKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.'){
+                e.Handled = true;
+            }
+        }
+
+        private void thresholdsTextChanged(object sender, EventArgs e)
+        {
+            double n;
+            if (System.Text.RegularExpressions.Regex.IsMatch(((TextBox)sender).Text, " ^ [0-9]"))
+            {
+                ((TextBox)sender).Text = "";
+            }
         }
     }
 }
