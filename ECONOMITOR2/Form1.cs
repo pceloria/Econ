@@ -269,5 +269,10 @@ namespace ECONOMITOR2
             Form2 alarmsSetupForm = new Form2();
             alarmsSetupForm.Show();
         }
+
+        private void buttonConfiguration_Click(object sender, EventArgs e)
+        {
+            Acqsign.enableECGwave(false);
+        }
     }
 }

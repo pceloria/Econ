@@ -58,6 +58,7 @@
             this.buttonPause = new System.Windows.Forms.Button();
             this.buttonSilenciar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonConfiguration = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.derivacion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.respiracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spo2)).BeginInit();
@@ -236,7 +237,7 @@
             this.buttonStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonStart.ForeColor = System.Drawing.Color.White;
-            this.buttonStart.Location = new System.Drawing.Point(519, 13);
+            this.buttonStart.Location = new System.Drawing.Point(498, 13);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(39, 35);
             this.buttonStart.TabIndex = 17;
@@ -249,7 +250,7 @@
             this.buttonShutdown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonShutdown.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonShutdown.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonShutdown.Location = new System.Drawing.Point(698, 12);
+            this.buttonShutdown.Location = new System.Drawing.Point(698, 13);
             this.buttonShutdown.Name = "buttonShutdown";
             this.buttonShutdown.Size = new System.Drawing.Size(39, 35);
             this.buttonShutdown.TabIndex = 18;
@@ -290,9 +291,9 @@
             this.buttonAlarma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonAlarma.BackgroundImage")));
             this.buttonAlarma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonAlarma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAlarma.Location = new System.Drawing.Point(599, 14);
+            this.buttonAlarma.Location = new System.Drawing.Point(588, 13);
             this.buttonAlarma.Name = "buttonAlarma";
-            this.buttonAlarma.Size = new System.Drawing.Size(63, 35);
+            this.buttonAlarma.Size = new System.Drawing.Size(39, 35);
             this.buttonAlarma.TabIndex = 26;
             this.buttonAlarma.UseVisualStyleBackColor = false;
             this.buttonAlarma.Click += new System.EventHandler(this.botonAlarma_Click);
@@ -303,7 +304,7 @@
             this.buttonPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPause.ForeColor = System.Drawing.Color.White;
-            this.buttonPause.Location = new System.Drawing.Point(564, 14);
+            this.buttonPause.Location = new System.Drawing.Point(543, 13);
             this.buttonPause.Name = "buttonPause";
             this.buttonPause.Size = new System.Drawing.Size(39, 35);
             this.buttonPause.TabIndex = 27;
@@ -314,7 +315,7 @@
             this.buttonSilenciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSilenciar.BackgroundImage")));
             this.buttonSilenciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonSilenciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSilenciar.Location = new System.Drawing.Point(437, 28);
+            this.buttonSilenciar.Location = new System.Drawing.Point(437, 26);
             this.buttonSilenciar.Name = "buttonSilenciar";
             this.buttonSilenciar.Size = new System.Drawing.Size(55, 52);
             this.buttonSilenciar.TabIndex = 28;
@@ -328,6 +329,18 @@
             this.textBox1.Size = new System.Drawing.Size(100, 83);
             this.textBox1.TabIndex = 29;
             // 
+            // buttonConfiguration
+            // 
+            this.buttonConfiguration.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonConfiguration.BackgroundImage")));
+            this.buttonConfiguration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonConfiguration.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonConfiguration.Location = new System.Drawing.Point(632, 13);
+            this.buttonConfiguration.Name = "buttonConfiguration";
+            this.buttonConfiguration.Size = new System.Drawing.Size(39, 35);
+            this.buttonConfiguration.TabIndex = 30;
+            this.buttonConfiguration.UseVisualStyleBackColor = true;
+            this.buttonConfiguration.Click += new System.EventHandler(this.buttonConfiguration_Click);
+            // 
             // Economitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,6 +350,7 @@
             this.CancelButton = this.buttonShutdown;
             this.ClientSize = new System.Drawing.Size(749, 432);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonConfiguration);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.derivacion1);
             this.Controls.Add(this.respiracion);
@@ -389,6 +403,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart spo2;
         private System.Windows.Forms.Button buttonSilenciar;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonConfiguration;
     }
 }
 
