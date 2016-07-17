@@ -99,19 +99,19 @@ namespace ECONOMITOR2
                 Acqsign.enableTEMP(false);
             }
 
-            if (comboBox1.SelectedItem.ToString() == "x 0.25")
+            if (comboBox1.SelectedIndex == 0)
             {
                 Acqsign.setECGgain(Acqsign.GAINX025);
             }
-            else if(comboBox1.SelectedItem.ToString() == "x 0.5")
+            else if(comboBox1.SelectedIndex == 1)
             {
                 Acqsign.setECGgain(Acqsign.GAINX050);
             }
-            else if (comboBox1.SelectedItem.ToString() == "x 1")
+            else if (comboBox1.SelectedIndex == 2)
             {
                 Acqsign.setECGgain(Acqsign.GAINX100);
             }
-            else if (comboBox1.SelectedItem.ToString() == "x 2")
+            else if (comboBox1.SelectedIndex == 3)
             {
                 Acqsign.setECGgain(Acqsign.GAINX200);
             }
@@ -132,6 +132,20 @@ namespace ECONOMITOR2
             else if (comboBox2.SelectedIndex == 3)
             {
                 Acqsign.setRESPgain(Acqsign.GAINX200);
+            }
+
+
+            if (comboBox4.SelectedIndex == 0)
+            {
+                Acqsign.setECGfilter(Acqsign.OPERATION);
+            }
+            else if (comboBox4.SelectedIndex == 1)
+            {
+                Acqsign.setECGfilter(Acqsign.MONITOR);
+            }
+            else if (comboBox4.SelectedIndex == 2)
+            {
+                Acqsign.setECGfilter(Acqsign.DIAGNOSE);
             }
 
 

@@ -280,10 +280,11 @@
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
-            "x 0.25",
-            "x 0.5",
-            "x 1",
-            "x 2"});
+            "10 seg",
+            "2 min",
+            "5 min",
+            "10 min",
+            "30 min"});
             this.comboBox3.Location = new System.Drawing.Point(223, 341);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(70, 28);
