@@ -16,7 +16,13 @@ namespace ECONOMITOR2
         {
             InitializeComponent();
             loadLimits();
+
+
+
+            System.Diagnostics.Process keyboard = new System.Diagnostics.Process();
+            keyboard = System.Diagnostics.Process.Start("osk.exe");
             
+            //keyboard.Kill();
         }
 
         private void loadLimits()
