@@ -114,9 +114,7 @@ namespace ECONOMITOR2
                 AudioVisual.actualiza_text(textRR, currentRR);
                 AudioVisual.actualiza_text(textHeartRate, currentHR);
                 AudioVisual.actualiza_text(textSpO2, currentspo2);
-                AudioVisual.actualiza_text(textDiastolica, currentDiastolica);
-                AudioVisual.actualiza_text(textSistolica, currentSistolica);
-                AudioVisual.actualiza_text(textMean_Pressure, currentMean_Pressure);
+
 
                 //Alarmas.toma_de_decisiones(currentHR, currentRR, currentTemperatura, currentDiastolica,
                 //    currentSistolica, currentspo2,textHRbajo,textHRalto,textRRbajo,textRRalto,textSpO2bajo,
