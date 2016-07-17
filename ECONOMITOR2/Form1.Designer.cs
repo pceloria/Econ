@@ -56,6 +56,7 @@
             this.textHeartRate = new System.Windows.Forms.TextBox();
             this.buttonAlarma = new System.Windows.Forms.Button();
             this.buttonPause = new System.Windows.Forms.Button();
+            this.buttonSilenciar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.derivacion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.respiracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spo2)).BeginInit();
@@ -74,12 +75,10 @@
             chartArea1.Name = "ChartArea1";
             this.derivacion1.ChartAreas.Add(chartArea1);
             this.derivacion1.Dock = System.Windows.Forms.DockStyle.Bottom;
-
             legend1.Enabled = false;
-
             legend1.Name = "Legend1";
             this.derivacion1.Legends.Add(legend1);
-            this.derivacion1.Location = new System.Drawing.Point(0, 324);
+            this.derivacion1.Location = new System.Drawing.Point(0, 108);
             this.derivacion1.Name = "derivacion1";
             series1.BackImageTransparentColor = System.Drawing.Color.Black;
             series1.BackSecondaryColor = System.Drawing.Color.Black;
@@ -127,17 +126,14 @@
             // spo2
             // 
             this.spo2.BackColor = System.Drawing.Color.Black;
-
             chartArea3.BackColor = System.Drawing.Color.Black;
             chartArea3.Name = "ChartArea1";
             this.spo2.ChartAreas.Add(chartArea3);
             this.spo2.Dock = System.Windows.Forms.DockStyle.Bottom;
-
             legend3.Enabled = false;
-
             legend3.Name = "Legend1";
             this.spo2.Legends.Add(legend3);
-            this.spo2.Location = new System.Drawing.Point(0, 108);
+            this.spo2.Location = new System.Drawing.Point(0, 324);
             this.spo2.Name = "spo2";
             series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
@@ -230,26 +226,25 @@
             // 
             this.buttonStart.BackColor = System.Drawing.Color.Black;
             this.buttonStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStart.BackgroundImage")));
-            this.buttonStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonStart.ForeColor = System.Drawing.Color.White;
-            this.buttonStart.Location = new System.Drawing.Point(494, 5);
+            this.buttonStart.Location = new System.Drawing.Point(455, 11);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(38, 36);
+            this.buttonStart.Size = new System.Drawing.Size(39, 35);
             this.buttonStart.TabIndex = 17;
             this.buttonStart.Tag = "buttonStart";
             this.buttonStart.UseVisualStyleBackColor = false;
-            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // buttonShutdown
             // 
             this.buttonShutdown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonShutdown.BackgroundImage")));
-            this.buttonShutdown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonShutdown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonShutdown.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonShutdown.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonShutdown.Location = new System.Drawing.Point(676, 9);
+            this.buttonShutdown.Location = new System.Drawing.Point(642, 10);
             this.buttonShutdown.Name = "buttonShutdown";
-            this.buttonShutdown.Size = new System.Drawing.Size(27, 28);
+            this.buttonShutdown.Size = new System.Drawing.Size(45, 37);
             this.buttonShutdown.TabIndex = 18;
             this.buttonShutdown.Tag = "buttonShutdown";
             this.buttonShutdown.UseVisualStyleBackColor = true;
@@ -284,11 +279,11 @@
             // 
             this.buttonAlarma.BackColor = System.Drawing.Color.Black;
             this.buttonAlarma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonAlarma.BackgroundImage")));
-            this.buttonAlarma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonAlarma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonAlarma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAlarma.Location = new System.Drawing.Point(638, 18);
+            this.buttonAlarma.Location = new System.Drawing.Point(579, 9);
             this.buttonAlarma.Name = "buttonAlarma";
-            this.buttonAlarma.Size = new System.Drawing.Size(17, 18);
+            this.buttonAlarma.Size = new System.Drawing.Size(40, 42);
             this.buttonAlarma.TabIndex = 26;
             this.buttonAlarma.UseVisualStyleBackColor = false;
             this.buttonAlarma.Click += new System.EventHandler(this.botonAlarma_Click);
@@ -296,14 +291,25 @@
             // buttonPause
             // 
             this.buttonPause.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPause.BackgroundImage")));
-            this.buttonPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPause.ForeColor = System.Drawing.Color.White;
-            this.buttonPause.Location = new System.Drawing.Point(576, 17);
+            this.buttonPause.Location = new System.Drawing.Point(514, 13);
             this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(19, 24);
+            this.buttonPause.Size = new System.Drawing.Size(38, 32);
             this.buttonPause.TabIndex = 27;
             this.buttonPause.UseVisualStyleBackColor = true;
+            // 
+            // buttonSilenciar
+            // 
+            this.buttonSilenciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSilenciar.BackgroundImage")));
+            this.buttonSilenciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonSilenciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSilenciar.Location = new System.Drawing.Point(693, 8);
+            this.buttonSilenciar.Name = "buttonSilenciar";
+            this.buttonSilenciar.Size = new System.Drawing.Size(45, 39);
+            this.buttonSilenciar.TabIndex = 28;
+            this.buttonSilenciar.UseVisualStyleBackColor = true;
             // 
             // Economitor
             // 
@@ -314,6 +320,9 @@
             this.CancelButton = this.buttonShutdown;
             this.ClientSize = new System.Drawing.Size(749, 432);
             this.ControlBox = false;
+            this.Controls.Add(this.derivacion1);
+            this.Controls.Add(this.respiracion);
+            this.Controls.Add(this.buttonSilenciar);
             this.Controls.Add(this.buttonPause);
             this.Controls.Add(this.buttonAlarma);
             this.Controls.Add(this.textHeartRate);
@@ -327,8 +336,6 @@
             this.Controls.Add(this.textTemperatura);
             this.Controls.Add(this.labelTemperatura);
             this.Controls.Add(this.spo2);
-            this.Controls.Add(this.respiracion);
-            this.Controls.Add(this.derivacion1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.Name = "Economitor";
@@ -362,6 +369,7 @@
         private System.Windows.Forms.Button buttonAlarma;
         private System.Windows.Forms.Button buttonPause;
         private System.Windows.Forms.DataVisualization.Charting.Chart spo2;
+        private System.Windows.Forms.Button buttonSilenciar;
     }
 }
 
