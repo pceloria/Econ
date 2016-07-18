@@ -11,18 +11,20 @@ namespace ECONOMITOR2
     {
         // init variables de la clase
         private static double[] s;
-        private static int secondsToShow = 10;
+        private static int secondsToShowECG = 8;
+        private static int secondsToShowRESP = 25;
+        private static int secondsToShowSPO2 = 8;
         public static int getPointsOfECG()
         {
-            return 250*secondsToShow;
+            return 250*secondsToShowECG;
         }
         public static int getPointsOfRESP()
         {
-            return 50*secondsToShow;
+            return 50*secondsToShowRESP;
         }
         public static int getPointsOfSPO2()
         {
-            return 50*secondsToShow;
+            return 50*secondsToShowSPO2;
         }
 
         private static Chart chartECG;
@@ -88,17 +90,19 @@ namespace ECONOMITOR2
             AudioVisual.chartRESP = chartRESP;
 
             // Se inicializa el grafico de ECG
-            int pointsECG = secondsToShow*250;
+            int pointsECG = secondsToShowECG*250;
             for (int j = 0; j < pointsECG; j++)
                     chartECG.Series["Series1"].Points.AddY(0);
 
-            // Se inicializa el grafico de RESP y SPO2
-            int pointsOthers = secondsToShow * 50;
-            for (int j = 0; j < pointsOthers; j++)
-            {
+            // Se inicializa el grafico de RESP
+            int pointsRESP = secondsToShowRESP * 50;
+            for (int j = 0; j < pointsRESP; j++)
                 chartRESP.Series["Series1"].Points.AddY(0);
+
+            // Se inicializa el grafico de SPO2
+            int pointsSPO2 = secondsToShowSPO2 * 50;
+            for (int j = 0; j < pointsSPO2; j++)
                 chartSPO2.Series["Series1"].Points.AddY(0);
-            }
                
 
         }

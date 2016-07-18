@@ -75,12 +75,16 @@ namespace ECONOMITOR2
                 }
                 else
                     MessageBox.Show("Cannot find COM port");
+               
+                
+            }
+            else
                 if (flag_pause == true)
                 {
-                    timer1.Start();
+                    timer1.Enabled = true;
+                    //timer1.Start();
                     flag_pause = false;
                 }
-            }
                 
         }
         
@@ -217,7 +221,8 @@ namespace ECONOMITOR2
         private void buttonPause_Click(object sender, EventArgs e)
         {
             flag_pause = true;
-            timer1.Stop();
+            //timer1.Stop();
+            timer1.Enabled = false;
         }
     }
 }

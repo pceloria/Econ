@@ -116,6 +116,8 @@ namespace ECONOMITOR2
                 lastPositionInECGArray = 0;
 
             newECGpackages++;
+            if (newECGpackages > 24)
+                newECGpackages = 24;
         }
         public static void updateRESP(double[] newData)
         {
@@ -132,6 +134,9 @@ namespace ECONOMITOR2
                 lastPositionInRESPArray = 0;
 
             newRESPpackages++;
+            if (newRESPpackages > 24)
+                newRESPpackages = 24;
+            
         }
         public static void updateSPO2(double[] newData)
         {
@@ -148,6 +153,8 @@ namespace ECONOMITOR2
                 lastPositionInSPO2Array = 0;
 
             newSPO2packages++;
+            if (newSPO2packages > 24)
+                newSPO2packages = 24;
         }
 
         // metodos para devolver doubles de variables lentas

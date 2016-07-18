@@ -71,6 +71,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(70, 28);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.TabStop = false;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // ECG
@@ -112,6 +113,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(71, 28);
             this.comboBox2.TabIndex = 6;
+            this.comboBox2.TabStop = false;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label1
@@ -233,6 +235,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(114, 28);
             this.comboBox4.TabIndex = 17;
+            this.comboBox4.TabStop = false;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label3
@@ -297,6 +300,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(70, 28);
             this.comboBox3.TabIndex = 26;
+            this.comboBox3.TabStop = false;
             // 
             // pictureBox2
             // 

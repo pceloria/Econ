@@ -257,6 +257,9 @@
             this.textHRalto.TabIndex = 23;
             this.textHRalto.TabStop = false;
             this.textHRalto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textHRalto.Click += new System.EventHandler(this.thresholdsClick);
+            this.textHRalto.TextChanged += new System.EventHandler(this.thresholdsTextChanged);
+            this.textHRalto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.thrasholdsKeyPress);
             // 
             // textHRbajo
             // 
@@ -271,6 +274,9 @@
             this.textHRbajo.TabIndex = 24;
             this.textHRbajo.TabStop = false;
             this.textHRbajo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textHRbajo.Click += new System.EventHandler(this.thresholdsClick);
+            this.textHRbajo.TextChanged += new System.EventHandler(this.thresholdsTextChanged);
+            this.textHRbajo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.thrasholdsKeyPress);
             // 
             // label1
             // 
@@ -330,6 +336,9 @@
             this.textSpO2bajo.TabIndex = 29;
             this.textSpO2bajo.TabStop = false;
             this.textSpO2bajo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textSpO2bajo.Click += new System.EventHandler(this.thresholdsClick);
+            this.textSpO2bajo.TextChanged += new System.EventHandler(this.thresholdsTextChanged);
+            this.textSpO2bajo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.thrasholdsKeyPress);
             // 
             // label14
             // 
@@ -355,6 +364,9 @@
             this.textRRalto.TabIndex = 33;
             this.textRRalto.TabStop = false;
             this.textRRalto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textRRalto.Click += new System.EventHandler(this.thresholdsClick);
+            this.textRRalto.TextChanged += new System.EventHandler(this.thresholdsTextChanged);
+            this.textRRalto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.thrasholdsKeyPress);
             // 
             // textTEMPalto
             // 
@@ -369,6 +381,9 @@
             this.textTEMPalto.TabIndex = 34;
             this.textTEMPalto.TabStop = false;
             this.textTEMPalto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textTEMPalto.Click += new System.EventHandler(this.thresholdsClick);
+            this.textTEMPalto.TextChanged += new System.EventHandler(this.thresholdsTextChanged);
+            this.textTEMPalto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.thrasholdsKeyPress);
             // 
             // Form2
             // 
