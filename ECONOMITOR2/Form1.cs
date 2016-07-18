@@ -31,7 +31,7 @@ namespace ECONOMITOR2
         public Economitor()
         {
 
-            Welcome_init();
+            //Welcome_init();
             InitializeComponent();
             Alarmas.Alarm_init(exclamationMark);
             currentIndexECG = 0;
@@ -101,9 +101,9 @@ namespace ECONOMITOR2
                 Alarmas.counter1 = 0;
             }
 
-            if (Alarmas.counter_color == 20 && Alarmas.flag_color == true)
+            if (Alarmas.counter_color == 20)
             {
-                Alarmas.flag_color = false;
+               
                 Alarmas.counter_color = 0;
 
             }

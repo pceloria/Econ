@@ -29,7 +29,10 @@ namespace ECONOMITOR2
             private static Stream audio_temp = Properties.Resources.audio_temp;
             public static int counter1;
             public static int counter_color;
-            public static Boolean flag_color = true;
+            private static Boolean flag_alarm_HR = false;
+            private static Boolean flag_alarm_RR = false;
+            private static Boolean flag_alarm_spo2 = false;
+            private static Boolean flag_alarm_temp = false;
 
             public static Boolean flag_RR_enable = false;
             public static Boolean flag_HR_enable = false;
@@ -110,79 +113,40 @@ namespace ECONOMITOR2
                                                 System.Windows.Forms.TextBox text_spo2, 
                                                 System.Windows.Forms.TextBox text_temp)
         {
-            //low_HR
-            if (currentHR < low_HR && flag_HR_enable) 
+            //HR
+            if ((currentHR < low_HR || currentHR > high_HR) && flag_HR_enable) 
             {
                 if (flag_alarma == true)
                 { 
-                    sonarAlarma(audio_HR);
-                    exclamationMark.Visible = true;
-                    
+                    sonarAlarma(audio_RR);
                 }
-                if (flag_color == true)
-                {
-                    text_HR.BackColor = System.Drawing.Color.Red;
-                    flag_color = false;
-                }
-                else
-                {
-                    text_HR.BackColor = System.Drawing.Color.Yellow;
-                    flag_color = true;
-                }
-                
+                text_HR.BackColor = System.Drawing.Color.Orange;
+                flag_alarm_HR = true;
+
             }
             else
             {
                 text_HR.BackColor = System.Drawing.Color.Black;
-                exclamationMark.Visible = false;
+                flag_alarm_HR = false;
             }
 
-            //high_HR
-            if (currentHR > high_HR && flag_HR_enable)
-            {
-                if (flag_alarma == true)
-                {
-                    sonarAlarma(audio_HR);
-                    exclamationMark.Visible = true;
-                }
-                text_HR.BackColor = System.Drawing.Color.Red;
-            }
-            else
-            {
-                text_HR.BackColor = System.Drawing.Color.Black;
-                exclamationMark.Visible = false;
-            }
 
-            //low_RR
-            if (currentRR < low_RR && flag_RR_enable)
+            //RR
+            if ((currentRR < low_RR || currentRR >high_RR) && flag_RR_enable)
             {
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_RR);
-                    exclamationMark.Visible = true;
+                   
                 }
-                text_RR.BackColor = System.Drawing.Color.Red;
+                text_RR.BackColor = System.Drawing.Color.Orange;
+                flag_alarm_RR = true;
             }
             else
             {
                 text_RR.BackColor = System.Drawing.Color.Black;
-                exclamationMark.Visible = false;
-            }
-
-            //high_RR
-            if (currentRR > high_RR && flag_RR_enable)
-            {
-                if (flag_alarma == true)
-                {
-                    sonarAlarma(audio_RR);
-                    exclamationMark.Visible = true;
-                }
-                text_RR.BackColor = System.Drawing.Color.Red;
-            }
-            else
-            {
-                text_RR.BackColor = System.Drawing.Color.Black;
-                exclamationMark.Visible = false;
+                flag_alarm_RR = false;
+               
             }
 
            //low_SpO2
@@ -191,47 +155,43 @@ namespace ECONOMITOR2
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_spo2);
-                    exclamationMark.Visible = true;
+                
                 }
-                text_spo2.BackColor = System.Drawing.Color.Red;
+                text_spo2.BackColor = System.Drawing.Color.Orange;
+                flag_alarm_spo2 = true;
             }
             else
             {
                 text_spo2.BackColor = System.Drawing.Color.Black;
-                exclamationMark.Visible = false;
+                flag_alarm_spo2 = false;
+               
             }
 
-            //low_temperatura
-            if (currentTemperatura < low_temperatura && flag_TEMP_enable)
+            //temperatura
+            if ((currentTemperatura < low_temperatura || currentHR > high_temperatura ) && flag_TEMP_enable)
             {
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_temp);
-                    exclamationMark.Visible = true;
+               
                 }
-                text_temp.BackColor = System.Drawing.Color.Red;
+                text_temp.BackColor = System.Drawing.Color.Orange;
+                flag_alarm_temp = true;
             }
             else
             {
                 text_temp.BackColor = System.Drawing.Color.Black;
-                exclamationMark.Visible = false;
-            }
-            //high_temperatura
-            if (currentTemperatura > high_temperatura && flag_TEMP_enable)
-            {
-                if (flag_alarma == true)
-                {
-                    sonarAlarma(audio_temp);
-                    exclamationMark.Visible = true;
-                }
-                text_temp.BackColor = System.Drawing.Color.Red;
-            }
-            else
-            {
-                text_temp.BackColor = System.Drawing.Color.Black;
-                exclamationMark.Visible = false;
+                flag_alarm_temp = false;
             }
 
+            if (flag_alarm_HR || flag_alarm_RR || flag_alarm_spo2 || flag_alarm_temp)
+            {
+                exclamationMark.Visible = true;
+            }
+            else 
+            {
+                exclamationMark.Visible = false;
+            }
         }
 
         public static void sonarAlarma(Stream str)
