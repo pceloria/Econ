@@ -63,8 +63,7 @@ namespace ECONOMITOR2
             Alarmas.flag_TEMP_enable = onoffTEMP.Checked;
 
             // Cerrar Form
-            this.Dispose();
-            this.Close();
+            Close();
         }
 
         private void buttonDiscardAlarms_Click(object sender, EventArgs e)

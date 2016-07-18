@@ -30,8 +30,6 @@ namespace ECONOMITOR2
 
         public Economitor()
         {
-            Welcome_init();
-            
             InitializeComponent();
             currentIndexECG = 0;
             currentIndexSPO2 = 0;
@@ -48,7 +46,9 @@ namespace ECONOMITOR2
 
             AudioVisual.init_Draw(derivacion1, respiracion, spo2);;
             Data.init();
-            
+
+
+            Welcome_init();
         }
 
         private void buttonShutdown_Click(object sender, EventArgs e)
@@ -202,8 +202,13 @@ namespace ECONOMITOR2
 
         private void Welcome_init()
         {
-            Welcome = new Welcome();
+            Welcome = new Welcome(); 
             Welcome.Show();
+
+            Welcome.TopMost = true;
+            Welcome.Focus();
+            Welcome.BringToFront();
+            
         }
 
         private void buttonPause_Click(object sender, EventArgs e)

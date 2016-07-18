@@ -20,6 +20,7 @@ namespace ECONOMITOR2
             WelcomeTimer.Interval = (3000);                     // Timer will tick evert second
             WelcomeTimer.Enabled = true;                       // Enable the timer
             WelcomeTimer.Start();                              // Start the timer
+
         }
 
         private void Welcome_Tick(object sender, EventArgs e)
