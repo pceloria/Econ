@@ -31,8 +31,8 @@ namespace ECONOMITOR2
         public Economitor()
         {
             Welcome_init();
-            
             InitializeComponent();
+            Alarmas.Alarm_init(exclamationMark);
             currentIndexECG = 0;
             currentIndexSPO2 = 0;
             currentIndexRESP = 0;

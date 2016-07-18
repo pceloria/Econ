@@ -35,7 +35,12 @@ namespace ECONOMITOR2
             public static Boolean flag_HR_enable = false;
             public static Boolean flag_SpO2_enable = false;
             public static Boolean flag_TEMP_enable = false;
+            private static System.Windows.Forms.PictureBox exclamationMark;
 
+        public static void Alarm_init(System.Windows.Forms.PictureBox em)
+        {
+            Alarmas.exclamationMark = em;
+        }
         //getters
         public static double get_low_temperatura()
         {
@@ -111,6 +116,8 @@ namespace ECONOMITOR2
                 if (flag_alarma == true)
                 { 
                     sonarAlarma(audio_HR);
+                    exclamationMark.Visible = true;
+                    
                 }
                 if (flag_color == true)
                 {
@@ -127,6 +134,7 @@ namespace ECONOMITOR2
             else
             {
                 text_HR.BackColor = System.Drawing.Color.Black;
+                exclamationMark.Visible = false;
             }
 
             //high_HR
@@ -135,12 +143,14 @@ namespace ECONOMITOR2
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_HR);
+                    exclamationMark.Visible = true;
                 }
                 text_HR.BackColor = System.Drawing.Color.Red;
             }
             else
             {
                 text_HR.BackColor = System.Drawing.Color.Black;
+                exclamationMark.Visible = false;
             }
 
             //low_RR
@@ -149,12 +159,14 @@ namespace ECONOMITOR2
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_RR);
+                    exclamationMark.Visible = true;
                 }
                 text_RR.BackColor = System.Drawing.Color.Red;
             }
             else
             {
                 text_RR.BackColor = System.Drawing.Color.Black;
+                exclamationMark.Visible = false;
             }
 
             //high_RR
@@ -163,12 +175,14 @@ namespace ECONOMITOR2
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_RR);
+                    exclamationMark.Visible = true;
                 }
                 text_RR.BackColor = System.Drawing.Color.Red;
             }
             else
             {
                 text_RR.BackColor = System.Drawing.Color.Black;
+                exclamationMark.Visible = false;
             }
 
            //low_SpO2
@@ -177,12 +191,14 @@ namespace ECONOMITOR2
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_spo2);
+                    exclamationMark.Visible = true;
                 }
                 text_spo2.BackColor = System.Drawing.Color.Red;
             }
             else
             {
                 text_spo2.BackColor = System.Drawing.Color.Black;
+                exclamationMark.Visible = false;
             }
 
             //low_temperatura
@@ -191,12 +207,14 @@ namespace ECONOMITOR2
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_temp);
+                    exclamationMark.Visible = true;
                 }
                 text_temp.BackColor = System.Drawing.Color.Red;
             }
             else
             {
                 text_temp.BackColor = System.Drawing.Color.Black;
+                exclamationMark.Visible = false;
             }
             //high_temperatura
             if (currentTemperatura > high_temperatura && flag_TEMP_enable)
@@ -204,12 +222,14 @@ namespace ECONOMITOR2
                 if (flag_alarma == true)
                 {
                     sonarAlarma(audio_temp);
+                    exclamationMark.Visible = true;
                 }
                 text_temp.BackColor = System.Drawing.Color.Red;
             }
             else
             {
                 text_temp.BackColor = System.Drawing.Color.Black;
+                exclamationMark.Visible = false;
             }
 
         }
