@@ -19,6 +19,13 @@ namespace ECONOMITOR2
             InitializeComponent();
         }
 
+        public void LoadStates()
+        {
+            //checkBox_ECGwave = 
+              //  checkBox_HR_RR
+
+        }
+
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
