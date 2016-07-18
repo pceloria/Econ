@@ -44,7 +44,7 @@ namespace ECONOMITOR2
         private static int RespRate;
         private static int ST_Level;
         // Parametros del SPO2
-        private static byte SPO2_Status;
+        public static int SPO2_Status;
         private static int Spo2Sat;
         private static int PulseRate;
         // Parametros del NIBP
@@ -88,7 +88,7 @@ namespace ECONOMITOR2
         }
         public static void updateSPO2params(int SPO2_Status, int Spo2Sat, int PulseRate)
         {
-            Data.SPO2_Status = (byte)SPO2_Status;
+            Data.SPO2_Status = SPO2_Status;
             Data.Spo2Sat = Spo2Sat;
             Data.PulseRate = PulseRate;
         }

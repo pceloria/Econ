@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Economitor));
             this.derivacion1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.respiracion = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -62,6 +62,9 @@
             this.buttonAlarma = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
             this.exclamationMark = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.derivacion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.respiracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spo2)).BeginInit();
@@ -76,107 +79,107 @@
             this.derivacion1.BorderSkin.BackColor = System.Drawing.Color.Black;
             this.derivacion1.BorderSkin.BackSecondaryColor = System.Drawing.Color.Yellow;
             this.derivacion1.BorderSkin.PageColor = System.Drawing.Color.Gray;
-            chartArea7.AxisY.IsLabelAutoFit = false;
-            chartArea7.AxisY.Maximum = 6D;
-            chartArea7.AxisY.Minimum = -6D;
-            chartArea7.BackColor = System.Drawing.Color.Black;
-            chartArea7.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
-            chartArea7.Name = "ChartArea1";
-            this.derivacion1.ChartAreas.Add(chartArea7);
+            chartArea1.AxisY.IsLabelAutoFit = false;
+            chartArea1.AxisY.Maximum = 6D;
+            chartArea1.AxisY.Minimum = -6D;
+            chartArea1.BackColor = System.Drawing.Color.Black;
+            chartArea1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
+            chartArea1.Name = "ChartArea1";
+            this.derivacion1.ChartAreas.Add(chartArea1);
             this.derivacion1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend7.Enabled = false;
-            legend7.Name = "Legend1";
-            this.derivacion1.Legends.Add(legend7);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.derivacion1.Legends.Add(legend1);
             this.derivacion1.Location = new System.Drawing.Point(0, 156);
             this.derivacion1.Name = "derivacion1";
-            series7.BackImageTransparentColor = System.Drawing.Color.Black;
-            series7.BackSecondaryColor = System.Drawing.Color.Black;
-            series7.BorderColor = System.Drawing.Color.Black;
-            series7.BorderWidth = 2;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series7.Color = System.Drawing.Color.Red;
-            series7.LabelBackColor = System.Drawing.Color.White;
-            series7.LabelBorderColor = System.Drawing.Color.White;
-            series7.Legend = "Legend1";
-            series7.MarkerBorderColor = System.Drawing.Color.White;
-            series7.Name = "Series1";
-            this.derivacion1.Series.Add(series7);
+            series1.BackImageTransparentColor = System.Drawing.Color.Black;
+            series1.BackSecondaryColor = System.Drawing.Color.Black;
+            series1.BorderColor = System.Drawing.Color.Black;
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series1.Color = System.Drawing.Color.Red;
+            series1.LabelBackColor = System.Drawing.Color.White;
+            series1.LabelBorderColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.MarkerBorderColor = System.Drawing.Color.White;
+            series1.Name = "Series1";
+            this.derivacion1.Series.Add(series1);
             this.derivacion1.Size = new System.Drawing.Size(800, 108);
             this.derivacion1.TabIndex = 0;
             this.derivacion1.TabStop = false;
             this.derivacion1.Tag = "derivacion1";
             this.derivacion1.Text = "chart1";
-            title7.Alignment = System.Drawing.ContentAlignment.BottomLeft;
-            title7.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            title7.DockingOffset = 30;
-            title7.ForeColor = System.Drawing.Color.White;
-            title7.Name = "DI";
-            title7.Text = "DI";
-            this.derivacion1.Titles.Add(title7);
+            title1.Alignment = System.Drawing.ContentAlignment.BottomLeft;
+            title1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            title1.DockingOffset = 30;
+            title1.ForeColor = System.Drawing.Color.White;
+            title1.Name = "DI";
+            title1.Text = "DI";
+            this.derivacion1.Titles.Add(title1);
             // 
             // respiracion
             // 
             this.respiracion.BackColor = System.Drawing.Color.Black;
-            chartArea8.AxisX.MajorGrid.Enabled = false;
-            chartArea8.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea8.AxisY.Maximum = 250D;
-            chartArea8.AxisY.Minimum = -50D;
-            chartArea8.BackColor = System.Drawing.Color.Black;
-            chartArea8.Name = "ChartArea1";
-            this.respiracion.ChartAreas.Add(chartArea8);
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea2.AxisY.Maximum = 250D;
+            chartArea2.AxisY.Minimum = -50D;
+            chartArea2.BackColor = System.Drawing.Color.Black;
+            chartArea2.Name = "ChartArea1";
+            this.respiracion.ChartAreas.Add(chartArea2);
             this.respiracion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend8.Enabled = false;
-            legend8.Name = "Legend1";
-            this.respiracion.Legends.Add(legend8);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.respiracion.Legends.Add(legend2);
             this.respiracion.Location = new System.Drawing.Point(0, 264);
             this.respiracion.Name = "respiracion";
-            series8.BorderWidth = 2;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.respiracion.Series.Add(series8);
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.respiracion.Series.Add(series2);
             this.respiracion.Size = new System.Drawing.Size(800, 108);
             this.respiracion.TabIndex = 3;
             this.respiracion.Text = "chart4";
-            title8.Alignment = System.Drawing.ContentAlignment.BottomLeft;
-            title8.DockingOffset = 30;
-            title8.ForeColor = System.Drawing.Color.White;
-            title8.Name = "Title1";
-            title8.Text = "RESP";
-            this.respiracion.Titles.Add(title8);
+            title2.Alignment = System.Drawing.ContentAlignment.BottomLeft;
+            title2.DockingOffset = 30;
+            title2.ForeColor = System.Drawing.Color.White;
+            title2.Name = "Title1";
+            title2.Text = "RESP";
+            this.respiracion.Titles.Add(title2);
             // 
             // spo2
             // 
             this.spo2.BackColor = System.Drawing.Color.Black;
-            chartArea9.AxisY.Maximum = 100D;
-            chartArea9.AxisY.Minimum = 0D;
-            chartArea9.BackColor = System.Drawing.Color.Black;
-            chartArea9.Name = "ChartArea1";
-            this.spo2.ChartAreas.Add(chartArea9);
+            chartArea3.AxisY.Maximum = 100D;
+            chartArea3.AxisY.Minimum = 0D;
+            chartArea3.BackColor = System.Drawing.Color.Black;
+            chartArea3.Name = "ChartArea1";
+            this.spo2.ChartAreas.Add(chartArea3);
             this.spo2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend9.Enabled = false;
-            legend9.Name = "Legend1";
-            this.spo2.Legends.Add(legend9);
+            legend3.Enabled = false;
+            legend3.Name = "Legend1";
+            this.spo2.Legends.Add(legend3);
             this.spo2.Location = new System.Drawing.Point(0, 372);
             this.spo2.Name = "spo2";
-            series9.BorderWidth = 2;
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series9.Color = System.Drawing.Color.Lime;
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.spo2.Series.Add(series9);
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series3.Color = System.Drawing.Color.Lime;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.spo2.Series.Add(series3);
             this.spo2.Size = new System.Drawing.Size(800, 108);
             this.spo2.TabIndex = 4;
             this.spo2.Text = "chart5";
-            title9.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title9.DockingOffset = 30;
-            title9.ForeColor = System.Drawing.Color.White;
-            title9.Name = "Title1";
-            title9.Text = "SpO2";
-            this.spo2.Titles.Add(title9);
+            title3.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title3.DockingOffset = 30;
+            title3.ForeColor = System.Drawing.Color.White;
+            title3.Name = "Title1";
+            title3.Text = "SpO2";
+            this.spo2.Titles.Add(title3);
             // 
             // labelTemperatura
             // 
@@ -376,6 +379,27 @@
             this.exclamationMark.TabStop = false;
             this.exclamationMark.Visible = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 214);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 32;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(148, 45);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 33;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(0, 427);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 34;
+            // 
             // Economitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,6 +409,9 @@
             this.CancelButton = this.buttonShutdown;
             this.ClientSize = new System.Drawing.Size(800, 480);
             this.ControlBox = false;
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.exclamationMark);
             this.Controls.Add(this.buttonConfiguration);
             this.Controls.Add(this.derivacion1);
@@ -442,6 +469,9 @@
         private System.Windows.Forms.Button buttonSilenciar;
         private System.Windows.Forms.Button buttonConfiguration;
         private System.Windows.Forms.PictureBox exclamationMark;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
