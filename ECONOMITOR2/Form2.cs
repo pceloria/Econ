@@ -30,8 +30,8 @@ namespace ECONOMITOR2
         }
         private void loadLimits()
         {
-            textHRalto.Text = Alarmas.get_high_HR() + "";
-            textHRbajo.Text = Alarmas.get_low_HR() + "";
+            textHRbajo.Text = Alarmas.get_high_HR() + "";
+            textHRalto.Text = Alarmas.get_low_HR() + "";
             textRRalto.Text = Alarmas.get_high_RR() + "";
             textRRbajo.Text = Alarmas.get_low_RR() + "";
             textSpO2bajo.Text = Alarmas.get_low_Spo2() + "";
@@ -48,8 +48,8 @@ namespace ECONOMITOR2
         private void botonOKalarma_Click(object sender, EventArgs e)
         {
             // Extraer de los textbox los datos y actualizar las alarmas
-            Alarmas.set_high_HR(textHRalto);
-            Alarmas.set_low_HR(textHRbajo);
+            Alarmas.set_high_HR(textHRbajo);
+            Alarmas.set_low_HR(textHRalto);
             Alarmas.set_high_RR(textRRalto);
             Alarmas.set_low_RR(textRRbajo);
             Alarmas.set_low_Spo2(textSpO2bajo);

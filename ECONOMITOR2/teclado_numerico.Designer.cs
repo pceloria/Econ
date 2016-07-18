@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(teclado_numerico));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -212,30 +213,30 @@
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(12, 200);
+            this.button12.Location = new System.Drawing.Point(12, 201);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(60, 60);
+            this.button12.Size = new System.Drawing.Size(60, 59);
             this.button12.TabIndex = 11;
-            this.button12.Text = "Delete";
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.deleteClick);
             // 
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.Black;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(210, 200);
+            this.button13.Location = new System.Drawing.Point(229, 216);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(70, 43);
+            this.button13.Size = new System.Drawing.Size(47, 31);
             this.button13.TabIndex = 12;
-            this.button13.Text = "Enter";
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.enterClick);
             // 
@@ -247,9 +248,9 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(211, 12);
+            this.button14.Location = new System.Drawing.Point(229, 12);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(61, 29);
+            this.button14.Size = new System.Drawing.Size(47, 31);
             this.button14.TabIndex = 13;
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.discardClick);
@@ -275,7 +276,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "teclado_numerico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.ResumeLayout(false);
