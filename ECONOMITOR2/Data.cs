@@ -64,6 +64,8 @@ namespace ECONOMITOR2
         public static void updateECGparams(int ECG_Status, int HeartRate, int RespRate, int ST_Level)
         {
             // No recibe el arritmia code porque no esta disponible en esta version
+
+            
             Data.ECG_Status = ECG_Status;
             Data.HeartRate = HeartRate;
             Data.RespRate = RespRate;
@@ -147,7 +149,6 @@ namespace ECONOMITOR2
             return HeartRate;
         }
         public static int getCurrentSpo2Sat()
-
         {
             return Spo2Sat;
         }
