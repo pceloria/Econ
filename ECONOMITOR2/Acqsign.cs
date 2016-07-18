@@ -54,7 +54,7 @@ namespace ECONOMITOR2
         private static int ECG_PARAMval;
         private static int NIBP_PARAMval;
         private static int SPO2_PARAMval1;
-        private static int TEMPval;
+        private static double TEMPval;
         private static int SPO2_WAVEval;
         private static int RESP_WAVEval;
 
@@ -97,6 +97,13 @@ namespace ECONOMITOR2
                 port.Parity = Parity.None;
                 port.DataBits = 8;
                 port.StopBits = StopBits.One;
+
+                enableECG(true);
+                enableECGwave(true);
+                enableRESPwave(true);
+                enableSPO2(true);
+                enableSPO2wave(true);
+                enableTEMP(true);
 
                 try
                 {
@@ -232,8 +239,8 @@ namespace ECONOMITOR2
                                     TEMP_Status = data[0];
                                     TEMP1_Integral = data[1];
                                     TEMP1_Decimal = data[2];
-                                    TEMPval = TEMP1_Integral + TEMP1_Decimal / 10;
-                                    Data.updateTemperatura(TEMPval);
+                                    TEMPval = TEMP1_Integral + ((double)TEMP1_Decimal) / 10;
+                                    Data.updateTemperatura(TEMPval, TEMP_Status);
                                     break;
 
                                 case SOFT_VERSION:

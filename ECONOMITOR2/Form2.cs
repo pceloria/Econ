@@ -18,7 +18,7 @@ namespace ECONOMITOR2
             InitializeComponent();
             loadLimits();
             loadEnables();
-
+            Focus();
         }
         private void loadEnables()
         {

@@ -57,6 +57,7 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.White;
@@ -66,7 +67,7 @@
             "x 0.5",
             "x 1",
             "x 2"});
-            this.comboBox1.Location = new System.Drawing.Point(224, 237);
+            this.comboBox1.Location = new System.Drawing.Point(206, 254);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(70, 28);
             this.comboBox1.TabIndex = 3;
@@ -77,7 +78,7 @@
             this.ECG.AutoSize = true;
             this.ECG.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ECG.ForeColor = System.Drawing.Color.Red;
-            this.ECG.Location = new System.Drawing.Point(129, 227);
+            this.ECG.Location = new System.Drawing.Point(111, 244);
             this.ECG.Name = "ECG";
             this.ECG.Size = new System.Drawing.Size(73, 31);
             this.ECG.TabIndex = 4;
@@ -88,7 +89,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(129, 268);
+            this.label2.Location = new System.Drawing.Point(111, 285);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 31);
             this.label2.TabIndex = 5;
@@ -97,6 +98,7 @@
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.ForeColor = System.Drawing.Color.White;
@@ -106,7 +108,7 @@
             "x 0.5",
             "x 1",
             "x 2"});
-            this.comboBox2.Location = new System.Drawing.Point(223, 275);
+            this.comboBox2.Location = new System.Drawing.Point(205, 292);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(71, 28);
             this.comboBox2.TabIndex = 6;
@@ -217,6 +219,7 @@
             // comboBox4
             // 
             this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.ForeColor = System.Drawing.Color.White;
@@ -226,7 +229,7 @@
             "OPERATION",
             "MONITOR",
             "DIAGNOSE"});
-            this.comboBox4.Location = new System.Drawing.Point(316, 237);
+            this.comboBox4.Location = new System.Drawing.Point(298, 254);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(114, 28);
             this.comboBox4.TabIndex = 17;
@@ -237,7 +240,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(221, 196);
+            this.label3.Location = new System.Drawing.Point(203, 213);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 29);
             this.label3.TabIndex = 18;
@@ -248,7 +251,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(333, 196);
+            this.label4.Location = new System.Drawing.Point(315, 213);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 29);
             this.label4.TabIndex = 19;
@@ -279,6 +282,7 @@
             // comboBox3
             // 
             this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.ForeColor = System.Drawing.Color.White;
@@ -289,7 +293,7 @@
             "5 min",
             "10 min",
             "30 min"});
-            this.comboBox3.Location = new System.Drawing.Point(223, 341);
+            this.comboBox3.Location = new System.Drawing.Point(206, 356);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(70, 28);
             this.comboBox3.TabIndex = 26;
@@ -298,7 +302,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::ECONOMITOR2.Properties.Resources.buttonSilenciar_BackgroundImage;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(135, 331);
+            this.pictureBox2.Location = new System.Drawing.Point(118, 346);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(57, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

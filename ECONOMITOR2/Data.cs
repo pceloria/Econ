@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace ECONOMITOR2
 {
@@ -36,13 +37,14 @@ namespace ECONOMITOR2
 
         // Parametro de Temperatura
         private static double Temperatura;
+        public static int TempStatus;
         // Parametros del ECG
-        private static int ECG_Status;
+        private static byte ECG_Status;
         private static int HeartRate;
         private static int RespRate;
         private static int ST_Level;
         // Parametros del SPO2
-        private static int SPO2_Status;
+        private static byte SPO2_Status;
         private static int Spo2Sat;
         private static int PulseRate;
         // Parametros del NIBP
@@ -56,24 +58,37 @@ namespace ECONOMITOR2
         private static double[] SPO2;
         private static double[] RESP;
 
+        // Flags
+        public static bool flagECGleadOFF;
+        public static int ECGgain;
+        public static int ECGfilter;
+
+
         // Guardado de variables lentas luego de la adquisicion
-        public static void updateTemperatura(int Temperatura)
+        public static void updateTemperatura(double Temperatura, int TempStatus )
         {
             Data.Temperatura = Temperatura;
+            Data.TempStatus = TempStatus;
+
         }
         public static void updateECGparams(int ECG_Status, int HeartRate, int RespRate, int ST_Level)
         {
             // No recibe el arritmia code porque no esta disponible en esta version
 
+            //
+            Data.ECG_Status = (Byte)ECG_Status;
+            BitArray bitsECG_Status = new BitArray(new byte[] { Data.ECG_Status });
+            ECGgain = (Data.ECG_Status & 0x0C)>>2;
+            ECGfilter = (Data.ECG_Status & 0x30) >> 4;
+            flagECGleadOFF = (bool)bitsECG_Status[1];
             
-            Data.ECG_Status = ECG_Status;
             Data.HeartRate = HeartRate;
             Data.RespRate = RespRate;
             Data.ST_Level = ST_Level;
         }
         public static void updateSPO2params(int SPO2_Status, int Spo2Sat, int PulseRate)
         {
-            Data.SPO2_Status = SPO2_Status;
+            Data.SPO2_Status = (byte)SPO2_Status;
             Data.Spo2Sat = Spo2Sat;
             Data.PulseRate = PulseRate;
         }
