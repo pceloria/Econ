@@ -157,6 +157,7 @@ namespace ECONOMITOR2
             //AudioVisual.Draw(derivacion2, data);
             //AudioVisual.Draw(derivacion3, data);
 
+            setStatus();
 
             counter++;
             Alarmas.counter1++;
@@ -218,6 +219,43 @@ namespace ECONOMITOR2
         {
             flag_pause = true;
             timer1.Stop();
+        }
+
+        private void setStatus() {
+
+            if (Data.TempStatus == 0) {
+                textBox2.Text = "Sensor off";
+            }
+            else {
+                textBox2.Text = "Normal";
+            }
+
+
+            if (Data.flagECGleadOFF) {
+                textBox1.Text = "Lead off";
+            }
+            else  {
+                textBox1.Text = "Normal";
+            }
+
+
+            if (Data.SPO2_Status == 0) {
+                textBox3.Text = "Normal";
+            }
+            else if(Data.SPO2_Status == 1) {
+                textBox3.Text = "Sensor off";
+            }
+            else if (Data.SPO2_Status == 2) {
+                textBox3.Text = "No finger insert";
+            }
+            else if (Data.SPO2_Status == 3) {
+                textBox3.Text = "Searching pulse signal";
+            }
+            else if (Data.SPO2_Status == 4) {
+                textBox3.Text = "Searching time out";
+                    
+            }
+
         }
     }
 }
