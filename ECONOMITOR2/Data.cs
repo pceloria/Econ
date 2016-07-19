@@ -12,9 +12,9 @@ namespace ECONOMITOR2
         public static void init()
         {
             // inicializo los vectores a graficar
-            ECG = new double[5000];
-            SPO2 = new double[1000];
-            RESP = new double[1000];
+            ECG = new double[AudioVisual.getPointsOfECG()];
+            SPO2 = new double[AudioVisual.getPointsOfSPO2()];
+            RESP = new double[AudioVisual.getPointsOfRESP()];
 
             HeartRate = 80;
             RespRate = 60;
@@ -34,6 +34,9 @@ namespace ECONOMITOR2
         private static int newRESPpackages = 0;
         private static int newSPO2packages = 0;
 
+        public static int ECGpackagesSize = 25;
+        public static int RESPpackagesSize = 5;
+        public static int SPO2packagesSize = 5;
 
         // Parametro de Temperatura
         private static double Temperatura;
@@ -112,7 +115,7 @@ namespace ECONOMITOR2
            
             lastPositionInECGArray = lastPositionInECGArray + newData.Length;
 
-            if (lastPositionInECGArray + newData.Length > 5000)
+            if (lastPositionInECGArray + newData.Length > AudioVisual.getPointsOfECG())
                 lastPositionInECGArray = 0;
 
             newECGpackages++;
@@ -130,7 +133,7 @@ namespace ECONOMITOR2
 
             lastPositionInRESPArray = lastPositionInRESPArray + newData.Length;
 
-            if (lastPositionInRESPArray + newData.Length > 1000)
+            if (lastPositionInRESPArray + newData.Length > AudioVisual.getPointsOfRESP())
                 lastPositionInRESPArray = 0;
 
             newRESPpackages++;
@@ -149,7 +152,7 @@ namespace ECONOMITOR2
 
             lastPositionInSPO2Array = lastPositionInSPO2Array + newData.Length;
 
-            if (lastPositionInSPO2Array + newData.Length > 1000)
+            if (lastPositionInSPO2Array + newData.Length > AudioVisual.getPointsOfSPO2())
                 lastPositionInSPO2Array = 0;
 
             newSPO2packages++;
@@ -187,11 +190,11 @@ namespace ECONOMITOR2
                 return null;
             else
             {
-                double[] newECGdata = new double[newECGpackages * 25];
-                int newDataStartsAt = lastPositionInECGArray - newECGpackages * 25;
-                for (int k = 0; k < newECGpackages * 25; k++)
+                double[] newECGdata = new double[newECGpackages * ECGpackagesSize];
+                int newDataStartsAt = lastPositionInECGArray - newECGpackages * ECGpackagesSize;
+                for (int k = 0; k < newECGpackages * ECGpackagesSize; k++)
                     if (newDataStartsAt + k < 0)
-                        newECGdata[k] = ECG[5000 + newDataStartsAt + k];
+                        newECGdata[k] = ECG[AudioVisual.getPointsOfECG() + newDataStartsAt + k];
                     else
                         newECGdata[k] = ECG[newDataStartsAt + k];
                
@@ -205,11 +208,11 @@ namespace ECONOMITOR2
                 return null;
             else
             {
-                double[] newRESPdata = new double[newRESPpackages * 5];
-                int newDataStartsAt = lastPositionInRESPArray - newRESPpackages * 5;
-                for (int k = 0; k < newRESPpackages * 5; k++)
+                double[] newRESPdata = new double[newRESPpackages * RESPpackagesSize];
+                int newDataStartsAt = lastPositionInRESPArray - newRESPpackages * RESPpackagesSize;
+                for (int k = 0; k < newRESPpackages * RESPpackagesSize; k++)
                     if (newDataStartsAt + k < 0)
-                        newRESPdata[k] = RESP[1000 + newDataStartsAt + k];
+                        newRESPdata[k] = RESP[AudioVisual.getPointsOfRESP() + newDataStartsAt + k];
                     else
                         newRESPdata[k] = RESP[newDataStartsAt + k];
 
@@ -223,11 +226,11 @@ namespace ECONOMITOR2
                 return null;
             else
             {
-                double[] newSPO2data = new double[newSPO2packages * 5];
-                int newDataStartsAt = lastPositionInSPO2Array - newSPO2packages * 5;
-                for (int k = 0; k < newSPO2packages * 5; k++)
+                double[] newSPO2data = new double[newSPO2packages * SPO2packagesSize];
+                int newDataStartsAt = lastPositionInSPO2Array - newSPO2packages * SPO2packagesSize;
+                for (int k = 0; k < newSPO2packages * SPO2packagesSize; k++)
                     if (newDataStartsAt + k < 0)
-                        newSPO2data[k] = SPO2[1000 + newDataStartsAt + k];
+                        newSPO2data[k] = SPO2[AudioVisual.getPointsOfSPO2() + newDataStartsAt + k];
                     else
                         newSPO2data[k] = SPO2[newDataStartsAt + k];
 

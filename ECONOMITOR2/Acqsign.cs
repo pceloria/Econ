@@ -67,15 +67,15 @@ namespace ECONOMITOR2
         const int RESP_WAVEfreq = 50;
 
         const int TIME = 1;
-        const double TIMEpackage = 0.1;
+        //const double TIMEpackage = 0.1;
 
-        static double[] ECG_WAVEdat = new double[(int)(TIMEpackage * ECG_WAVEfreq)];
+        static double[] ECG_WAVEdat = new double[Data.ECGpackagesSize];
         static int[] ECG_PARAMdat = new int[TIME * ECG_PARAMfreq];
         static int[] NIBP_PARAMdat = new int[TIME * NIBP_PARAMfreq];
         static int[] SPO2_PARAMdat = new int[TIME * SPO2_PARAMfreq];
         static int[] TEMPdat = new int[TIME * TEMPfreq];
-        static double[] SPO2_WAVEdat = new double[(int)(TIMEpackage * SPO2_WAVEfreq)];
-        static double[] RESP_WAVEdat = new double[(int)(TIMEpackage * RESP_WAVEfreq)];
+        static double[] SPO2_WAVEdat = new double[Data.SPO2packagesSize];
+        static double[] RESP_WAVEdat = new double[Data.RESPpackagesSize];
 
         static int indexECG = 0;
         static int indexSPO2 = 0;

@@ -10,7 +10,6 @@ namespace ECONOMITOR2
     class AudioVisual
     {
         // init variables de la clase
-        private static double[] s;
         private static int secondsToShowECG = 8;
         private static int secondsToShowRESP = 25;
         private static int secondsToShowSPO2 = 8;
@@ -68,7 +67,7 @@ namespace ECONOMITOR2
         {
 
             if (currentIndex != 0)
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < 2; j++)
                     chartSPO2.Series["Series1"].Points[currentIndex + j].IsEmpty = false;
 
             for (int j = 0; j < data.Length; j++)
@@ -76,7 +75,7 @@ namespace ECONOMITOR2
                 chartSPO2.Series["Series1"].Points[j + currentIndex].SetValueY(data[j]);
             }
             if (data.Length + 4 + currentIndex < getPointsOfSPO2())
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < 2; j++)
                     chartSPO2.Series["Series1"].Points[data.Length + currentIndex + j].IsEmpty = true;
 
             chartSPO2.ResetAutoValues();

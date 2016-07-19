@@ -144,7 +144,8 @@ namespace ECONOMITOR2
 
             if (newSPO2Data != null)
             {
-                if (currentIndexSPO2 + newSPO2Data.Length > AudioVisual.getPointsOfSPO2())
+                if (currentIndexSPO2 + newSPO2Data.Length > AudioVisual.getPointsOfSPO2() ||
+                    currentIndexSPO2 + 2 > AudioVisual.getPointsOfSPO2())
                     currentIndexSPO2 = 0;
                 AudioVisual.DrawSPO2(newSPO2Data, currentIndexSPO2);
                 currentIndexSPO2 += newSPO2Data.Length;
@@ -171,10 +172,7 @@ namespace ECONOMITOR2
 
         void buttonSilenciar_Click(object sender, EventArgs e) {
             
-            
             Alarmas.silenciarAlarma();
-            
-        
         }
 
 
