@@ -62,12 +62,13 @@
             this.onoffRR.AutoSize = true;
             this.onoffRR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.onoffRR.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.onoffRR.Location = new System.Drawing.Point(186, 158);
+            this.onoffRR.Location = new System.Drawing.Point(173, 158);
             this.onoffRR.Name = "onoffRR";
             this.onoffRR.Size = new System.Drawing.Size(112, 28);
             this.onoffRR.TabIndex = 10;
             this.onoffRR.Text = "ON / OFF";
             this.onoffRR.UseVisualStyleBackColor = true;
+            this.onoffRR.Click += new System.EventHandler(this.checkboxOnOffClick);
             // 
             // textRRbajo
             // 
@@ -119,6 +120,7 @@
             this.onoffTEMP.TabIndex = 10;
             this.onoffTEMP.Text = "ON / OFF";
             this.onoffTEMP.UseVisualStyleBackColor = true;
+            this.onoffTEMP.Click += new System.EventHandler(this.checkboxOnOffClick);
             // 
             // textTEMPbajo
             // 
@@ -153,7 +155,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Yellow;
-            this.label12.Location = new System.Drawing.Point(571, 81);
+            this.label12.Location = new System.Drawing.Point(597, 86);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 24);
             this.label12.TabIndex = 8;
@@ -243,6 +245,7 @@
             this.onoffHR.TabIndex = 27;
             this.onoffHR.Text = "ON / OFF";
             this.onoffHR.UseVisualStyleBackColor = true;
+            this.onoffHR.Click += new System.EventHandler(this.checkboxOnOffClick);
             // 
             // textHRalto
             // 
@@ -250,7 +253,7 @@
             this.textHRalto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textHRalto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textHRalto.ForeColor = System.Drawing.Color.Red;
-            this.textHRalto.Location = new System.Drawing.Point(99, 277);
+            this.textHRalto.Location = new System.Drawing.Point(102, 277);
             this.textHRalto.MaxLength = 4;
             this.textHRalto.Name = "textHRalto";
             this.textHRalto.Size = new System.Drawing.Size(100, 29);
@@ -267,7 +270,7 @@
             this.textHRbajo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textHRbajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textHRbajo.ForeColor = System.Drawing.Color.Red;
-            this.textHRbajo.Location = new System.Drawing.Point(242, 277);
+            this.textHRbajo.Location = new System.Drawing.Point(255, 277);
             this.textHRbajo.MaxLength = 4;
             this.textHRbajo.Name = "textHRbajo";
             this.textHRbajo.Size = new System.Drawing.Size(100, 29);
@@ -283,7 +286,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(127, 250);
+            this.label1.Location = new System.Drawing.Point(134, 249);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 24);
             this.label1.TabIndex = 25;
@@ -294,7 +297,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(275, 249);
+            this.label2.Location = new System.Drawing.Point(288, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 24);
             this.label2.TabIndex = 26;
@@ -322,6 +325,7 @@
             this.onoffSpO2.TabIndex = 31;
             this.onoffSpO2.Text = "ON / OFF";
             this.onoffSpO2.UseVisualStyleBackColor = true;
+            this.onoffSpO2.Click += new System.EventHandler(this.checkboxOnOffClick);
             // 
             // textSpO2bajo
             // 

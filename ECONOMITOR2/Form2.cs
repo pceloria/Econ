@@ -23,9 +23,16 @@ namespace ECONOMITOR2
         private void loadEnables()
         {
             onoffHR.Checked = Alarmas.flag_HR_enable;
+            enableHR(onoffHR.Checked);
+
             onoffRR.Checked = Alarmas.flag_RR_enable;
+            enableRR(onoffRR.Checked);
+
             onoffSpO2.Checked = Alarmas.flag_SpO2_enable;
+            enableSpO2(onoffSpO2.Checked);
+
             onoffTEMP.Checked = Alarmas.flag_TEMP_enable;
+            enableTEMP(onoffTEMP.Checked);
 
         }
         private void loadLimits()
@@ -96,6 +103,40 @@ namespace ECONOMITOR2
             {
                 ((TextBox)sender).Text = "";
             }
+        }
+
+        private void checkboxOnOffClick(object sender, EventArgs e)
+        {
+            CheckBox OnOff = (CheckBox)sender;
+
+            if (OnOff.Name.Equals("onoffRR"))
+                enableRR(OnOff.Checked);
+            else if (OnOff.Name.Equals("onoffHR"))
+                enableHR(OnOff.Checked);
+            else if (OnOff.Name.Equals("onoffTEMP"))
+                enableTEMP(OnOff.Checked);
+            else if (OnOff.Name.Equals("onoffSpO2"))
+                enableSpO2(OnOff.Checked);
+        }
+
+        private void enableRR(Boolean enabled)
+        {
+            textRRalto.Enabled = enabled;
+            textRRbajo.Enabled = enabled;
+        }
+        private void enableHR(Boolean enabled)
+        {
+            textHRalto.Enabled = enabled;
+            textHRbajo.Enabled = enabled;
+        }
+        private void enableSpO2(Boolean enabled)
+        {   
+            textSpO2bajo.Enabled = enabled;
+        }
+        private void enableTEMP(Boolean enabled)
+        {
+            textTEMPalto.Enabled = enabled;
+            textTEMPbajo.Enabled = enabled;
         }
     }
 }
