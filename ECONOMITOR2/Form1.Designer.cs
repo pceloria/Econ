@@ -65,6 +65,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.derivacion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.respiracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spo2)).BeginInit();
@@ -90,7 +95,7 @@
             legend1.Enabled = false;
             legend1.Name = "Legend1";
             this.derivacion1.Legends.Add(legend1);
-            this.derivacion1.Location = new System.Drawing.Point(0, 156);
+            this.derivacion1.Location = new System.Drawing.Point(0, 150);
             this.derivacion1.Name = "derivacion1";
             series1.BackImageTransparentColor = System.Drawing.Color.Black;
             series1.BackSecondaryColor = System.Drawing.Color.Black;
@@ -105,7 +110,7 @@
             series1.MarkerBorderColor = System.Drawing.Color.White;
             series1.Name = "Series1";
             this.derivacion1.Series.Add(series1);
-            this.derivacion1.Size = new System.Drawing.Size(800, 108);
+            this.derivacion1.Size = new System.Drawing.Size(1000, 150);
             this.derivacion1.TabIndex = 0;
             this.derivacion1.TabStop = false;
             this.derivacion1.Tag = "derivacion1";
@@ -132,7 +137,7 @@
             legend2.Enabled = false;
             legend2.Name = "Legend1";
             this.respiracion.Legends.Add(legend2);
-            this.respiracion.Location = new System.Drawing.Point(0, 264);
+            this.respiracion.Location = new System.Drawing.Point(0, 300);
             this.respiracion.Name = "respiracion";
             series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
@@ -140,7 +145,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.respiracion.Series.Add(series2);
-            this.respiracion.Size = new System.Drawing.Size(800, 108);
+            this.respiracion.Size = new System.Drawing.Size(1000, 150);
             this.respiracion.TabIndex = 3;
             this.respiracion.Text = "chart4";
             title2.Alignment = System.Drawing.ContentAlignment.BottomLeft;
@@ -162,7 +167,7 @@
             legend3.Enabled = false;
             legend3.Name = "Legend1";
             this.spo2.Legends.Add(legend3);
-            this.spo2.Location = new System.Drawing.Point(0, 372);
+            this.spo2.Location = new System.Drawing.Point(0, 450);
             this.spo2.Name = "spo2";
             series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
@@ -171,7 +176,7 @@
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             this.spo2.Series.Add(series3);
-            this.spo2.Size = new System.Drawing.Size(800, 108);
+            this.spo2.Size = new System.Drawing.Size(1000, 150);
             this.spo2.TabIndex = 4;
             this.spo2.Text = "chart5";
             title3.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -295,9 +300,9 @@
             this.buttonShutdown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonShutdown.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonShutdown.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonShutdown.Location = new System.Drawing.Point(698, 13);
+            this.buttonShutdown.Location = new System.Drawing.Point(928, 13);
             this.buttonShutdown.Name = "buttonShutdown";
-            this.buttonShutdown.Size = new System.Drawing.Size(39, 35);
+            this.buttonShutdown.Size = new System.Drawing.Size(47, 47);
             this.buttonShutdown.TabIndex = 18;
             this.buttonShutdown.Tag = "buttonShutdown";
             this.buttonShutdown.UseVisualStyleBackColor = true;
@@ -308,9 +313,9 @@
             this.buttonConfiguration.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonConfiguration.BackgroundImage")));
             this.buttonConfiguration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonConfiguration.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonConfiguration.Location = new System.Drawing.Point(609, 61);
+            this.buttonConfiguration.Location = new System.Drawing.Point(736, 13);
             this.buttonConfiguration.Name = "buttonConfiguration";
-            this.buttonConfiguration.Size = new System.Drawing.Size(39, 35);
+            this.buttonConfiguration.Size = new System.Drawing.Size(47, 47);
             this.buttonConfiguration.TabIndex = 30;
             this.buttonConfiguration.UseVisualStyleBackColor = true;
             this.buttonConfiguration.Click += new System.EventHandler(this.buttonConfiguration_Click);
@@ -320,9 +325,9 @@
             this.buttonSilenciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSilenciar.BackgroundImage")));
             this.buttonSilenciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonSilenciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSilenciar.Location = new System.Drawing.Point(457, 28);
+            this.buttonSilenciar.Location = new System.Drawing.Point(531, 22);
             this.buttonSilenciar.Name = "buttonSilenciar";
-            this.buttonSilenciar.Size = new System.Drawing.Size(67, 65);
+            this.buttonSilenciar.Size = new System.Drawing.Size(69, 74);
             this.buttonSilenciar.TabIndex = 28;
             this.buttonSilenciar.UseVisualStyleBackColor = true;
             this.buttonSilenciar.Click += new System.EventHandler(this.buttonSilenciar_Click);
@@ -333,9 +338,9 @@
             this.buttonPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPause.ForeColor = System.Drawing.Color.White;
-            this.buttonPause.Location = new System.Drawing.Point(610, 13);
+            this.buttonPause.Location = new System.Drawing.Point(863, 13);
             this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(39, 35);
+            this.buttonPause.Size = new System.Drawing.Size(47, 47);
             this.buttonPause.TabIndex = 27;
             this.buttonPause.UseVisualStyleBackColor = true;
             this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
@@ -346,9 +351,9 @@
             this.buttonAlarma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonAlarma.BackgroundImage")));
             this.buttonAlarma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonAlarma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAlarma.Location = new System.Drawing.Point(565, 61);
+            this.buttonAlarma.Location = new System.Drawing.Point(668, 13);
             this.buttonAlarma.Name = "buttonAlarma";
-            this.buttonAlarma.Size = new System.Drawing.Size(39, 35);
+            this.buttonAlarma.Size = new System.Drawing.Size(47, 47);
             this.buttonAlarma.TabIndex = 26;
             this.buttonAlarma.UseVisualStyleBackColor = false;
             this.buttonAlarma.Click += new System.EventHandler(this.botonAlarma_Click);
@@ -360,9 +365,9 @@
             this.buttonStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonStart.ForeColor = System.Drawing.Color.White;
-            this.buttonStart.Location = new System.Drawing.Point(565, 13);
+            this.buttonStart.Location = new System.Drawing.Point(793, 13);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(39, 35);
+            this.buttonStart.Size = new System.Drawing.Size(47, 47);
             this.buttonStart.TabIndex = 17;
             this.buttonStart.Tag = "buttonStart";
             this.buttonStart.UseVisualStyleBackColor = false;
@@ -372,7 +377,7 @@
             // 
             this.exclamationMark.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exclamationMark.BackgroundImage")));
             this.exclamationMark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.exclamationMark.Location = new System.Drawing.Point(354, 20);
+            this.exclamationMark.Location = new System.Drawing.Point(428, 20);
             this.exclamationMark.Name = "exclamationMark";
             this.exclamationMark.Size = new System.Drawing.Size(97, 76);
             this.exclamationMark.TabIndex = 31;
@@ -395,10 +400,45 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(0, 427);
+            this.textBox3.Location = new System.Drawing.Point(0, 524);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 34;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(0, 238);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 35;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(0, 369);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 36;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(0, 550);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 37;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(0, 108);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 38;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(148, 108);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 39;
             // 
             // Economitor
             // 
@@ -407,8 +447,13 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CancelButton = this.buttonShutdown;
-            this.ClientSize = new System.Drawing.Size(800, 480);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.ControlBox = false;
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -472,6 +517,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
     }
 }
 
