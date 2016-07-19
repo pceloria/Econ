@@ -113,19 +113,19 @@ namespace ECONOMITOR2
         public static void DrawECGtoZero()
         {
             for (int j = 0; j < getPointsOfECG(); j++)
-                chartECG.Series["Series1"].Points[].SetValueY(0);
+                chartECG.Series["Series1"].Points[j].SetValueY(0);
             
         }
         public static void DrawRESPtoZero()
         {
             for (int j = 0; j < getPointsOfRESP(); j++)
-                chartRESP.Series["Series1"].Points[].SetValueY(0);
+                chartRESP.Series["Series1"].Points[j].SetValueY(0);
             
         }
         public static void DrawSPO2toZero()
         {
             for (int j = 0; j < getPointsOfSPO2(); j++)
-                chartSPO2.Series["Series1"].Points[].SetValueY(0);
+                chartSPO2.Series["Series1"].Points[j].SetValueY(0);
             
         }
     }
