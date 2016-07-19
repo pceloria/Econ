@@ -68,12 +68,12 @@ namespace ECONOMITOR2
 
         private static bool firstOpen = true;
 
-        private static bool ECGwave = true;
-        private static bool RESPwave = true;
-        private static bool SPO2wave = true;
-        private static bool SPO2param = true;
-        private static bool ECGparam = true;
-        private static bool TEMPparam = true;
+        public static bool ECGwave = true;
+        public static bool RESPwave = true;
+        public static bool SPO2wave = true;
+        public static bool SPO2param = true;
+        public static bool ECGparam = true;
+        public static bool TEMPparam = true;
 
         private static int ECGgain = 2;
         private static int RESPgain = 2;
@@ -113,7 +113,7 @@ namespace ECONOMITOR2
             }
             else {
                 Acqsign.enableECGwave(false);
-                ECGwave = false;
+                ECGwave = false;              
             }
 
             if (checkBox_RESPwave.Checked)

@@ -229,7 +229,7 @@ namespace ECONOMITOR2
         private void setStatus() {
 
             if (Data.TempStatus == 0) {
-                textBox2.Text = "Normal";
+                textBox2.Text = "";
             }
             else {               
                 textBox2.Text = "Sensor off";
@@ -240,12 +240,12 @@ namespace ECONOMITOR2
                 textBox1.Text = "Lead off";
             }
             else  {
-                textBox1.Text = "Normal";
+                textBox1.Text = "";
             }
 
 
             if (Data.SPO2_Status == 0) {
-                textBox3.Text = "Normal";
+                textBox3.Text = "";
             }
             else if(Data.SPO2_Status == 1) {
                 textBox3.Text = "Sensor off";
@@ -259,6 +259,60 @@ namespace ECONOMITOR2
             else if (Data.SPO2_Status == 4) {
                 textBox3.Text = "Searching time out";
                     
+            }
+            
+            if (FormConfig.ECGwave == false)
+            {
+                textBox4.Text = "Disabled";
+            }
+            else
+            {
+                textBox4.Text = "";
+            }
+
+            if (FormConfig.SPO2wave == false)
+            {
+                textBox6.Text = "Disabled";
+            }
+            else
+            {
+                textBox6.Text = "";
+            }
+
+            if (FormConfig.RESPwave == false)
+            {
+                textBox5.Text = "Disabled";
+            }
+            else
+            {
+                textBox5.Text = "";
+            }
+
+            if (FormConfig.ECGparam == false)
+            {
+                textBox7.Text = "Disabled";
+            }
+            else
+            {
+                textBox7.Text = "";
+            }
+
+            if (FormConfig.SPO2param == false)
+            {
+                textBox8.Text = "Disabled";
+            }
+            else
+            {
+                textBox8.Text = "";
+            }
+
+            if (FormConfig.TEMPparam == false)
+            {
+                textBox2.Text = "Disabled";
+            }
+            else
+            {
+                textBox2.Text = "";
             }
 
         }
