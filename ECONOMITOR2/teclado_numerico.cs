@@ -24,6 +24,15 @@ namespace ECONOMITOR2
             oldAlarm = this.currentTB.Text;
             newAlarm = "";
 
+            int parentCenterX = currentTB.Parent.Location.X + currentTB.Parent.Width / 2;
+            int centerY = currentTB.Location.Y + currentTB.Parent.Location.Y - Height / 2;
+            int offsetX = currentTB.Parent.Width / 2 - currentTB.Location.X;
+            if (currentTB.Location.X < currentTB.Parent.Width / 2)
+                Location = new Point(parentCenterX - offsetX + currentTB.Width,
+                                     centerY);
+            else
+                Location = new Point(parentCenterX - Width - offsetX,
+                                     centerY);
         }
 
         private void numberClick(object sender, EventArgs e)

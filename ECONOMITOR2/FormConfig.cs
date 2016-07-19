@@ -19,6 +19,7 @@ namespace ECONOMITOR2
         {
             InitializeComponent();
             LoadStates();
+            LoadComboBoxes();
         }
 
         public void LoadStates()
@@ -36,6 +37,34 @@ namespace ECONOMITOR2
               //  checkBox_HR_RR
 
         }
+        public void LoadComboBoxes()
+        {
+            switch (Alarmas.silenceDurationInSeconds)
+            {
+                case 10:
+                    // 10 segundos
+                    comboBoxSilence.SelectedIndex = 0;
+                    break;
+                case 120:
+                    // 2 minutos
+                    comboBoxSilence.SelectedIndex = 1;
+                    break;
+                case 300:
+                    // 5 minutos
+                    comboBoxSilence.SelectedIndex = 2;
+                    break;
+                case 600:
+                    // 10 minutos
+                    comboBoxSilence.SelectedIndex = 3;
+                    break;
+                case 1800:
+                    // 30 minutos
+                    comboBoxSilence.SelectedIndex = 4;
+                    break;
+                default:
+                    break;
+            }
+        }
 
         private static bool firstOpen = true;
 
@@ -46,9 +75,9 @@ namespace ECONOMITOR2
         private static bool ECGparam = true;
         private static bool TEMPparam = true;
 
-        private static int ECGgain = -1;
-        private static int RESPgain = -1;
-        private static int ECGfilter = -1;
+        private static int ECGgain = 2;
+        private static int RESPgain = 2;
+        private static int ECGfilter = 0;
         
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -204,6 +233,31 @@ namespace ECONOMITOR2
             }
 
 
+            switch (comboBoxSilence.SelectedIndex)
+            {
+                case 0:
+                    // 10 segundos
+                    Alarmas.silenceDurationInSeconds = 10;
+                    break;
+                case 1:
+                    // 2 minutos
+                    Alarmas.silenceDurationInSeconds = 2*60;
+                    break;
+                case 2:
+                    // 5 minutos
+                    Alarmas.silenceDurationInSeconds = 5*60;
+                    break;
+                case 3:
+                    // 10 minutos
+                    Alarmas.silenceDurationInSeconds = 10*60;
+                    break;
+                case 4:
+                    // 30 minutos
+                    Alarmas.silenceDurationInSeconds = 30*60;
+                    break;
+                default:
+                    break;
+            }
 
             this.Close();
         }

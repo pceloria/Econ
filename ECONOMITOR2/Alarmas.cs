@@ -20,7 +20,10 @@ namespace ECONOMITOR2
             private static int low_RR = 3;
             private static int high_RR = 15;
             private static int low_Spo2 = 95;
+
             public static Boolean flag_alarma = true;
+            public static int silenceDurationInSeconds = 10; // Por default 10 segundos
+
             private static System.Media.SoundPlayer player = new System.Media.SoundPlayer();
             public static Stream audio_HR = Properties.Resources.audio_HR;
             private static Stream audio_RR = Properties.Resources.audio_RR;
@@ -29,6 +32,7 @@ namespace ECONOMITOR2
             private static Stream audio_temp = Properties.Resources.audio_temp;
             public static int counter1;
             public static int counter_color;
+
             private static Boolean flag_alarm_HR = false;
             private static Boolean flag_alarm_RR = false;
             private static Boolean flag_alarm_spo2 = false;

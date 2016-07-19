@@ -145,6 +145,11 @@
     <Content Include="Resources\buttonShutdown.BackgroundImage.png" />
     <Content Include="Resources\buttonSilenciar.BackgroundImage.png" />
     <Content Include="Resources\buttonStart.BackgroundImage.png" />
+    <None Include="Resources\economitor2.wav" />
+    <Content Include="Resources\economitor2.wma" />
+    <Content Include="Resources\economitor3.wma" />
+    <Content Include="Resources\economitor4.wma" />
+    <Content Include="Resources\economitor_welcome.wma" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

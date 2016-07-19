@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.IO;
 
 namespace ECONOMITOR2
 {
     public partial class Welcome : Form
     {
+
+        private static Stream economitor2 = Properties.Resources.economitor2 ;
+
+
         public Welcome()
         {
             InitializeComponent();
@@ -21,6 +27,8 @@ namespace ECONOMITOR2
             WelcomeTimer.Enabled = true;                       // Enable the timer
             WelcomeTimer.Start();                              // Start the timer
 
+            Alarmas.sonarAlarma(economitor2);
+            
         }
 
         private void Welcome_Tick(object sender, EventArgs e)

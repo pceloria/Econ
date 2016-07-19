@@ -45,7 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxSilence = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonDiscardAlarms = new System.Windows.Forms.Button();
@@ -282,25 +282,25 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "/";
             // 
-            // comboBox3
+            // comboBoxSilence
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.comboBoxSilence.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.comboBoxSilence.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSilence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxSilence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSilence.ForeColor = System.Drawing.Color.White;
+            this.comboBoxSilence.FormattingEnabled = true;
+            this.comboBoxSilence.Items.AddRange(new object[] {
             "10 seg",
             "2 min",
             "5 min",
             "10 min",
             "30 min"});
-            this.comboBox3.Location = new System.Drawing.Point(206, 356);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(70, 28);
-            this.comboBox3.TabIndex = 26;
-            this.comboBox3.TabStop = false;
+            this.comboBoxSilence.Location = new System.Drawing.Point(206, 356);
+            this.comboBoxSilence.Name = "comboBoxSilence";
+            this.comboBoxSilence.Size = new System.Drawing.Size(70, 28);
+            this.comboBoxSilence.TabIndex = 26;
+            this.comboBoxSilence.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -362,7 +362,7 @@
             this.ClientSize = new System.Drawing.Size(749, 410);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBoxSilence);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonDiscardAlarms);
@@ -414,7 +414,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxSilence;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -100,7 +100,7 @@ namespace ECONOMITOR2
             double[] newSPO2Data = Data.getNewSPO2packages();
             double[] newRESPData = Data.getNewRESPpackages();
 
-            if (Alarmas.counter1 == 100 && Alarmas.flag_alarma == false ) {
+            if (Alarmas.counter1 == 1000*Alarmas.silenceDurationInSeconds/50 && Alarmas.flag_alarma == false ) {
                 Alarmas.flag_alarma = true;
                 Alarmas.counter1 = 0;
             }
