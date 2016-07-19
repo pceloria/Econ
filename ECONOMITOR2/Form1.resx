@@ -143,7 +143,7 @@
   <data name="buttonConfiguration.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAAB8CAYAAAChbripAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAEEVJREFUeF7tnV3PXUMUx1saUlciLn0NV65EKqkQF1WElqLqvfX+Tku13lXrndSF
+        DQAACw0B7QfALAAAEEVJREFUeF7tnV3PXUMUx1saUlciLn0NV65EKqkQF1WElqLqvfX+Tku13lXrndSF
         EJekccGlRCLhO/BF8Jj/PLN215699sya131O8/yTn5lZe2atNXOOPuecvffsbRsbG2uDkSnG7V9//XXj
         999/R8Me8/tIoA/vFxoj9UP522+/2dj8+DoiGpcACykt5pwNfP755zhm9dRTTw3j6TjqIXL6oXz88cdR
         t0IO/HiMlL49EI2rgr9QtHhvv/027BM98MADw+JSX9TniB0HvA/qhw4dQnuikydP2ni8P/Dbq4ZoXBJp
@@ -387,7 +387,7 @@
   <data name="exclamationMark.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAABcxJREFUeF7t3XuIlFUYBvCdvbWX1s11d2d1173Oli2G4VqhJmIKiaZodJEis8jI
+        DgAACw4BQL7hQQAABcxJREFUeF7t3XuIlFUYBvCdvbWX1s11d2d1173Oli2G4VqhJmIKiaZodJEis8jI
         7mhKiZTRldwsQUvKEkvMNC+UmVcyrf4piCgiojtGERRUFN1P8y4uTbvPnnO+mWTfz/O88PtL5+X9dh5m
         d+Y750wei8VisVgsFovFYrFYfasjbR7F0ri0nKsrzVAs7UnLuRiA+GIAAscABI4BCBwDELjjG4BJo0vN
         NTMqaQBNG1sOn5tjjm8ANt5ZZ8zr7TSADqyqh8/NMQzAiY4BCBwDEDgGIHAMQOAYgMAxAIFjAALHAASO
