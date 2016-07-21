@@ -98,22 +98,24 @@ namespace ECONOMITOR2
                 port.DataBits = 8;
                 port.StopBits = StopBits.One;
 
-                enableECG(true);
-                enableECGwave(true);
-                enableRESPwave(true);
-                enableSPO2(true);
-                enableSPO2wave(true);
-                enableTEMP(true);
 
-                setECGgain(GAINX100);
-                setRESPgain(GAINX100);
-                setECGfilter(OPERATION);
 
                 try
                 {
                     port.Open();
                     isPortOpen = true;
                     port.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(DataRecievedHandler);
+                    enableECG(true);
+                    enableECGwave(true);
+                    enableRESPwave(true);
+                    enableSPO2(true);
+                    enableSPO2wave(true);
+                    enableTEMP(true);
+
+                    setECGgain(GAINX100);
+                    setRESPgain(GAINX100);
+                    setECGfilter(OPERATION);
+
 
                     //enableSPO2();
                     //enableRESP();

@@ -262,6 +262,7 @@ namespace ECONOMITOR2
             if (FormConfig.ECGwave == false)
             {
                 textBox4.Text = "Disabled";
+                AudioVisual.DrawECGtoZero();
             }
             else
             {
@@ -271,6 +272,7 @@ namespace ECONOMITOR2
             if (FormConfig.SPO2wave == false)
             {
                 textBox6.Text = "Disabled";
+                AudioVisual.DrawSPO2toZero();
             }
             else
             {
@@ -280,6 +282,7 @@ namespace ECONOMITOR2
             if (FormConfig.RESPwave == false)
             {
                 textBox5.Text = "Disabled";
+                AudioVisual.DrawRESPtoZero();
             }
             else
             {
@@ -289,6 +292,9 @@ namespace ECONOMITOR2
             if (FormConfig.ECGparam == false)
             {
                 textBox7.Text = "Disabled";
+                textBox9.Text = "Disabled";
+                textRR.Text = "-";
+                textHeartRate.Text = "-";
             }
             else
             {
@@ -298,6 +304,7 @@ namespace ECONOMITOR2
             if (FormConfig.SPO2param == false)
             {
                 textBox8.Text = "Disabled";
+                textSpO2.Text = "-";
             }
             else
             {
@@ -307,11 +314,17 @@ namespace ECONOMITOR2
             if (FormConfig.TEMPparam == false)
             {
                 textBox2.Text = "Disabled";
+                textTemperatura.Text = "-";
             }
             else
             {
                 textBox2.Text = "";
             }
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
